@@ -167,7 +167,7 @@ public class DormitoryUpdateDao {
 						" :solarPowerSystem,:solarPowerSystemCnt,:inventersCnt,:inventersCnt,:inventersCapacity,:inventersCapacity ,'','D')"+
 						"ON DUPLICATE KEY UPDATE Entance_Lobby=:entranceLobby,Entance_Lobby_Count=:entranceLobbyCnt,Warandah=:warandah,"+
 						" Warandah_Count=:warandahCnt,Stair_Case=:stairCase,Stair_Case_Count=:stairCaseCnt,Water_Tank_Count=:waterTankCnt,"+
-						" Solor_Power_System=:solarPowerSystem,Solor_Power_System_Count=:solarPowerSystemCnt,Inverters=:inventersCnt,"+
+						" Solor_Power_System=:solarPowerSystem,Solor_Power_System_Count=:solarPowerSystemCnt,Inverters=:inventers,"+
 						" Inverters_Count=:inventersCnt,Inverter_Capacity=:inventersCapacity,Inverter_Capacity_Count=:inventersCapacity";
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 			System.out.println(":::::"+getExecuteSql(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap));

@@ -608,7 +608,7 @@
 										<input type="text" name="d_commonarea_solar_powersystem" id="d_commonarea_solar_powersystem" dbname="solarPowerSystemCnt" /></td>
 								</tr>
 								<tr>
-									<td><a href="#">Inverters</a> <input type="checkbox" dbname="inventers"  class="dontHideCls" placeholder="size">
+									<td><a href="#">Inverters</a> <input type="checkbox" id="d_commonarea_inventers" dbname="inventers"  class="dontHideCls" placeholder="size">
 										<input type="text"  dbname="inventersCnt" style="display:none;"/></td>
 								</tr>
 								<tr>
@@ -874,8 +874,8 @@ function getDmClinicDetails(){
 						$("#d_clinic_bulb").val(data.Bulbs_Count);
 						$("#d_clinic_glass_door").val(data.Glass_Door_Almira_Count);
 						$("#d_clinic_storewell").val(data.Store_Well_Almira_Count);
-						$("#d_clinic_stype_chairs").val(data.Chairs_Count);
-						$("#d_clinic_chairs").val(data.Ceiling_Fans_Count_Count);
+						$("#d_clinic_stype_chairs").val(data.S_Type_Chairs_Count);
+						$("#d_clinic_chairs").val(data.Chairs_Count);
 						$("#d_clinic_tables").val(data.Tables_Count);
 						$("#d_clinic_Stools").val(data.Stools_Count);
 						$("#d_clinic_wall_mount_fans").val(data.Wall_Mount_Fans_Count);
@@ -1009,6 +1009,7 @@ function getDmCommonAreaDetails(){
 			$("#d_commonarea_stair_case_check").attr('checked',data.Stair_Case);
 			$("#d_commonarea_watertank_check").attr('checked',data.Water_Tank_Count);
 			$("#d_commonarea_solar_powersystem_check").attr('checked',data.Solor_Power_System);
+			$("#d_commonarea_inventers").attr('checked',data.Inverters);
 			$("#d_commonarea_inverter_capacity_check").attr('checked',data.Inverter_Capacity);
 		},
 		failure : function(err) {
