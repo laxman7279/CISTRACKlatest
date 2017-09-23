@@ -41,6 +41,12 @@
 										<div class="table-responsive">
 											<table class="table">
 												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="L_Length" id="L_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="L_Width" id="L_Width" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Carpet Area (in sft)</a> <input
 														type="checkbox" name="Plinth_Area" id="Plinth_Area" /><br>
 														<input type="text" name="L_Plinth_Area" id="L_Plinth_Area" /></td>
@@ -125,7 +131,12 @@
 										<div class="table-responsive">
 
 											<table class="table">
-
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="P_Length" id="P_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="P_Width" id="P_Width" /></td>
+												</tr>
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" name="Plinth_Area" id="Plinth_Area" /><br>
@@ -228,6 +239,12 @@
 										<div class="table-responsive">
 											<table class="table">
 												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="EH_Length" id="EH_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="EH_Width" id="EH_Width" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
 														name="EH_Plinth_Area" id="EH_Plinth_Area" /></td>
@@ -283,6 +300,12 @@
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="ST_Length" id="ST_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="ST_Width" id="ST_Width" /></td>
+												</tr>
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
@@ -373,6 +396,12 @@
 										<div class="table-responsive">
 											<table class="table">
 												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="SR_Length" id="SR_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="SR_Width" id="SR_Width" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
 														name="SR_Plinth_Area" id="SR_Plinth_Area" /></td>
@@ -460,6 +489,12 @@
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="GR_Length" id="GR_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="GR_Width" id="GR_Width" /></td>
+												</tr>
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
@@ -554,6 +589,12 @@
 										<div class="table-responsive">
 											<table class="table">
 												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="BL_Length" id="BL_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="BL_Width" id="BL_Width" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
 														name="BL_Plinth_Area" id="BL_Plinth_Area" /></td>
@@ -643,6 +684,12 @@
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="PL_Length" id="PL_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="PL_Width" id="PL_Width" /></td>
+												</tr>
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
@@ -734,6 +781,12 @@
 										<div class="table-responsive">
 											<table class="table">
 												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="CL_Length" id="CL_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="CL_Width" id="CL_Width" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
 														name="CL_Plinth_Area" id="CL_Plinth_Area" /></td>
@@ -823,6 +876,12 @@
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="ZL_Length" id="ZL_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="ZL_Width" id="ZL_Width" /></td>
+												</tr>
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
@@ -915,6 +974,12 @@
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="CO_Length" id="CO_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="CO_Width" id="CO_Width" /></td>
+												</tr>
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"

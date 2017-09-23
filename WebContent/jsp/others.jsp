@@ -75,7 +75,7 @@
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
 								href="#collapse4211" ><span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp;<a data-toggle="collapse" data-parent="#accordion"
-								href="#" >Guard 	Room</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								href="#" >Guard Room</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
 								name="GuardRoom" id="GuardRoom" />
 					</h4>
 				</div>
@@ -116,6 +116,12 @@
 										type="text" name="GDAlmiraCount" id="GDAlmiraCount" /></td>
 									<td><a href="#">Store well Almira</a> <br> <input
 										type="text" name="SWAlmairaCount" id="SWAlmairaCount" /></td>
+								</tr>
+								<tr>
+									<td><a href="#">Length (in sft)</a> <br> <input
+										type="text" name="Length" id="Length" /></td>
+									<td><a href="#">Width (in sft)</a> <br> <input
+										type="text" name="Width" id="Width" /></td>
 								</tr>
 								<tr>
 									<td><a href="#">Carpet Area (in sft)</a> <br> <input

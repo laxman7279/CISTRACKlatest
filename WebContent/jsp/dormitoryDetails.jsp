@@ -41,9 +41,12 @@
 											<option value="3">Second Floor</option>
 									</select></td>
 								</tr>
-
-
-
+								<tr>
+									<td><a href="#">Length (in sft)</a> <br> 
+									<input type="text" name="d_warden_Length" id="d_warden_Length" dbname="length" /></td>
+									<td><a href="#">Width (in sft)</a> <br> 
+									<input type="text" name="d_warden_Width" id="d_warden_Width" dbname="width" /></td>
+								</tr>
 								<tr>
 									<td><a href="#">Carpet Area</a> <input type="checkbox" 
 										name="Plinth_Area" id="Plinth_Area" dbname="carpetArea" /><br> <input
@@ -156,8 +159,12 @@
 											<option value="3">Second Floor</option>
 									</select></td>
 								</tr>
-
-
+								<tr>
+									<td><a href="#">Length (in sft)</a> <br> 
+									<input type="text" name="d_office_Length" id="d_office_Length" dbname="length" /></td>
+									<td><a href="#">Width (in sft)</a> <br> 
+									<input type="text" name="d_office_Width" id="d_office_Width" dbname="width" /></td>
+								</tr>
 								<tr>
 									<td><a href="#">Carpet Area</a> <input type="checkbox"
 										name="d_office_Plinth_Area_check" id="d_office_Plinth_Area_check" dbname="carpetArea" /><br> <input
@@ -268,8 +275,12 @@
 											<option value="3">Second Floor</option>
 									</select></td>
 								</tr>
-
-
+								<tr>
+									<td><a href="#">Length (in sft)</a> <br> 
+									<input type="text" name="d_waiting_Length" id="d_waiting_Length" dbname="length" /></td>
+									<td><a href="#">Width (in sft)</a> <br> 
+									<input type="text" name="d_waiting_Width" id="d_waiting_Width" dbname="width" /></td>
+								</tr>
 								<tr>
 									<td><a href="#">Carpet Area</a> <input type="checkbox"
 										name="d_waiting_Plinth_Area_check" id="d_waiting_Plinth_Area_check" dbname="carpetArea" /><br> <input
@@ -374,8 +385,12 @@
 											<option value="3">Second Floor</option>
 									</select></td>
 								</tr>
-
-
+								<tr>
+									<td><a href="#">Length (in sft)</a> <br> 
+									<input type="text" name="d_clinic_Length" id="d_clinic_Length" dbname="length" /></td>
+									<td><a href="#">Width (in sft)</a> <br> 
+									<input type="text" name="d_clinic_Width" id="d_clinic_Width" dbname="width" /></td>
+								</tr>
 								<tr>
 									<td><a href="#">Carpet Area</a> <input type="checkbox"
 										name="d_clinic_Plinth_Area_check" id="d_clinic_Plinth_Area_check" dbname="carpetArea"/><br> <input
@@ -1069,10 +1084,10 @@ function addHalls(){
   } else {
     var rows = "";
     for (var i = 0; i < a; i++) {
-    	 rows += "<div class='panel panel-default dormitoryHallDiv' > 				<div class='panel-heading'><div> 					<h4 class='panel-title'> 			<a data-toggle='collapse' data-parent='#accordion' 							href='#collapse1222".concat(i+1)+ "'><span class='glyphicon glyphicon-menu-down'></span></a>&nbsp;&nbsp;&nbsp;<a href='#' >	Hall</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input 										type='checkbox' dbname='hall'/> 					</h4> </div> "+
+    	 rows += "<div class='panel panel-default dormitoryHallDiv' ><div class='panel-heading'><div><h4 class='panel-title'><a data-toggle='collapse' data-parent='#accordion' href='#collapse1222".concat(i+1)+ "'><span class='glyphicon glyphicon-menu-down'></span></a>&nbsp;&nbsp;&nbsp;<a href='#' >	Hall</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' dbname='hall'/></h4> </div> "+
 		         "<div id='collapse1222".concat(i+1)+ "' class='panel-collapse collapse'> <div class='panel-body'><div class='table-responsive'> "+
 		         "<table class='table'> <tr><td> <label style='padding-right: 20px;padding-left: 90px;'><b>Block</b></label> <select name='H_Block_Id_#I#' id='H_Block_Id_#I#' dbname='blockId' class='form-control' style='width:200px;'>     <option value='0'>Select block</option> <option value='1'>1st Block</option> <option value='2'>Second Block</option> <option value='3'>Third Block</option> </select> </td>  <td> <label style='padding-right: 20px;padding-left: 90px;'><b>Floor</b></label> <select dbname='floorId' name='H_Floor_Id_#I#' id='H_Floor_Id_#I#' class='form-control' style='width:200px;'>     <option value='0'>Select floor</option> <option value='1'>Ground Floor</option> <option value='2'>First Floor</option> <option value='3'>Second Floor</option> </select> </td></tr>"+  
-		         "<tr> <td><a href='#'>Carpet Area</a> <input type='checkbox'><br> <input type='text' name='H_Plinth_Area_#I#' id ='H_Plinth_Area_#I#' dbname='carpetAreaCnt'></td><td><a href='#'>Ceiling Fans</a> <input type='checkbox' name='H_Ceiling_Fans_#I#' id ='H_Ceiling_Fans_#I#' dbname='ceilingFans'><br> <input type='text' name='H_Ceiling_Fans_Count_#I#' id ='H_Ceiling_Fans_Count_#I#' dbname='ceilingFansCnt'></td> 	</tr>  "+
+		         "<tr><td>Length (in sft)<br><input type='text' name='H_Length_#I#' id='H_Length_#I#' /></td><td>Width (in sft)<br><input type='text' name='H_Width_#I#' id='H_Width_#I#' /></td></tr><tr> <td><a href='#'>Carpet Area</a> <input type='checkbox'><br> <input type='text' name='H_Plinth_Area_#I#' id ='H_Plinth_Area_#I#' dbname='carpetAreaCnt'></td><td><a href='#'>Ceiling Fans</a> <input type='checkbox' name='H_Ceiling_Fans_#I#' id ='H_Ceiling_Fans_#I#' dbname='ceilingFans'><br> <input type='text' name='H_Ceiling_Fans_Count_#I#' id ='H_Ceiling_Fans_Count_#I#' dbname='ceilingFansCnt'></td> 	</tr>  "+
 		         "<tr><td><a href='#'>Tube Lights</a> <input type='checkbox' name='H_TubeLights_#I#' id ='H_TubeLights_#I#' dbname='tubeLights'><br> <input type='text'name='H_TubeLights_Count_#I#' id ='H_TubeLights_Count_#I#' dbname='tubeLightsCnt'></td><td><a href='#'>Bulbs</a> <input type='checkbox' name='H_Bulbs_#I#' id ='H_Bulbs_#I#' dbname='bulbs'><br> <input type='text' name='H_Bulbs_Count_#I#' id ='H_Bulbs_Count_#I#' dbname='bulbsCnt'></td></tr>"+  
 		         "<tr><td><a href='#'>Glass Door Almira</a> <input type='checkbox' name='H_Glass_Door_Almira_#I#' id ='H_Glass_Door_Almira_#I#' dbname='glassDoorAlmira'><br> <input type='text' name='H_Glass_Door_Almira_Count_#I#' id ='H_Glass_Door_Almira_Count_#I#' dbname='glassDoorAlmiraCnt'></td><td><a href='#'>Storewell Almira</a> <input type='checkbox' name='H_Store_Well_Almira_#I#' id ='H_Store_Well_Almira_#I#' dbname='storeWallAlmira'><br> <input type='text' name='H_Store_Well_Almira_Count_#I#' id ='H_Store_Well_Almira_Count_#I#' dbname='storeWallAlmiraCnt'></td></tr>"+  
 		         "<tr><td><a href='#'>S type Chairs</a> <input type='checkbox' name='H_S_Type_Chairs_#I#' id ='H_S_Type_Chairs_#I#' dbname='sTypeChairs'><br> <input type='text'name='H_S_Type_Chairs_Count_#I#' id ='H_S_Type_Chairs_Count_#I#' dbname='sTypeChairsCnt'></td><td><a href='#'>Chairs</a> <input type='checkbox' name='H_Chairs_#I#' id ='H_Chairs_#I#' dbname='chairs'><br> <input type='text' name='H_Chairs_Count_#I#' id ='H_Chairs_Count_#I#' dbname='chairsCnt'></td></tr> "+
