@@ -51,7 +51,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in sft)</a> <input
 														type="checkbox" name="Plinth_Area" id="Plinth_Area" /><br>
-														<input type="text" name="L_Plinth_Area" id="L_Plinth_Area" /></td>
+														<input type="text" name="L_Plinth_Area" id="L_Plinth_Area" readonly=true/></td>
 
 
 													<td><a href="#">Stools</a> <input type="checkbox"
@@ -143,7 +143,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" name="Plinth_Area" id="Plinth_Area" /><br>
-														<input type="text" name="P_Plinth_Area" id="P_Plinth_Area" /></td>
+														<input type="text" name="P_Plinth_Area" id="P_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Reading Tables</a> <input
 														type="checkbox" name="P_ReadingTables"
 														id="P_ReadingTables" /><br> <input type="text"
@@ -251,7 +251,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="EH_Plinth_Area" id="EH_Plinth_Area" /></td>
+														name="EH_Plinth_Area" id="EH_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Stools</a> <input type="checkbox"
 														name="EH_Stools" id="EH_Stools" /><br> <input
 														type="text" name="EH_Stools_Count" id="EH_Stools_Count" /></td>
@@ -313,7 +313,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="ST_Plinth_Area" id="ST_Plinth_Area" /></td>
+														name="ST_Plinth_Area" id="ST_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Stools</a> <input type="checkbox"
 														name="ST_Stools" id="ST_Stools" /><br> <input
 														type="text" name="ST_Stools_Count" id="ST_Stools_Count" /></td>
@@ -409,7 +409,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="SR_Plinth_Area" id="SR_Plinth_Area" /></td>
+														name="SR_Plinth_Area" id="SR_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Stools</a> <input type="checkbox"
 														name="SR_Stools" id="SR_Stools" /><br> <input
 														type="text" name="SR_Stools_Count" id="SR_Stools_Count" /></td>
@@ -503,7 +503,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="GR_Plinth_Area" id="GR_Plinth_Area" /></td>
+														name="GR_Plinth_Area" id="GR_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Stools</a> <input type="checkbox"
 														name="GR_Stools" id="GR_Stools" /><br> <input
 														type="text" name="GR_Stools_Count" id="GR_Stools_Count" /></td>
@@ -604,7 +604,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="BL_Plinth_Area" id="BL_Plinth_Area" /></td>
+														name="BL_Plinth_Area" id="BL_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Ceiling Fans</a> <input
 														type="checkbox" name="BL_Ceiling_Fans"
 														id="BL_Ceiling_Fans" /><br> <input type="text"
@@ -703,7 +703,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="PL_Plinth_Area" id="PL_Plinth_Area" /></td>
+														name="PL_Plinth_Area" id="PL_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Ceiling Fans</a> <input
 														type="checkbox" name="PL_Ceiling_Fans"
 														id="PL_Ceiling_Fans" /><br> <input type="text"
@@ -802,7 +802,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="CL_Plinth_Area" id="CL_Plinth_Area" /></td>
+														name="CL_Plinth_Area" id="CL_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Ceiling Fans</a> <input
 														type="checkbox" name="CL_Ceiling_Fans"
 														id="CL_Ceiling_Fans" /><br> <input type="text"
@@ -901,7 +901,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="ZL_Plinth_Area" id="ZL_Plinth_Area" /></td>
+														name="ZL_Plinth_Area" id="ZL_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Ceiling Fans</a> <input
 														type="checkbox" name="ZL_Ceiling_Fans"
 														id="ZL_Ceiling_Fans" /><br> <input type="text"
@@ -1002,7 +1002,7 @@
 												<tr>
 													<td><a href="#">Carpet Area (in Sft)</a> <input
 														type="checkbox" /><br> <input type="text"
-														name="CO_Plinth_Area" id="CO_Plinth_Area" /></td>
+														name="CO_Plinth_Area" id="CO_Plinth_Area"  readonly=true/></td>
 													<td><a href="#">Ceiling Fans</a> <input
 														type="checkbox" name="CO_Ceiling_Fans"
 														id="CO_Ceiling_Fans" /><br> <input type="text"

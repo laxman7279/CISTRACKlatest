@@ -28,7 +28,7 @@ public class QuatersDao {
 	{
 		StringBuilder query = new StringBuilder();
 
-		query.append("select  Block_Id,Floor_Id,Plinth_Area,Table_Fans,Tables_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count,TubeLights,");
+		query.append("select  Block_Id,Floor_Id,Length,Width,Plinth_Area,Table_Fans,Tables_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count,TubeLights,");
 		query.append(" TubeLights_Count,Bulbs,Bulbs_Count,Glass_Door_Almira,Glass_Door_Almira_Count, ");
 		query.append("Store_Well_Almira,Store_Well_Almira_Count  ");
 		query.append("	 from "+tablename+" where  Building_Id ="+buildingid+" and "+ wherecolumn+" = " + staffquarterId);
@@ -46,6 +46,8 @@ public class QuatersDao {
 				//roomjson.put("Floor_Id", rs.getInt("Floor_Id"));
 				//roomjson.put("Block_Id", rs.getInt("Block_Id"));
 				roomjson.put("Plinth", rs.getInt("Plinth_Area"));
+				roomjson.put("Length", rs.getInt("Length"));
+				roomjson.put("Width", rs.getInt("Width"));
 				roomjson.put("TableFans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				roomjson.put("TableFansCount", rs.getInt("Tables_Fans_Count"));
 				roomjson.put("CeilingFans", "Y".equalsIgnoreCase(rs.getString("Ceiling_Fans")) ? true : false);

@@ -113,7 +113,7 @@
 								</tr>
 								<tr>
 									<td><a href="#">Carpet Area (in sft)</a> <br> <input
-										type="text" name="PlintArea" id="PlintArea" /></td>
+										type="text" name="PlintArea" id="PlintArea" readonly=true /></td>
 									<td><a href="#">Table Fans</a> <br> <input
 										type="text" name="TableFansCount" id="TableFansCount" /></td>
 								</tr>

@@ -168,7 +168,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				" select Library_Building_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				" select Library_Building_Id, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count`, `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Well-Almira_Count`,Stools , Stools_Count from Library_Room ")
 				.append(" where  School_Building_Id = " + schoolid);
@@ -183,6 +183,8 @@ public class CISDao {
 
 				LibraryDetailsJson.put("Library_Building_Id", rs.getInt("Library_Building_Id"));
 				LibraryDetailsJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				LibraryDetailsJson.put("Length", rs.getInt("Length"));
+				LibraryDetailsJson.put("Width", rs.getInt("Width"));
 				LibraryDetailsJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				LibraryDetailsJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				LibraryDetailsJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -225,7 +227,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				"select Principal_Room_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				"select Principal_Room_Id, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count`, `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Well-Almira_Count`,Stools , Stools_Count ,")
 				.append(" `Principal-Table`, `Principal-Table-Count`, `Principal-Chair` ,`Principal-Chair-Count`, `Locker-Units`, `Locker-Units-Count` from Principal_Room ")
@@ -241,6 +243,8 @@ public class CISDao {
 
 				PrincipalRoomJson.put("Principal_Room_Id", rs.getInt("Principal_Room_Id"));
 				PrincipalRoomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				PrincipalRoomJson.put("Length", rs.getInt("Length"));
+				PrincipalRoomJson.put("Width", rs.getInt("Width"));
 				PrincipalRoomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				PrincipalRoomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				PrincipalRoomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -297,7 +301,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				"select  Entrance_Hall_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				"select  Entrance_Hall_Id, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  Stools , Stools_Count ")
 				.append(" from Entrance_Room where  School_Building_Id = " + schoolid);
 
@@ -311,6 +315,8 @@ public class CISDao {
 
 				entranceRoomJson.put("Entrance_Hall_Id", rs.getInt("Entrance_Hall_Id"));
 				entranceRoomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				entranceRoomJson.put("Length", rs.getInt("Length"));
+				entranceRoomJson.put("Width", rs.getInt("Width"));
 				entranceRoomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				entranceRoomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				entranceRoomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -344,7 +350,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				"select Staff_Room_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				"select Staff_Room_Id, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Well-Almira_Count`,Stools , Stools_Count ,")
 				.append(" `Locker-Units`, `Locker-Units_Count` ")
@@ -360,6 +366,8 @@ public class CISDao {
 
 				officestaffroomJson.put("Staff_Room_Id", rs.getInt("Staff_Room_Id"));
 				officestaffroomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				officestaffroomJson.put("Length", rs.getInt("Length"));
+				officestaffroomJson.put("Width", rs.getInt("Width"));
 				officestaffroomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				officestaffroomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				officestaffroomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -410,7 +418,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				"select Store_Room_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				"select Store_Room_Id, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Well-Almira_Count`,Stools , Stools_Count ,")
 				.append(" `Locker-Units`, `Locker-Units-Count` ")
@@ -426,6 +434,8 @@ public class CISDao {
 
 				storeRoomJson.put("Store_Room_Id", rs.getInt("Store_Room_Id"));
 				storeRoomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				storeRoomJson.put("Length", rs.getInt("Length"));
+				storeRoomJson.put("Width", rs.getInt("Width"));
 				storeRoomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				storeRoomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				storeRoomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -472,7 +482,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				"select Games_Room_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				"select Games_Room_Id, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Games-Well-Almira_Count`,Stools , Stools_Count ,")
 				.append(" `Locker-Units`, `Locker-Units_Count` ")
@@ -488,6 +498,8 @@ public class CISDao {
 
 				gamesRoomJson.put("Games_Room_Id", rs.getInt("Games_Room_Id"));
 				gamesRoomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				gamesRoomJson.put("Length", rs.getInt("Length"));
+				gamesRoomJson.put("Width", rs.getInt("Width"));
 				gamesRoomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				gamesRoomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				gamesRoomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -534,7 +546,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				" select `Botany-Lab_Id`, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				" select `Botany-Lab_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Wall-Almira_Count`,Stools , Stools_Count ,")
 				.append(" `Locker-Units`, `Locker-Units_Count`, Green_Board, Green_Board_Count ")
@@ -550,6 +562,8 @@ public class CISDao {
 
 				botanyLabJson.put("Botany_Lab_Id", rs.getInt("Botany-Lab_Id"));
 				botanyLabJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				botanyLabJson.put("Length", rs.getInt("Length"));
+				botanyLabJson.put("Width", rs.getInt("Width"));
 				botanyLabJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				botanyLabJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				botanyLabJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -597,7 +611,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				" select `Chemistry-Lab-Id`, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables, ")
+				" select `Chemistry-Lab-Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables, ")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Chemistry-Lab-Well-Almira_Count`,  Stools , Stools_Count , ")
 				.append(" `Locker-Units`, `Locker-Units_Count` ,Green_Board, Green_Board_Count")
@@ -613,6 +627,8 @@ public class CISDao {
 
 				chemistryLabJson.put("Chemistry_Lab_Id", rs.getInt("Chemistry-Lab-Id"));
 				chemistryLabJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				chemistryLabJson.put("Length", rs.getInt("Length"));
+				chemistryLabJson.put("Width", rs.getInt("Width"));
 				chemistryLabJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				chemistryLabJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				chemistryLabJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -660,7 +676,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				" select `Physics-Lab_Building_Id`, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				" select `Physics-Lab_Building_Id`, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Physics-Lab-Well-Almira_Count`, Stools , Stools_Count ,")
 				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ")
@@ -676,6 +692,8 @@ public class CISDao {
 
 				physicsLabJson.put("Physics_Lab_Building_Id", rs.getInt("Physics-Lab_Building_Id"));
 				physicsLabJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				physicsLabJson.put("Length", rs.getInt("Length"));
+				physicsLabJson.put("Width", rs.getInt("Width"));
 				physicsLabJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				physicsLabJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				physicsLabJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -722,7 +740,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				" select  `Zoology-Lab_Building_Id`, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				" select  `Zoology-Lab_Building_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Zoology-Lab-Well-Almira_Count`, Stools , Stools_Count ,")
 				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ")
@@ -738,6 +756,8 @@ public class CISDao {
 
 				zoologyLabJson.put("Zoology_Lab_Building_Id", rs.getInt("Zoology-Lab_Building_Id"));
 				zoologyLabJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				zoologyLabJson.put("Length", rs.getInt("Length"));
+				zoologyLabJson.put("Width", rs.getInt("Width"));
 				zoologyLabJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				zoologyLabJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				zoologyLabJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
@@ -786,7 +806,7 @@ public class CISDao {
 		StringBuilder query = new StringBuilder();
 
 		query.append(
-				" select `Computers-Lab_Building_Id`, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				" select `Computers-Lab_Building_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Computers-Lab-Well-Almira_Count`, Stools , Stools_Count ,")
 				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ")
@@ -802,6 +822,8 @@ public class CISDao {
 
 				compLabJson.put("Computers_Lab_Building_Id", rs.getInt("Computers-Lab_Building_Id"));
 				compLabJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				compLabJson.put("Length", rs.getInt("Length"));
+				compLabJson.put("Width", rs.getInt("Width"));
 				compLabJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
 				compLabJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
 				compLabJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));

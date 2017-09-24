@@ -72,13 +72,13 @@ public class PrincipalQuartersDao {
 	
 	public void updatePrincipalQuartersObjectData(JSONObject jsonObject,String tableName,String tableColumn) { 
 		try {
-			String PRINCIPAL_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO #TABLE_NAME# (Principal_Quarter_Id, #TABLE_COLUMN#, Block_Id, Floor_Id, Plinth_Area, "+
+			String PRINCIPAL_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO #TABLE_NAME# (Principal_Quarter_Id, #TABLE_COLUMN#, Block_Id, Floor_Id, Length,Width,Plinth_Area, "+
 						" Ceiling_Fans, Ceiling_Fans_Count, TubeLights, TubeLights_Count, Bulbs, Bulbs_Count, Glass_Door_Almira, Glass_Door_Almira_Count,"+
 						" Store_Well_Almira, Store_Well_Almira_Count, Table_Fans, Tables_Fans_Count, BUILDING_ID) "+
-						" VALUES (:principalQuarterId,:buildingId,:buildingId,:buildingId,:carpetAreaCnt,"+
+						" VALUES (:principalQuarterId,:buildingId,:buildingId,:buildingId,:length,:width,:carpetAreaCnt,"+
 						" :ceilingFans,:ceilingFansCnt,:tubeLights,:tubeLightsCnt,:bulbs,:bulbsCnt,:glassDoorAlmira,:glassDoorAlmiraCnt,"+
 						" :storeWellAlmira,:storeWellAlmiraCnt,:tableFans,:tableFansCnt,:buildingId )"+
-						"ON DUPLICATE KEY UPDATE Plinth_Area=:carpetAreaCnt,Ceiling_Fans=:ceilingFans,Ceiling_Fans_Count=:ceilingFansCnt,TubeLights=:tubeLights,"+
+						"ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:carpetAreaCnt,Ceiling_Fans=:ceilingFans,Ceiling_Fans_Count=:ceilingFansCnt,TubeLights=:tubeLights,"+
 						" TubeLights_Count=:tubeLightsCnt,Bulbs=:bulbs,Bulbs_Count=:bulbsCnt,Glass_Door_Almira=:glassDoorAlmira,Glass_Door_Almira_Count=:glassDoorAlmiraCnt,"+
 						" Store_Well_Almira=:storeWellAlmira,Store_Well_Almira_Count=:storeWellAlmiraCnt,Table_Fans=:tableFans,Tables_Fans_Count=:tableFansCnt";
 			PRINCIPAL_QUARTERS_OBJECT_MERGE_SQL = PRINCIPAL_QUARTERS_OBJECT_MERGE_SQL.replace("#TABLE_NAME#", tableName).replace("#TABLE_COLUMN#", tableColumn);

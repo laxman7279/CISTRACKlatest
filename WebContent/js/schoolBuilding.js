@@ -56,7 +56,9 @@ function getSchoolDetails() {
 			dataType : 'json',
 			success : function(data) {
 				$("#L_Plinth_Area").val(data.Plinth_Area);
-
+				$("#L_Length").val(data.Length);
+				$("#L_Width").val(data.Width);
+				
 				$("#L_Stools").attr('checked', data.Stools);
 				$("#L_Stools_Count").val(data.Stools_Count);
 
@@ -116,7 +118,8 @@ function getSchoolDetails() {
 					$('#P_'+key).val(value);
 				});
 				$("#P_Plinth_Area").val(data.Plinth_Area);
-
+				$("#P_Length").val(data.Length);
+				$("#P_Width").val(data.Width);
 				$("#P_Stools").attr('checked', data.Stools);
 				$("#P_Stools_Count").val(data.Stools_Count);
 
@@ -178,7 +181,8 @@ function getSchoolDetails() {
 			success : function(data) {
 
 				$("#EH_Plinth_Area").val(data.Plinth_Area);
-
+				$("#EH_Length").val(data.Length);
+				$("#EH_Width").val(data.Width);
 				$("#EH_Stools").attr('checked', data.Stools);
 				$("#EH_Stools_Count").val(data.Stools_Count);
 
@@ -221,7 +225,8 @@ function getSchoolDetails() {
 			success : function(data) {
 
 				$("#SR_Plinth_Area").val(data.Plinth_Area);
-
+				$("#SR_Length").val(data.Length);
+				$("#SR_Width").val(data.Width);
 				$("#SR_Stools").attr('checked', data.Stools);
 				$("#SR_Stools_Count").val(data.Stools_Count);
 
@@ -277,7 +282,8 @@ function getSchoolDetails() {
 			success : function(data) {
 
 				$("#ST_Plinth_Area").val(data.Plinth_Area);
-
+				$("#ST_Length").val(data.Length);
+				$("#ST_Width").val(data.Width);
 				$("#ST_Stools").attr('checked', data.Stools);
 				$("#ST_Stools_Count").val(data.Stools_Count);
 
@@ -333,7 +339,8 @@ function getSchoolDetails() {
 			success : function(data) {
 
 				$("#GR_Plinth_Area").val(data.Plinth_Area);
-
+				$("#GR_Length").val(data.Length);
+				$("#GR_Width").val(data.Width);
 				$("#GR_Stools").attr('checked', data.Stools);
 				$("#GR_Stools_Count").val(data.Stools_Count);
 
@@ -386,7 +393,8 @@ function getSchoolDetails() {
 	 	        dataType: 'json',
 	 	        success: function(data) {
 	       			$("#BL_Plinth_Area").val( data.Plinth_Area);
-				
+	       			$("#BL_Length").val(data.Length);
+					$("#BL_Width").val(data.Width);
 					$("#BL_Stools").attr('checked', data.Stools);
 	       			$("#BL_Stools_Count").val( data.Stools_Count);
 				
@@ -442,7 +450,8 @@ function getSchoolDetails() {
 	 	        success: function(data) {
  	        			
  	        			$("#CL_Plinth_Area").val( data.Plinth_Area);
-						
+ 	        			$("#CL_Length").val(data.Length);
+ 	        			$("#CL_Width").val(data.Width);
 						$("#CL_Stools").attr('checked', data.Stools);
  	        			$("#CL_Stools_Count").val( data.Stools_Count);
 						
@@ -499,7 +508,8 @@ function getSchoolDetails() {
 	 	        success: function(data){
  	        			
  	        			$("#PL_Plinth_Area").val( data.Plinth_Area);
-						
+ 	        			$("#PL_Length").val(data.Length);
+ 	        			$("#PL_Width").val(data.Width);
 						$("#PL_Stools").attr('checked', data.Stools);
  	        			$("#PL_Stools_Count").val( data.Stools_Count);
 						
@@ -559,7 +569,8 @@ function getSchoolDetails() {
 	 	                {
 	 	        			
 	 	        			$("#ZL_Plinth_Area").val( data.Plinth_Area);
-							
+	 	        			$("#ZL_Length").val(data.Length);
+	 	        			$("#ZL_Width").val(data.Width);
 							$("#ZL_Stools").attr('checked', data.Stools);
 	 	        			$("#ZL_Stools_Count").val( data.Stools_Count);
 							
@@ -621,7 +632,8 @@ function getSchoolDetails() {
 	 	                {
 	 	        			
 	 	        			$("#CO_Plinth_Area").val( data.Plinth_Area);
-							
+	 	        			$("#CO_Length").val(data.Length);
+	 	        			$("#CO_Width").val(data.Width);
 							$("#CO_Stools").attr('checked', data.Stools);
 	 	        			$("#CO_Stools_Count").val( data.Stools_Count);
 							

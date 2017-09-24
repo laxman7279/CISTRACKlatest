@@ -76,13 +76,13 @@ public class SchoolBuildingDao {
 	
 	public void updateAdminLibraryData(JSONObject jsonObject) { 
 		try {
-			String LIBRARY_MERGE_SQL = "INSERT INTO Library_Room (Library_Building_Id,School_Building_Id,Plinth_Area,Table_Fans,Table_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count, "+
+			String LIBRARY_MERGE_SQL = "INSERT INTO Library_Room (Library_Building_Id,School_Building_Id,Length,Width,Plinth_Area,Table_Fans,Table_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count, "+
 					"Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs, Bulbs_Count, ReadingTables, ReadingTables_Count,`S-Type-Chairs`,"+
 					"`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count) "+
-					" VALUES (:libraryBuildingId,:schoolBuildingId,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,:ceilingFansCount,"+
+					" VALUES (:libraryBuildingId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,:ceilingFansCount,"+
 					":tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables,:readingTablesCount,:sTypeChairs,"+
 					":sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira,:storeWellAlmiraCount,:stools,:stoolsCount )"+
-					"ON DUPLICATE KEY UPDATE Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					"ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,"+
 					"ReadingTables=:readingTables,ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
@@ -97,15 +97,15 @@ public class SchoolBuildingDao {
 
 	public void updateAdminPrincipalData(JSONObject jsonObject) { 
 		try {
-			String PRINCIPAL_MERGE_SQL = "INSERT INTO Principal_Room (Principal_Room_Id,School_Building_Id,Plinth_Area,Table_Fans,Table_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count, "+
+			String PRINCIPAL_MERGE_SQL = "INSERT INTO Principal_Room (Principal_Room_Id,School_Building_Id,Length,Width,Plinth_Area,Table_Fans,Table_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count, "+
 					"Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs, Bulbs_Count, ReadingTables, ReadingTables_Count,`S-Type-Chairs`,"+
 					"`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count, "+
 					"`Principal-Table`, `Principal-Table-Count`, `Principal-Chair` ,`Principal-Chair-Count`, `Locker-Units`, `Locker-Units-Count` ) "+
-					" VALUES (:principalBuildingId,:schoolBuildingId,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,:ceilingFansCount,"+
+					" VALUES (:principalBuildingId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,:ceilingFansCount,"+
 					":tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables,:readingTablesCount,:sTypeChairs,"+
 					":sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira,:storeWellAlmiraCount,:stools,:stoolsCount, "+
 					":principalTable, :principalTableCount, :principalChair,:principalChairCount, :lockerUnits, :lockerUnitsCount) "+
-					" ON DUPLICATE KEY UPDATE Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,"+
 					"ReadingTables=:readingTables,ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
@@ -122,11 +122,11 @@ public class SchoolBuildingDao {
 
 	public void updateAdminEntranceData(JSONObject jsonObject) { 
 		try {
-			String ENTRANCE_MERGE_SQL = "INSERT INTO Entrance_Room (Entrance_Hall_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
+			String ENTRANCE_MERGE_SQL = "INSERT INTO Entrance_Room (Entrance_Hall_Id, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
 					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  Stools , Stools_Count ) "+
-					" VALUES (:entranceHallId,:schoolBuildingId,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
+					" VALUES (:entranceHallId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:stools,:stoolsCount )"+
-					" ON DUPLICATE KEY UPDATE Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,"+
 					"Stools=:stools,Stools_Count=:stoolsCount";
@@ -139,15 +139,15 @@ public class SchoolBuildingDao {
 			
 	public void updateAdminStoreData(JSONObject jsonObject) { 
 		try {
-			String ENTRANCE_MERGE_SQL = "INSERT INTO Store_Room (Store_Room_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
+			String ENTRANCE_MERGE_SQL = "INSERT INTO Store_Room (Store_Room_Id, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
 					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, "+
 					"ReadingTables_Count,`S-Type-Chairs`,`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`, "+
 					"`Store-Well-Almira_Count`,Stools , Stools_Count , `Locker-Units`, `Locker-Units-Count` ) "+
-					" VALUES (:storeRoomId,:schoolBuildingId,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
+					" VALUES (:storeRoomId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables, "+
 					":readingTablesCount,:sTypeChairs,:sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira, "+
 					":storeWellAlmiraCount,:stools,:stoolsCount,:lockerUnits, :lockerUnitsCount) "+
-					" ON DUPLICATE KEY UPDATE Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,ReadingTables=:readingTables,"+
 					"ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
@@ -162,15 +162,15 @@ public class SchoolBuildingDao {
 	}
 	public void updateAdminStaffData(JSONObject jsonObject) { 
 		try {
-			String ENTRANCE_MERGE_SQL = "INSERT INTO Staff_Room (Staff_Room_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
+			String ENTRANCE_MERGE_SQL = "INSERT INTO Staff_Room (Staff_Room_Id, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
 					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, "+
 					"ReadingTables_Count,`S-Type-Chairs`,`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`, "+
 					"`Store-Well-Almira_Count`,Stools , Stools_Count , `Locker-Units`, `Locker-Units_Count` ) "+
-					" VALUES (:staffRoomId,:schoolBuildingId,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
+					" VALUES (:staffRoomId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables, "+
 					":readingTablesCount,:sTypeChairs,:sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira, "+
 					":storeWellAlmiraCount,:stools,:stoolsCount,:lockerUnits, :lockerUnitsCount) "+
-					" ON DUPLICATE KEY UPDATE Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,ReadingTables=:readingTables,"+
 					"ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
@@ -185,15 +185,15 @@ public class SchoolBuildingDao {
 	}
 	public void updateAdminGamesData(JSONObject jsonObject) { 
 		try {
-			String ENTRANCE_MERGE_SQL = "INSERT INTO Games_Room (Games_Room_Id, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
+			String ENTRANCE_MERGE_SQL = "INSERT INTO Games_Room (Games_Room_Id, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
 					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, "+
 					"ReadingTables_Count,`S-Type-Chairs`,`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`, "+
 					"`Games-Well-Almira_Count`,Stools , Stools_Count , `Locker-Units`, `Locker-Units_Count` ) "+
-					" VALUES (:gamesRoomId,:schoolBuildingId,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
+					" VALUES (:gamesRoomId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables, "+
 					":readingTablesCount,:sTypeChairs,:sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira, "+
 					":storeWellAlmiraCount,:stools,:stoolsCount,:lockerUnits, :lockerUnitsCount) "+
-					" ON DUPLICATE KEY UPDATE Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,ReadingTables=:readingTables,"+
 					"ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
@@ -208,15 +208,15 @@ public class SchoolBuildingDao {
 	}
 	public void updateLabsData(JSONObject jsonObject, String labTableName,String labColumnName,String labColumnId,String storeAlmiraCnt) { 
 		try {
-			String ENTRANCE_MERGE_SQL = "INSERT INTO `#LAB_NAME#` (`#LAB_COLUMN_NAME#`, School_Building_Id, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
+			String ENTRANCE_MERGE_SQL = "INSERT INTO `#LAB_NAME#` (`#LAB_COLUMN_NAME#`, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
 					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, "+
 					"ReadingTables_Count,`S-Type-Chairs`,`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`, "+
 					"`#STORE_WALL_ALMIRA_COUNT#`,Stools,Stools_Count,`Locker-Units`,`Locker-Units_Count`,Green_Board,Green_Board_Count ) "+
-					" VALUES (:#LAB_COLUMN_ID#,:schoolBuildingId,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
+					" VALUES (:#LAB_COLUMN_ID#,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables, "+
 					":readingTablesCount,:sTypeChairs,:sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira, "+
 					":storeWellAlmiraCount,:stools,:stoolsCount,:lockerUnits, :lockerUnitsCount,:greenBoard,:greenBoardCount) "+
-					" ON DUPLICATE KEY UPDATE Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,ReadingTables=:readingTables,"+
 					"ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
