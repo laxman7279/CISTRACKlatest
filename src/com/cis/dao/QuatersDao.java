@@ -341,6 +341,54 @@ public class QuatersDao {
 		return utiljson;
 	}
 
-
-
+	public JSONObject getEPWHallDetails(int id,String tablename, String wherecolumn )
+	{
+		String query ="Select Institution_Id,EP_Waiting_Id,Block_Id,Floor_Id,Plinth_Area,Ceiling_Fans,Ceiling_Fans_Count,TubeLights,TubeLights_Count, "
+				+ " Bulbs,Bulbs_Count,S_Type_Chairs,S_Type_Chairs_Count,Chairs,Chairs_Count,Tables,Tables_Count,Stools,Stools_Count,Wall_Mount_Fans, "	
+			    + " Wall_Mount_Fans_Count,Pedestal_Fans,Pedestal_Fans_Count,Doors,Doors_Count,Windows,Windows_Count,Ventilators,Ventilators_Count "
+				+ " from EP_WaitingHall where Institution_Id = "+id+" ";
+	
+	SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
+	JSONObject DormitoryDetailsJson = new JSONObject();
+	while (rs.next()) {
+		try {
+			DormitoryDetailsJson.put("Institution_Id", rs.getInt("Institution_Id"));
+			DormitoryDetailsJson.put("EP_Waiting_Id", rs.getInt("EP_Waiting_Id"));
+			DormitoryDetailsJson.put("Block_Id", rs.getInt("Block_Id"));
+			DormitoryDetailsJson.put("Floor_Id", rs.getInt("Floor_Id"));
+			DormitoryDetailsJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
+			DormitoryDetailsJson.put("Ceiling_Fans", "Y".equalsIgnoreCase(rs.getString("Ceiling_Fans")) ? true : false);
+			DormitoryDetailsJson.put("Ceiling_Fans_Count", rs.getInt("Ceiling_Fans_Count"));
+			DormitoryDetailsJson.put("TubeLights", "Y".equalsIgnoreCase(rs.getString("TubeLights")) ? true : false);
+			DormitoryDetailsJson.put("TubeLights_Count", rs.getInt("TubeLights_Count"));
+			DormitoryDetailsJson.put("Bulbs", "Y".equalsIgnoreCase(rs.getString("Bulbs")) ? true : false);
+			DormitoryDetailsJson.put("Bulbs_Count", rs.getInt("Bulbs_Count"));
+			DormitoryDetailsJson.put("S_Type_Chairs", "Y".equalsIgnoreCase(rs.getString("S_Type_Chairs")) ? true : false);
+			DormitoryDetailsJson.put("S_Type_Chairs_Count", rs.getInt("S_Type_Chairs_Count"));
+			DormitoryDetailsJson.put("Chairs", "Y".equalsIgnoreCase(rs.getString("Chairs")) ? true : false);
+			DormitoryDetailsJson.put("Chairs_Count", rs.getInt("Chairs_Count"));
+			DormitoryDetailsJson.put("Tables", "Y".equalsIgnoreCase(rs.getString("Tables")) ? true : false);
+			DormitoryDetailsJson.put("Tables_Count", rs.getInt("Tables_Count"));
+			DormitoryDetailsJson.put("Stools", "Y".equalsIgnoreCase(rs.getString("Stools")) ? true : false);
+			DormitoryDetailsJson.put("Stools_Count", rs.getInt("Stools_Count"));
+			DormitoryDetailsJson.put("Wall_Mount_Fans", "Y".equalsIgnoreCase(rs.getString("Wall_Mount_Fans")) ? true : false);
+			DormitoryDetailsJson.put("Wall_Mount_Fans_Count", rs.getInt("Wall_Mount_Fans_Count"));
+			DormitoryDetailsJson.put("Pedestal_Fans", "Y".equalsIgnoreCase(rs.getString("Pedestal_Fans")) ? true : false);
+			DormitoryDetailsJson.put("Pedestal_Fans_Count", rs.getInt("Pedestal_Fans_Count"));
+			DormitoryDetailsJson.put("Doors", "Y".equalsIgnoreCase(rs.getString("Doors")) ? true : false);
+			DormitoryDetailsJson.put("Doors_Count", rs.getInt("Doors_Count"));
+			DormitoryDetailsJson.put("Windows", "Y".equalsIgnoreCase(rs.getString("Windows")) ? true : false);
+			DormitoryDetailsJson.put("Windows_Count", rs.getInt("Windows_Count"));
+			DormitoryDetailsJson.put("Ventilators", "Y".equalsIgnoreCase(rs.getString("Ventilators")) ? true : false);
+			DormitoryDetailsJson.put("Ventilators_Count", rs.getInt("Ventilators_Count"));
+		} catch (InvalidResultSetAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	return DormitoryDetailsJson;
+	}
 }

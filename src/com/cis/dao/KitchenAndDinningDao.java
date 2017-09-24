@@ -23,7 +23,7 @@ private final JdbcTemplate jdbcTemplate;
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
-	public JSONObject getTableDetails(int id,String tablename, String wherecolumn )
+	public JSONObject getTableDetails11(int id,String tablename, String wherecolumn )
 	{
 		StringBuilder query = new StringBuilder();
 

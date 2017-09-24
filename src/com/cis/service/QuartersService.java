@@ -19,4 +19,6 @@ public interface QuartersService {
 	public JSONObject getToiletDetails(int staffquarterId,String tablename, String wherecolumn,int buildingid);	
 	
 	public JSONObject getTableDetails(int id,String tablename, String wherecolumn );
+	
+	public JSONObject getEPWHallDetails(int id,String tablename, String wherecolumn );
 }

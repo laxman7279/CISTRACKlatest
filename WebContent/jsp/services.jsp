@@ -149,6 +149,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		switchOthers();
 		switchDinning();
 		switchKitchen();
+		switchWaitingHall();
 
 	}
 	function switchKitchen() {
@@ -172,6 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		document.getElementById('stats-div').style.display = 'none';
 		document.getElementById('Dinning-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 		getKitchenDetails();
 
 	}
@@ -197,6 +199,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		document.getElementById('stats-div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 		
 		getDiningDetails();
 
@@ -224,6 +227,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('stats-div').style.display = 'none';
 		document.getElementById('Dinning-Div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 
 	}
 	function switchClass() {
@@ -290,6 +294,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			$('#switchKitchen').removeClass('active');
 
 		}
+		
+		if ($('#switchWaiting').hasClass('active')) {
+
+			//alert('switchOthers');
+
+			$('#switchWaiting').removeClass('active');
+
+		}
 
 	}
 
@@ -319,6 +331,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('Others-Div').style.display = 'none';
 		document.getElementById('Dinning-Div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 		
 		
 	}
@@ -343,6 +356,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('stats-div').style.display = 'none';
 		document.getElementById('Dinning-Div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 		
 		getStaffQuarters();
 	}
@@ -368,6 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('stats-div').style.display = 'none';
 		document.getElementById('Dinning-Div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 		
 		getPrinQuarters();
 	}
@@ -392,6 +407,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('stats-div').style.display = 'none';
 		document.getElementById('Dinning-Div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 
 	}
 
@@ -416,9 +432,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('stats-div').style.display = 'none';
 		document.getElementById('Dinning-Div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('EPWH-Div').style.display = 'none';
 	}
 
-	
+	function switchWaitingHall() {
+		switchClass();
+
+		$('#epwhdiv').addClass('active');
+		//populateOtherDetails();
+		//alert('others report');
+
+		//alert(document.getElementById('Dorm-Div').style.display);
+		if (document.getElementById('EPWH-Div').style.display == 'none')
+			document.getElementById('EPWH-Div').style.display = 'block';
+		else
+			document.getElementById('EPWH-Div').style.display = 'none';
+
+		document.getElementById('School-Div').style.display = 'none';
+		document.getElementById('Overview-Div').style.display = 'none';
+		document.getElementById('Staff-Div').style.display = 'none';
+		document.getElementById('Principal-Div').style.display = 'none';
+		document.getElementById('Dorm-Div').style.display = 'none';
+		document.getElementById('stats-div').style.display = 'none';
+		document.getElementById('Dinning-Div').style.display = 'none';
+		document.getElementById('Kitchen-Div').style.display = 'none';
+		document.getElementById('Others-Div').style.display = 'none';
+	}
 
 	
 
@@ -902,7 +941,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li  class="list-inline-item" onclick="switchKitchen()" id="switchKitchen"><a href="#Kitchen-Div"><B><font color="black">Kitchen</font></B></a></li>
 					<li  class="list-inline-item" onclick="switchDinning()" id="switchDinning"><a href="#Dinning-Div"><B><font color="black">Dinning</font></B></a></li>
 				    <li  class="list-inline-item" onclick="switchOthers()" id="switchOthers"><a href="#Others-Div"><B><font color="black">Others</font></B></a></li>
-
+				    <li  class="list-inline-item" onclick="switchWaitingHall()" id="switchWaiting"><a href="#EPWH-Div"><B><font color="black">Parent Waiting Hall</font></B></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -1086,6 +1125,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Others -->
 	<div id="Others-Div" style="background-color: #b3c2ff; padding-bottom: 40px; padding-left: 70px; padding-right: 40px; padding-top: 40px; margin: 10px; display: none;">
 		<jsp:include page="others.jsp" /> 
+	</div>
+	
+	<div id="EPWH-Div" style="background-color: #b3c2ff; padding-bottom: 40px; padding-left: 70px; padding-right: 40px; padding-top: 40px; margin: 10px; display: none;">
+		<jsp:include page="epwaitinghall.jsp" /> 
 	</div>
 	<!--others-->
 
