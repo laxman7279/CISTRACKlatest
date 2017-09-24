@@ -44,7 +44,19 @@
 			<option value='st'>Select Type</option><option value='250LPH'>250LPH</option>
 			<option value='500LPH'>500LPH</option><option value='1000LPH'>1000LPH</option>
 			</select></td>
+			
+			<td><a href="#"><b style="color: black">Fly Catchers</b></a> <br>
+				<input type="text" name="NumofFlyCatcher" id="NumofFlyCatcher" /></td>
+				
 		</tr>
+		<tr>
+			<td><a href="#"><b style="color: black">Tube Lights</b></a> <br>
+				<input type="text" name="NumofTubelights" id="NumofTubelights" /></td>
+			<td><a href="#"><b style="color: black">Fans </b></a> <br>
+				<input type="text" name="NumofFans" id="NumofFans" /></td>
+		</tr>
+		
+		
 	</table>
 	<input type="text" name="Dinning_id" id="Dinning_id" hidden="true" /> 
 	<input type="text" name="Institution_Id" id="Institution_Id" hidden="true" />
