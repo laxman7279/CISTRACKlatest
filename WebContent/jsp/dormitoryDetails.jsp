@@ -1033,6 +1033,15 @@ function getDmCommonAreaDetails(){
 			$("#d_commonarea_solar_powersystem_check").attr('checked',data.Solor_Power_System);
 			$("#d_commonarea_inventers").attr('checked',data.Inverters);
 			$("#d_commonarea_inverter_capacity_check").attr('checked',data.Inverter_Capacity);
+			$("#d_commonarea_ro_plant").val(data.RO_Plant_Capacity);
+			addTypeCapacity('#d_commonarea_watertank','dwater');
+			var waterJson = data.Water_Json;
+			waterJson = waterJson.replace(/=/g,'":"').replace(/, /g,'", "').replace(/"{|{/g,'{"').replace(/}"|}/g,'"}');
+			waterJson = $.parseJSON(waterJson);
+			$.each(waterJson,function(i,obj){
+				$('#dwater_waterTank_'+i).val(obj.type);
+				$('#dwater_capacity_'+i).val(obj.capacity);
+			});
 		},
 		failure : function(err) {
 			alert("Failed!");
@@ -1061,7 +1070,7 @@ $('#dormitorySaveDiv').on('click',function(){
 		});
 		if($(divThis).attr('dbname') == 'commonArea'){
 			$('div#dwater >div.table-responsive >table >tbody >tr').each(function(){
-				waterJson.push({"type":$(this).find('select').val() ,"capacity":($(this).val() == ''?'0':$(this).val()) });
+				waterJson.push({"type":$(this).find('select').val() ,"capacity":($(this).find('input').val() == ''?'0':$(this).find('input').val()) });
 			});
 			childJson['waterJson'] = waterJson;
 		}

@@ -795,7 +795,15 @@ function getSchoolDetails() {
 				$("#S_solar_powersystem").val(data.Solor_Power_System_Count);
 				$("#S_inverter_capacity").val(data.Inverter_Capacity_Count);
 				$("#S_inverter_capacity_check").attr('checked',data.Inverters);
-				
+				$("#S_Ro_Plant").val(data.RO_Plant_Capacity);
+				addTypeCapacity('#S_watertank','sbwater');
+				var waterJson = data.Water_Json;
+				waterJson = waterJson.replace(/=/g, '":"').replace(/, /g, '", "').replace(/"{|{/g, '{"').replace(/}"|}/g, '"}');
+				waterJson = $.parseJSON(waterJson);
+				$.each(waterJson,function(i,obj){
+					$('#sbwater_waterTank_'+i).val(obj.type);
+					$('#sbwater_capacity_'+i).val(obj.capacity);
+				});
 			},
 			failure : function() {
 				alert("Failed!");

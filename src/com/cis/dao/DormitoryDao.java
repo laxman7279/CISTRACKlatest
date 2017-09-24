@@ -440,8 +440,8 @@ public class DormitoryDao {
 	}
 
 public JSONObject getDmCommonAreaDetails(int dormitoryId, String type) {
-	String query ="select Dormitory_Id,CommonArea_Id,Entance_Lobby,Entance_Lobby_Count,Warandah,Warandah_Count,Stair_Case,Stair_Case_Count, "
-				+ " Water_Tank_Count,Solor_Power_System,Solor_Power_System_Count,Inverters,Inverters_Count,Inverter_Capacity,Inverter_Capacity_Count "
+	String query ="select Dormitory_Id,CommonArea_Id,Entance_Lobby,Entance_Lobby_Count,Warandah,Warandah_Count,Stair_Case,Stair_Case_Count,RO_Plant_Capacity, "
+				+ " CONVERT(Water_Json USING utf8) as Water_Json,Water_Tank_Count,Solor_Power_System,Solor_Power_System_Count,Inverters,Inverters_Count,Inverter_Capacity,Inverter_Capacity_Count "
 				+ " from D_CommonArea where  Dormitory_Id = "+dormitoryId+" and  Building_Type ='"+type+"'";
 
 SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -457,12 +457,15 @@ while (rs.next()) {
 		DormitoryDetailsJson.put("Stair_Case", "Y".equalsIgnoreCase(rs.getString("Stair_Case")) ? true : false);
 		DormitoryDetailsJson.put("Stair_Case_Count", rs.getInt("Stair_Case_Count"));
 		DormitoryDetailsJson.put("Water_Tank_Count", rs.getInt("Water_Tank_Count"));
+		DormitoryDetailsJson.put("Water_Json", rs.getObject("Water_Json"));
 		DormitoryDetailsJson.put("Solor_Power_System", "Y".equalsIgnoreCase(rs.getString("Solor_Power_System")) ? true : false);
 		DormitoryDetailsJson.put("Solor_Power_System_Count", rs.getInt("Solor_Power_System_Count"));
 		DormitoryDetailsJson.put("Inverters", "Y".equalsIgnoreCase(rs.getString("Inverters")) ? true : false);
 		DormitoryDetailsJson.put("Inverters_Count", rs.getInt("Inverters_Count"));
 		DormitoryDetailsJson.put("Inverter_Capacity", "Y".equalsIgnoreCase(rs.getString("Inverter_Capacity")) ? true : false);
 		DormitoryDetailsJson.put("Inverter_Capacity_Count", rs.getInt("Inverter_Capacity_Count"));
+		DormitoryDetailsJson.put("RO_Plant_Capacity", rs.getString("RO_Plant_Capacity"));
+		
 	} catch (InvalidResultSetAccessException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

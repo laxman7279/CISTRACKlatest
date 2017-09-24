@@ -162,15 +162,16 @@ public class DormitoryUpdateDao {
 		try {
 			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO D_CommonArea (Dormitory_Id, CommonArea_Id,Entance_Lobby, Entance_Lobby_Count, Warandah, "+
 						"Warandah_Count, Stair_Case, Stair_Case_Count, Water_Tank_Count, Solor_Power_System, Solor_Power_System_Count, Inverters, "+
-						" Inverters_Count, Inverter_Capacity, Inverter_Capacity_Count,Water_Json,Building_Type) "+
+						" Inverters_Count, Inverter_Capacity, Inverter_Capacity_Count,Water_Json,Building_Type,RO_Plant_Capacity) "+
 						" VALUES (:dormitoryId,:buildingId,:entranceLobby,:entranceLobbyCnt,:warandah,:warandahCnt,:stairCase,:stairCaseCnt,:waterTankCnt,"+
-						" :solarPowerSystem,:solarPowerSystemCnt,:inventersCnt,:inventersCnt,:inventersCapacity,:inventersCapacity ,'','D')"+
+						" :solarPowerSystem,:solarPowerSystemCnt,:inventersCnt,:inventersCnt,:inventersCapacity,:inventersCapacity,:waterJson,'D',:roPlant)"+
 						"ON DUPLICATE KEY UPDATE Entance_Lobby=:entranceLobby,Entance_Lobby_Count=:entranceLobbyCnt,Warandah=:warandah,"+
 						" Warandah_Count=:warandahCnt,Stair_Case=:stairCase,Stair_Case_Count=:stairCaseCnt,Water_Tank_Count=:waterTankCnt,"+
 						" Solor_Power_System=:solarPowerSystem,Solor_Power_System_Count=:solarPowerSystemCnt,Inverters=:inventers,"+
-						" Inverters_Count=:inventersCnt,Inverter_Capacity=:inventersCapacity,Inverter_Capacity_Count=:inventersCapacity";
+						" Inverters_Count=:inventersCnt,Inverter_Capacity=:inventersCapacity,Inverter_Capacity_Count=:inventersCapacity,RO_Plant_Capacity=:roPlant,Water_Json=:waterJson";
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 			System.out.println(":::::"+getExecuteSql(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap));
+			STAFF_QUARTERS_OBJECT_MERGE_SQL = STAFF_QUARTERS_OBJECT_MERGE_SQL.replaceAll(":waterJson", "'"+paramMap.get("waterJson").toString()+"'"); 
 			getNamedJdbcTemplate().update(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap);
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -462,7 +462,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	function addTypeCapacity($this,divKey) {
 		var rows = "";
 		for (var i = 0; i < $($this).val(); i++) {
-			rows += "<div class='table-responsive'><table class='table'><tr><td><a href='#' style='padding-bottom: 10px;'><label  style='color:black;'>Type</label></a><select name='waterTank_"+i+" id='waterTank_"+i+" class='form-control'><option value='st'>Select Type</option><option value='RCC'>RCC</option><option value='PVC'>PVC</option><option value='BOTH'>BOTH</option></select> </td><td style='margin-bottom:20px;'><a href='#'><b style='color:black;'>Capacity</b></a><input type='text' class='form-control'></td></tr></table></div>";
+			rows += "<div class='table-responsive'><table class='table'><tr><td><a href='#' style='padding-bottom: 10px;'><label  style='color:black;'>Type</label></a><select name='"+divKey+"_waterTank_"+i+"' id='"+divKey+"_waterTank_"+i+"' class='form-control'><option value='st'>Select Type</option><option value='RCC'>RCC</option><option value='PVC'>PVC</option><option value='BOTH'>BOTH</option></select> </td><td style='margin-bottom:20px;'><a href='#'><b style='color:black;'>Capacity</b></a><input type='text' class='form-control' name='"+divKey+"_capacity_"+i+"' id='"+divKey+"_capacity_"+i+"'></td></tr></table></div>";
 		}
 		$("#"+divKey).html(rows);
 	}

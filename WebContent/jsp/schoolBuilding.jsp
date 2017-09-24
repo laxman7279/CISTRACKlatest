@@ -1201,9 +1201,9 @@
 								dbname="inventersCapacity" /></li>
 							<li style="margin-bottom: 20px;"><a href="#"><b
 									style="color: black">RO Plant</b></a> <br> 
-									<select name='S_Ro_Plant' id='S_Ro_Plant' >
-									<option value='st'>Select Type</option><option value='250LPH'>250LPH</option>
-									<option value='500LPH'>500LPH</option><option value='1000LPH'>1000LPH</option>
+									<select name="S_Ro_Plant" id="S_Ro_Plant" dbname="roPlant" >
+									<option value="st">Select Type</option><option value="250LPH">250LPH</option>
+									<option value="500LPH">500LPH</option><option value="1000LPH">1000LPH</option>
 									</select></li>
 						</ul>
 					</div>
@@ -1272,11 +1272,11 @@ $('#schoolBuildingSaveDiv').on('click',function(){
 			$(divHrefId).find('input').each(function(){
 				divJson[$(this).attr('dbname')] = $(this).attr('type')=='checkbox'?($(this).is(':checked')?'Y':'N'):($(this).val() == ''?'0':$(this).val());
 			});
-			$($this).find('select').each(function(){
+			$(divHrefId).find('select').each(function(){
 				divJson[$(this).attr('dbname')] = $(this).val();
 			});
 			$(divHrefId).find('div#sbwater >div.table-responsive >table >tbody >tr').each(function(){
-				waterJson.push({"type":$(this).find('select').val() ,"capacity":($(this).val() == ''?'0':$(this).val()) });
+				waterJson.push({"type":$(this).find('select').val() ,"capacity":($(this).find('input').val() == ''?'0':$(this).find('input').val()) });
 			});
 			divJson['waterJson'] = waterJson;
 		}
