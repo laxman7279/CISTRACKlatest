@@ -232,6 +232,43 @@ public class OthersDao {
 			e.printStackTrace();
 		}
 	}
+	public void updateDormitoryToiletData(JSONObject jsonObject) { 
+		try {
+			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO O_Toilets (Others_Id,Toilets_Id,Exhaust_Fans,Exhaust_Fans_Count,TubeLights,"+
+					"TubeLights_Count,Bulbs,Bulbs_Count,Indian_Toilet,Indian_Toilet_Count,Water_Closet,Water_Closet_Count,Running_Water,Running_Water_Count,"+
+					"Flush_System,Flush_System_Count) "+
+					" VALUES (:othersId,:othersId,:exhaustFans,:exhaustFansCnt,:tubeLights,:tubeLightsCnt,:bulbs,:bulbsCnt,:indianToilets,"+
+					" :indianToiletsCnt,:waterCloset,:waterClosetCnt,:runningWater,:runningWaterCnt,:flushSystem,:flushSystemCnt )"+
+					"ON DUPLICATE KEY UPDATE Exhaust_Fans=:exhaustFans,Exhaust_Fans_Count=:exhaustFansCnt,TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCnt,"+
+					" Bulbs=:bulbs,Bulbs_Count=:bulbsCnt,Indian_Toilet=:indianToilets,Indian_Toilet_Count=:indianToiletsCnt,Water_Closet=:waterCloset,"+
+					" Water_Closet_Count=:waterClosetCnt,Running_Water=:runningWater,Running_Water_Count=:runningWaterCnt,Flush_System=:flushSystem,Flush_System_Count=:flushSystemCnt";
+			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
+			System.out.println(":::::"+STAFF_QUARTERS_OBJECT_MERGE_SQL.toString()); 
+			System.out.println(":::::"+paramMap.toString());
+			System.out.println(":::::"+getExecuteSql(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap));
+			getNamedJdbcTemplate().update(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void updateDormitoryBathRoomData(JSONObject jsonObject) { 
+		try {
+			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO O_Bathrooms (Others_Id,Bathrooms_Id,Exhaust_Fans,Exhaust_Fans_Count,TubeLights,"+
+						"TubeLights_Count,Bulbs,Bulbs_Count,Quantity,Quantity_Count,GeeZers,Geezers_Count,Washing_Area,Washing_Area_Count)"+
+						" VALUES (:othersId,:othersId,:exhaustFans,:exhaustFansCnt,:tubeLights,:tubeLightsCnt,:bulbs,:bulbsCnt,:quantity,"+
+						" :quantityCnt,:geezers,:geezersCnt,:washingArea,:washingAreaCnt)"+
+						"ON DUPLICATE KEY UPDATE Exhaust_Fans=:exhaustFans,Exhaust_Fans_Count=:exhaustFansCnt,TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCnt,"+
+						" Bulbs=:bulbs,Bulbs_Count=:bulbsCnt,Quantity=:quantity,Quantity_Count=:quantityCnt,GeeZers=:geezers,"+
+						" Geezers_Count=:geezersCnt,Washing_Area=:washingArea,Washing_Area_Count=:washingAreaCnt";
+			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
+			System.out.println(":::::"+STAFF_QUARTERS_OBJECT_MERGE_SQL.toString()); 
+			System.out.println(":::::"+paramMap.toString());
+			System.out.println(":::::"+getExecuteSql(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap)); 
+			getNamedJdbcTemplate().update(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public String getExecuteSql(String query,Map<String, Object> map){
 		for (Map.Entry<String, Object> entry : map.entrySet()) {
 			query = query.replaceAll(":"+entry.getKey()+",", "'"+entry.getValue()+"',");
