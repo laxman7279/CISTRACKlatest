@@ -42,6 +42,9 @@ public class OthersServiceImpl {
 			othersDao.updateSanitarySystemDetails(othersJson.getJSONObject("sanitarySystemObj")); 
 			othersDao.updateOverheadTankDetails(othersJson.getJSONObject("overheadTankObj")); 
 			othersDao.updatePlayGroundDetails(othersJson.getJSONObject("playGroundObj")); 
+			othersDao.updateDormitoryToiletData(othersJson.getJSONObject("toiletsObj"));
+			othersDao.updateDormitoryBathRoomData(othersJson.getJSONObject("bathRoomsObj"));
+			
 			System.out.println("::Successfully Saved:::");
 		} catch (Exception e) {
 			e.printStackTrace(); 
