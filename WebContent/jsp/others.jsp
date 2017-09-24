@@ -2,10 +2,7 @@
 	<label style="padding-right: 20px;">Others</label> <input type="checkbox" />
 </h3>
 <br>
-<br>
 <div id="othersDetailsDiv">
-<ul>
-	<li style="margin-bottom: 20px;">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default" >
 				<div class="panel-heading">
@@ -67,8 +64,6 @@
 				</div>
 			</div>
 		</div>
-	</li>
-	<li style="margin-bottom: 20px;">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -110,13 +105,6 @@
 									<td><a href="#">Cots</a> <br> <input type="text"
 										name="CotsCount" id="CotsCount" /></td>
 								</tr>
-
-								<tr>
-									<td><a href="#">Glass Door Almira</a> <br> <input
-										type="text" name="GDAlmiraCount" id="GDAlmiraCount" /></td>
-									<td><a href="#">Store well Almira</a> <br> <input
-										type="text" name="SWAlmairaCount" id="SWAlmairaCount" /></td>
-								</tr>
 								<tr>
 									<td><a href="#">Length (in sft)</a> <br> <input
 										type="text" name="Length" id="Length" /></td>
@@ -129,14 +117,22 @@
 									<td><a href="#">Table Fans</a> <br> <input
 										type="text" name="TableFansCount" id="TableFansCount" /></td>
 								</tr>
+								<tr>
+									<td><a href="#">Glass Door Almira</a> <br> <input
+										type="text" name="GDAlmiraCount" id="GDAlmiraCount" /></td>
+									<td><a href="#">Store well Almira</a> <br> <input
+										type="text" name="SWAlmairaCount" id="SWAlmairaCount" /></td>
+								</tr>
+								<tr>
+									<td><a href="#">Wooden Almira</a> <br> <input
+										type="text" name="WoodenAlmairaCount" id="WoodenAlmairaCount" /></td>
+								</tr>
 							</table>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</li>
-	<li style="margin-bottom: 20px;">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -195,8 +191,6 @@
 						</div>
 			</div>
 		</div>
-	</li>
-	<li style="margin-bottom: 20px;">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -282,8 +276,6 @@
 				</div>
 			</div>
 		</div>
-	</li>
-	<li style="margin-bottom: 20px;">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -345,8 +337,6 @@
 				</div>
 			</div>
 		</div>
-	</li>
-	<li style="margin-bottom: 20px;">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -417,16 +407,13 @@
 				</div>
 			</div>
 		</div>
-	</li>
-	<li style="margin-bottom: 20px;">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
 								href="#collapse1009" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" >Overhead
-								Reservoir
+								href="#" >Overhead Reservoir
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
 								name="OverheadTank" id="OverheadTank" />
 					</h4>
@@ -462,16 +449,14 @@
 					</div>
 				</div>
 			</div>
-			</li>
-	<li style="margin-bottom: 20px;">
+			</div>
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
 								href="#collapse1011" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" >Play
-								Ground
+								href="#" >Play Ground
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
 								name="PlayGround" id="PlayGround" />
 					</h4>
@@ -545,8 +530,103 @@
 				</div>
 			</div>
 		</div>
-	</li>
-</ul>
+	<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">												
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#o_toilets_collapse"> <span class="glyphicon glyphicon-menu-down" ></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Toilets
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" id="toilets" />							
+					</h4>
+				</div>
+				<div id="o_toilets_collapse" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<td><a href="#">Exhaust Fans</a> <input type="checkbox"
+										name="o_toilets_exhaustfans_check" id="o_toilets_exhaustfans_check" dbname="exhaustFans"/><br> <input
+										type="text" name=o_toilets_exhaustfans id="o_toilets_exhaustfans" dbname="exhaustFansCnt"/></td>
+									<td><a href="#">Tube Lights</a> <input type="checkbox"
+										name="o_toilets_tube_light_check" id="o_toilets_tube_light_check" dbname="tubeLights"/><br> <input
+										type="text" name="o_toilets_tube_light" id="o_toilets_tube_light" dbname="tubeLightsCnt"/></td>
+								</tr>
+								<tr>
+									<td><a href="#">Bulbs</a> <input type="checkbox"
+										name="o_toilets_bulb_check" id="o_toilets_bulb_check" dbname="bulbs"/><br> <input
+										type="text" name="o_toilets_bulb" id="o_toilets_bulb" dbname="bulbsCnt"/></td>
+									<td><a href="#">Indian Toilet</a> <input type="checkbox"
+										name="o_toilets_indian_check" id="o_toilets_indian_check" dbname="indianToilets"/><br> <input
+										type="text" name="o_toilets_indian" id="o_toilets_indian" dbname="indianToiletsCnt"/></td>
+								</tr>
+								<tr>
+									<td><a href="#">Water Closet</a> <input type="checkbox"
+										name="o_toilets_water_closet_check" id="o_toilets_water_closet_check" dbname="waterCloset"/><br> <input
+										type="text" name="o_toilets_water_closet" id="o_toilets_water_closet" dbname="waterClosetCnt"/></td>
+									<td><a href="#">Running Water</a> <input type="checkbox"
+										name="o_toilets_running_water_check" id="o_toilets_running_water_check" dbname="runningWater"/><br> <input
+										type="text" name="o_toilets_running_water" id="o_toilets_running_water" dbname="runningWaterCnt"/></td>
+								</tr>
+								<tr>
+									<td><a href="#">Flush System</a> <input type="checkbox"
+										name="o_toilets_flush_system_check" id="o_toilets_flush_system_check" dbname="flushSystem"/><br> <input
+										type="text" name="o_toilets_flush_system" id="o_toilets_flush_system" dbname="flushSystemCnt"/></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">													
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#o_bathrooms_collapse"> <span class="glyphicon glyphicon-menu-down" ></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#"  >Bathrooms
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" id="bathRooms"/>
+					</h4>
+				</div>
+				<div id="o_bathrooms_collapse" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<td><a href="#">Quantity</a> <input type="checkbox"
+										name="o_bathroom_quantity_check" id="o_bathroom_quantity_check" dbname="quantity"/><br> <input
+										type="text" name="o_bathroom_quantity" id="o_bathroom_quantity" dbname="quantityCnt"/></td>
+
+									<td><a href="#">Exhaust Fans</a> <input type="checkbox"
+										name="o_bathroom_exhaustfans_check" id="o_bathroom_exhaustfans_check" dbname="exhaustFans"/><br> <input
+										type="text" name="o_bathroom_exhaustfans" id="o_bathroom_exhaustfans" dbname="exhaustFansCnt"/></td>
+								</tr>
+								<tr>
+									<td><a href="#">Tube Lights</a> <input type="checkbox"
+										name="o_bathroom_tube_light_check" id="o_bathroom_tube_light_check" dbname="tubeLights"/><br> <input
+										type="text" name="o_bathroom_tube_light" id="o_bathroom_tube_light" dbname="tubeLightsCnt"/></td>
+
+									<td><a href="#">Bulbs</a> <input type="checkbox"
+										name="o_bathroom_bulb_check" id="o_bathroom_bulb_check" dbname="bulbs"/><br> <input
+										type="text" name="o_bathroom_bulb" id="o_bathroom_bulb" dbname="bulbsCnt"/></td>
+								</tr>
+								<tr>
+									<td><a href="#">Geezers</a> <input type="checkbox"
+										name="o_bathroom_geezers_check" id="o_bathroom_geezers_check" dbname="geezers"/><br> <input
+										type="text" name="o_bathroom_geezers" id="o_bathroom_geezers" dbname="geezersCnt"/></td>
+									<td><a href="#">Washing Area</a> <input type="checkbox"
+										placeholder="size" dbname="washingArea" ><br> <input type="text"
+										name="o_bathroom_washarea" id="o_bathroom_washarea" dbname="washingAreaCnt"/></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 </div>
 
 <div style="float: left; padding-top: 30px; padding-bottom: 30px; padding-right: 30px;"
@@ -852,21 +932,21 @@ $('#othersSaveDiv').on('click',function(){
 	console.log('-----SchoolSave-----');
 	var dropDownId = $('#institute').val();
 	var finalSaveJson = {"othersId":dropDownId,"institutionId":dropDownId};
-	$('#othersDetailsDiv >ul >li').each(function(){
+	$('#othersDetailsDiv >div').each(function(){
 		var divJson = {"othersId":dropDownId,"institutionId":dropDownId};
-		$(this).find('>div >div >div >div >div >table').find('input').each(function(){
-			divJson[formatCamcelCaseKey($(this).attr('id'))] =  $(this).attr('type')=='checkbox'?($(this).is(':checked')?'Y':'N'):($(this).val() == ''?'0':$(this).val());
+		$(this).find('>div >div >div >div >table').find('input').each(function(){
+			divJson[$(this).attr('dbname') == undefined ? formatCamcelCaseKey($(this).attr('id')) : $(this).attr('dbname')] =  $(this).attr('type')=='checkbox'?($(this).is(':checked')?'Y':'N'):($(this).val() == ''?'0':$(this).val());
 			if($(this).attr('type')=='radio'){
 				console.log($(this).attr('name'));
 				console.log($('input[name="'+$(this).attr('name')+'"]:first'));
 				console.log($('input[name="'+$(this).attr('name')+'"]:last'));
-				divJson[formatCamcelCaseKey($(this).attr('name'))] = $('input[name="'+$(this).attr('name')+'"]:first').is(':checked') ? $('input[name="'+$(this).attr('name')+'"]:first').val() : $('input[name="'+$(this).attr('name')+'"]:last').val(); 
+				divJson[$(this).attr('dbname') == undefined ? formatCamcelCaseKey($(this).attr('name')) : $(this).attr('dbname')] = $('input[name="'+$(this).attr('name')+'"]:first').is(':checked') ? $('input[name="'+$(this).attr('name')+'"]:first').val() : $('input[name="'+$(this).attr('name')+'"]:last').val(); 
 			}
 		});
-		$(this).find('>div >div >div >div >div >table').find('select').each(function(){
-			divJson[formatCamcelCaseKey($(this).attr('id'))] = $(this).val();
+		$(this).find('>div >div >div >div >table').find('select').each(function(){
+			divJson[$(this).attr('dbname') == undefined ? formatCamcelCaseKey($(this).attr('id')) : $(this).attr('dbname')] = $(this).val();
 		});
-		$(this).find('>div >div >div >h4 >input').each(function(){
+		$(this).find('>div >div >h4 >input').each(function(){
 			finalSaveJson[formatCamcelCaseKey($(this).attr('id'))] = $(this).is(':checked') ? 'Y' : 'N';
 			finalSaveJson[formatCamcelCaseKey($(this).attr('id'))+'Obj'] = divJson;
 		});

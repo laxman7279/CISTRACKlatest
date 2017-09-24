@@ -4,6 +4,8 @@
 <div class="container"
 	style="margin-top: 10px; background-color: white; color: black;">
 	<br>
+	<div><label>Year Of Construction</label>&nbsp;&nbsp;<input type="text" name="SB_Year_Of_Construction" id="SB_Year_Of_Construction"  /></div>
+	<br/>
 	<div class="row">
 		<div class="col col-md-4 schoolBldTabsDiv">
 			<ul class="nav nav-tabs nav-stacked text-center" role="tablist">
@@ -108,9 +110,10 @@
 														name="L_Store-Well-Almira_Count"
 														id="L_Store-Well-Almira_Count" /></td>
 												</tr>
-
-
-
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 <input type="text" name="L_Wooden_Count" id="L_Wooden_Count" /></td>
+												</tr>
 											</table>
 										</div>
 									</div>
@@ -217,9 +220,10 @@
 														id="P_Store-Well-Almira" /><br> <input type="text"
 														name="P_Store-Well-Almira_Count"
 														id="P_Store-Well-Almira_Count" /></td>
+													<td><a href="#">Wooden Almira</a><br>
+													 <input type="text" name="P_Wooden_Count" id="P_Wooden_Count" /></td>
 												</tr>
-												<tr><td><input type="text" name="P_Principal_Room_Id"
-													id="P_Principal_Room_Id" hidden="true" /></td></tr>
+												<tr><td><input type="text" name="P_Principal_Room_Id" id="P_Principal_Room_Id" hidden="true" /></td></tr>
 											</table>
 										</div>
 									</div>
@@ -361,18 +365,19 @@
 														type="checkbox" name="ST_Locker_Units"
 														id="ST_Locker_Units" /><br> <input type="text"
 														name="ST_Locker_Units_Count" id="ST_Locker_Units_Count" /></td>
+													<td><a href="#">S Type Chairs</a> <input
+														type="checkbox" name="ST_S_Type_Chairs"
+														id="ST_S_Type_Chairs" /><br> <input type="text"
+														name="ST_S_Type_Chairs_Count" id="ST_S_Type_Chairs_Count" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Store Well Almira</a> <input
 														type="checkbox" name="ST_Store-Well-Almira"
 														id="ST_Store-Well-Almira" /><br> <input type="text"
 														name="ST_Store-Well-Almira_Count"
 														id="ST_Store-Well-Almira_Count" /></td>
-												</tr>
-
-												<tr>
-													<td><a href="#">S Type Chairs</a> <input
-														type="checkbox" name="ST_S_Type_Chairs"
-														id="ST_S_Type_Chairs" /><br> <input type="text"
-														name="ST_S_Type_Chairs_Count" id="ST_S_Type_Chairs_Count" /></td>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="ST_Wooden_Count" id="ST_Wooden_Count" /></td>
 												</tr>
 
 											</table>
@@ -456,20 +461,20 @@
 														type="checkbox" name="SR_Locker_Units"
 														id="SR_Locker_Units" /><br> <input type="text"
 														name="SR_Locker_Units_Count" id="SR_Locker_Units_Count" /></td>
-													<td><a href="#">Store Well Almira</a> <input
-														type="checkbox" name="SR_Store-Well-Almira"
-														id="SR_Store-Well-Almira" /><br> <input type="text"
-														name="SR_Store-Well-Almira_Count"
-														id="SR_Store-Well-Almira_Count" /></td>
-												</tr>
-
-												<tr>
 													<td><a href="#">S Type Chairs</a> <input
 														type="checkbox" name="SR_S_Type_Chairs"
 														id="SR_S_Type_Chairs" /><br> <input type="text"
 														name="SR_S_Type_Chairs_Count" id="SR_S_Type_Chairs_Count" /></td>
 												</tr>
-
+												<tr>
+													<td><a href="#">Store Well Almira</a> <input
+														type="checkbox" name="SR_Store-Well-Almira"
+														id="SR_Store-Well-Almira" /><br> <input type="text"
+														name="SR_Store-Well-Almira_Count"
+														id="SR_Store-Well-Almira_Count" /></td>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="SR_Wooden_Count" id="SR_Wooden_Count" /></td>
+												</tr>
 											</table>
 										</div>
 									</div>
@@ -561,6 +566,8 @@
 														id="GR_Store-Well-Almira" /><br> <input type="text"
 														name="GR_Store-Well-Almira_Count"
 														id="GR_Store-Well-Almira_Count" /></td>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="GR_Wooden_Count" id="GR_Wooden_Count" /></td>
 												</tr>
 
 											</table>
@@ -663,7 +670,10 @@
 														type="text" name="BL_Table_Fans_Count"
 														id="BL_Table_Fans_Count" /></td>
 												</tr>
-
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="BL_Wooden_Count" id="BL_Wooden_Count" /></td>
+												</tr>
 
 											</table>
 										</div>
@@ -759,7 +769,10 @@
 														type="text" name="PL_Table_Fans_Count"
 														id="PL_Table_Fans_Count" /></td>
 												</tr>
-
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="PL_Wooden_Count" id="PL_Wooden_Count" /></td>
+												</tr>
 
 											</table>
 										</div>
@@ -855,7 +868,10 @@
 														type="text" name="CL_Table_Fans_Count"
 														id="CL_Table_Fans_Count" /></td>
 												</tr>
-
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="CL_Wooden_Count" id="CL_Wooden_Count" /></td>
+												</tr>
 
 											</table>
 										</div>
@@ -951,7 +967,10 @@
 														type="text" name="ZL_Table_Fans_Count"
 														id="ZL_Table_Fans_Count" /></td>
 												</tr>
-
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="ZL_Wooden_Count" id="ZL_Wooden_Count" /></td>
+												</tr>
 
 											</table>
 										</div>
@@ -1049,7 +1068,10 @@
 														type="text" name="CO_Table_Fans_Count"
 														id="CO_Table_Fans_Count" /></td>
 												</tr>
-
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="CO_Wooden_Count" id="CO_Wooden_Count" /></td>
+												</tr>
 
 											</table>
 										</div>
@@ -1155,9 +1177,9 @@
 
 							<li style="margin-bottom: 20px;" id="div-ul"><a href="#"><b
 									style="color: black">Water Tank </b></a> <input type="text"
-								 placeholder="enter no of tanks" id="S_watertank" name ="S_watertank"
-								id="type-capacity" dbname="waterTankCnt"></li>
-							<div id="water"></div>
+								 placeholder="enter no of tanks" id="S_watertank" onChange="addTypeCapacity(this,'sbwater');"
+								 name ="S_watertank" dbname="waterTankCnt"></li>
+							<div id="sbwater"></div>
 
 
 							<li style="margin-bottom: 20px;"><a href="#"><b
@@ -1177,6 +1199,12 @@
 									style="color: black">Inveter capacity </b></a> <br> <input
 								type="text" name="S_inverter_capacity" id="S_inverter_capacity"
 								dbname="inventersCapacity" /></li>
+							<li style="margin-bottom: 20px;"><a href="#"><b
+									style="color: black">RO Plant</b></a> <br> 
+									<select name='S_Ro_Plant' id='S_Ro_Plant' >
+									<option value='st'>Select Type</option><option value='250LPH'>250LPH</option>
+									<option value='500LPH'>500LPH</option><option value='1000LPH'>1000LPH</option>
+									</select></li>
 						</ul>
 					</div>
 				</div>
@@ -1247,7 +1275,7 @@ $('#schoolBuildingSaveDiv').on('click',function(){
 			$($this).find('select').each(function(){
 				divJson[$(this).attr('dbname')] = $(this).val();
 			});
-			$(divHrefId).find('div#waterTank >div.table-responsive >table >tbody >tr').each(function(){
+			$(divHrefId).find('div#sbwater >div.table-responsive >table >tbody >tr').each(function(){
 				waterJson.push({"type":$(this).find('select').val() ,"capacity":($(this).val() == ''?'0':$(this).val()) });
 			});
 			divJson['waterJson'] = waterJson;

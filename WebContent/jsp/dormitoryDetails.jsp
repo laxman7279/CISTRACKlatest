@@ -64,14 +64,6 @@
 										type="text" name="d_warden_bulb" id="d_warden_bulb" dbname="bulbsCnt" /></td>
 								</tr>
 								<tr>
-									<td><a href="#">Glass Door Almira</a> <input
-										type="checkbox" name="d_warden_glass_door_check" id="d_warden_glass_door_check" dbname="glassDoorAlmira" /><br>
-										<input type="text" name="d_warden_glass_door" id="d_warden_glass_door" dbname="glassDoorAlmiraCnt"  /></td>
-									<td><a href="#">Storewell Almira</a> <input
-										type="checkbox" name="d_warden_storewell_check" id="d_warden_storewell_check" dbname="storeWallAlmira" /><br>
-										<input type="text" name="d_warden_storewell" id="d_warden_storewell" dbname="storeWallAlmiraCnt" /></td>
-								</tr>
-								<tr>
 									<td><a href="#">S type Chairs</a> <input type="checkbox"
 										name="d_warden_stype_chairs_check" id="d_warden_stype_chairs_check" dbname="sTypeChairs" /><br> <input
 										type="text" name="d_warden_stype_chairs" id="d_warden_stype_chairs" dbname="sTypeChairsCnt" /></td>
@@ -115,7 +107,19 @@
 										name="d_warden_Ventilators_check" id="d_warden_Ventilators_check" dbname="ventilators" /><br> <input
 										type="text" name="d_warden_Ventilators" id="d_warden_Ventilators" dbname="ventilatorsCnt" /></td>
 								</tr>
-
+								<tr>
+									<td><a href="#">Glass Door Almira</a> <input
+										type="checkbox" name="d_warden_glass_door_check" id="d_warden_glass_door_check" dbname="glassDoorAlmira" /><br>
+										<input type="text" name="d_warden_glass_door" id="d_warden_glass_door" dbname="glassDoorAlmiraCnt"  /></td>
+									<td><a href="#">Storewell Almira</a> <input
+										type="checkbox" name="d_warden_storewell_check" id="d_warden_storewell_check" dbname="storeWallAlmira" /><br>
+										<input type="text" name="d_warden_storewell" id="d_warden_storewell" dbname="storeWallAlmiraCnt" /></td>
+								</tr>
+								<tr>
+									<td><a href="#">Wooden Almira</a> <input
+										type="checkbox" name="d_warden_wooden_check" id="d_warden_wooden_check" dbname="woodenAlmira" /><br>
+										<input type="text" name="d_warden_wooden" id="d_warden_wooden" dbname="woodenAlmiraCnt"  /></td>
+								</tr>
 							</table>
 						</div>
 					</div>
@@ -182,14 +186,6 @@
 										type="text" name="d_office_bulb" id="d_office_bulb" dbname="bulbsCnt" /></td>
 								</tr>
 								<tr>
-									<td><a href="#">Glass Door Almira</a> <input
-										type="checkbox" name="d_office_glass_door_check" id="d_office_glass_door_check" dbname="glassDoorAlmira" /><br>
-										<input type="text" name="d_office_glass_door" id="d_office_glass_door" dbname="glassDoorAlmiraCnt" /></td>
-									<td><a href="#">Storewell Almira</a> <input
-										type="checkbox" name="d_office_storewell_check" id="d_office_storewell_check" dbname="storeWallAlmira" /><br>
-										<input type="text" name="d_office_storewell" id="d_office_storewell" dbname="storeWallAlmiraCnt" /></td>
-								</tr>
-								<tr>
 									<td><a href="#">S type Chairs</a> <input type="checkbox"
 										name="d_office_stype_chairs_check" id="d_office_stype_chairs_check" dbname="sTypeChairs"/><br> <input
 										type="text" name="d_office_stype_chairs" id="d_office_stype_chairs" dbname="sTypeChairsCnt"/></td>
@@ -228,10 +224,18 @@
 									<td><a href="#">Ventilators</a> <input type="checkbox"
 										name="d_office_Ventilators_check" id="d_office_Ventilators_check" dbname="ventilators"/><br> <input
 										type="text" name="d_office_Ventilators" id="d_office_Ventilators" dbname="ventilatorsCnt"/></td>
+									<td><a href="#">Wooden Almira</a> <input
+										type="checkbox" name="d_office_wooden_check" id="d_office_wooden_check" dbname="woodenAlmira" /><br>
+										<input type="text" name="d_office_wooden" id="d_office_wooden" dbname="woodenAlmiraCnt"  /></td>
 								</tr>
-
-
-
+								<tr>
+									<td><a href="#">Glass Door Almira</a> <input
+										type="checkbox" name="d_office_glass_door_check" id="d_office_glass_door_check" dbname="glassDoorAlmira" /><br>
+										<input type="text" name="d_office_glass_door" id="d_office_glass_door" dbname="glassDoorAlmiraCnt" /></td>
+									<td><a href="#">Storewell Almira</a> <input
+										type="checkbox" name="d_office_storewell_check" id="d_office_storewell_check" dbname="storeWallAlmira" /><br>
+										<input type="text" name="d_office_storewell" id="d_office_storewell" dbname="storeWallAlmiraCnt" /></td>
+								</tr>
 							</table>
 						</div>
 					</div>
@@ -313,11 +317,7 @@
 									<td><a href="#">Stools</a> <input type="checkbox"
 										name="Plinth_Area_check" id="Plinth_Area_check" dbname="stools"/><br> <input
 										type="text" name="d_waiting_Stools" id="d_waiting_Stools" dbname="stoolsCnt"/></td>
-
 								</tr>
-
-
-
 								<tr>
 									<td><a href="#">Wall Mount Fans</a> <input type="checkbox"
 										name="d_waiting_wall_mount_fans_check" id="d_waiting_wall_mount_fans_check" dbname="wallMountFans"/><br> <input
@@ -408,14 +408,6 @@
 										type="text" name="d_clinic_bulb" id="d_clinic_bulb" dbname="bulbsCnt"/></td>
 								</tr>
 								<tr>
-									<td><a href="#">Glass Door Almira</a> <input
-										type="checkbox" name="d_clinic_glass_door_check" id="d_clinic_glass_door_check" dbname="glassDoorAlmira"/><br>
-										<input type="text" name="d_clinic_glass_door" id="d_clinic_glass_door" dbname="glassDoorAlmiraCnt"/></td>
-									<td><a href="#">Storewell Almira</a> <input
-										type="checkbox" name="Plinth_Area" id="Plinth_Area" dbname="storeWallAlmira"/><br>
-										<input type="text" name="d_clinic_storewell" id="d_clinic_storewell" dbname="storeWallAlmiraCnt"/></td>
-								</tr>
-								<tr>
 									<td><a href="#">S type Chairs</a> <input type="checkbox"
 										name="d_clinic_stype_chairs_check" id="d_clinic_stype_chairs_check" dbname="sTypeChairs"/><br> <input
 										type="text" name="d_clinic_stype_chairs" id="d_clinic_stype_chairs" dbname="sTypeChairsCnt"/></td>
@@ -458,8 +450,19 @@
 										name="d_clinic_cots_check" id="d_clinic_cots_check" dbname="cots"/><br> <input
 										type="text" name="d_clinic_cots" id="d_clinic_cots" dbname="cotsCnt"/></td>
 								</tr>
-
-
+								<tr>
+									<td><a href="#">Glass Door Almira</a> <input
+										type="checkbox" name="d_clinic_glass_door_check" id="d_clinic_glass_door_check" dbname="glassDoorAlmira"/><br>
+										<input type="text" name="d_clinic_glass_door" id="d_clinic_glass_door" dbname="glassDoorAlmiraCnt"/></td>
+									<td><a href="#">Storewell Almira</a> <input
+										type="checkbox" name="Plinth_Area" id="Plinth_Area" dbname="storeWallAlmira"/><br>
+										<input type="text" name="d_clinic_storewell" id="d_clinic_storewell" dbname="storeWallAlmiraCnt"/></td>
+								</tr>
+								<tr>
+									<td><a href="#">Wooden Almira</a> <input
+										type="checkbox" name="d_clinic_wooden_check" id="d_clinic_glass_wooden" dbname="woodenAlmira"/><br>
+										<input type="text" name="d_clinic_wooden" id="d_clinic_wooden" dbname="woodenAlmiraCnt"/></td>
+								</tr>
 							</table>
 						</div>
 					</div>
@@ -609,14 +612,11 @@
 										type="text" name="d_commonarea_stair_case" id="d_commonarea_stair_case" dbname="stairCaseCnt"/></td>
 								</tr>
 								<tr>
-									<td><a href="#">Water Tank</a> <input type="text"
-										 dbname="waterTankCnt"
-										placeholder="enter no of tanks" id="d_commonarea_watertank">
-										<li id="dtank"></li></td>
-
+									<td><a href="#">Water Tank</a> <input type="text"  dbname="waterTankCnt"
+										placeholder="enter no of tanks" id="d_commonarea_watertank" onChange="addTypeCapacity(this,'dwater');">
+									<div id="dwater"></div>
+									</td>
 								</tr>
-
-
 								<tr>
 									<td><a href="#">Solar Power System </a> <input
 										type="checkbox" name="d_commonarea_solar_powersystem_check" id="d_commonarea_solar_powersystem_check" dbname="solarPowerSystem"/><br>
@@ -629,6 +629,13 @@
 								<tr>
 									<td><a href="#">Inverter Capacity </a><br> <input
 										type="text" name="d_commonarea_inverter_capacity" id="d_commonarea_inverter_capacity" dbname="inventersCapacity" /></td>
+								</tr>
+								<tr>
+									<td><a href="#">RO Plant</a> 
+									<br> <select name='d_commonarea_ro_plant' id='d_commonarea_ro_plant' dbname="roPlant" >
+									<option value='st'>Select Type</option><option value='250LPH'>250LPH</option>
+									<option value='500LPH'>500LPH</option><option value='1000LPH'>1000LPH</option>
+									</select></td>
 								</tr>
 							</table>
 						</div>
@@ -1038,6 +1045,7 @@ function getDmCommonAreaDetails(){
 $('#dormitorySaveDiv').on('click',function(){
 	console.log('-----SchoolSave-----');
 	var dropDownId = $('#institute').val();
+	var waterJson = [];
 	var divJson = { "dormitoryId":dropDownId,"institutionId":dropDownId,"buildingId":dropDownId,'hallsArray':[] };
 	$('#dormitory >div').each(function(){
 		var $this= $(this);
@@ -1051,6 +1059,12 @@ $('#dormitorySaveDiv').on('click',function(){
 		$($this).find('>div >div.panel-collapse >div >div.table-responsive').find('select').each(function(){
 			childJson[$(this).attr('dbname')] = $(this).val();
 		});
+		if($(divThis).attr('dbname') == 'commonArea'){
+			$('div#dwater >div.table-responsive >table >tbody >tr').each(function(){
+				waterJson.push({"type":$(this).find('select').val() ,"capacity":($(this).val() == ''?'0':$(this).val()) });
+			});
+			childJson['waterJson'] = waterJson;
+		}
 		if($(divThis).attr('dbname') == 'hall'){ 
 			childJson['hallId'] = (divJson['hallsArray']).length+1;
 			(divJson['hallsArray']).push(childJson);			
@@ -1084,18 +1098,19 @@ function addHalls(){
   } else {
     var rows = "";
     for (var i = 0; i < a; i++) {
-    	 rows += "<div class='panel panel-default dormitoryHallDiv' ><div class='panel-heading'><div><h4 class='panel-title'><a data-toggle='collapse' data-parent='#accordion' href='#collapse1222".concat(i+1)+ "'><span class='glyphicon glyphicon-menu-down'></span></a>&nbsp;&nbsp;&nbsp;<a href='#' >	Hall</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' dbname='hall'/></h4> </div> "+
+    	 rows += "<div class='panel-group dormitoryHallDiv'> <div class='panel panel-default' ><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' data-parent='#accordion' href='#collapse1222".concat(i+1)+ "'><span class='glyphicon glyphicon-menu-down'></span></a>&nbsp;&nbsp;&nbsp;<a href='#' >	Hall</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' dbname='hall'/></h4> </div> "+
 		         "<div id='collapse1222".concat(i+1)+ "' class='panel-collapse collapse'> <div class='panel-body'><div class='table-responsive'> "+
 		         "<table class='table'> <tr><td> <label style='padding-right: 20px;padding-left: 90px;'><b>Block</b></label> <select name='H_Block_Id_#I#' id='H_Block_Id_#I#' dbname='blockId' class='form-control' style='width:200px;'>     <option value='0'>Select block</option> <option value='1'>1st Block</option> <option value='2'>Second Block</option> <option value='3'>Third Block</option> </select> </td>  <td> <label style='padding-right: 20px;padding-left: 90px;'><b>Floor</b></label> <select dbname='floorId' name='H_Floor_Id_#I#' id='H_Floor_Id_#I#' class='form-control' style='width:200px;'>     <option value='0'>Select floor</option> <option value='1'>Ground Floor</option> <option value='2'>First Floor</option> <option value='3'>Second Floor</option> </select> </td></tr>"+  
 		         "<tr><td>Length (in sft)<br><input type='text' name='H_Length_#I#' id='H_Length_#I#' /></td><td>Width (in sft)<br><input type='text' name='H_Width_#I#' id='H_Width_#I#' /></td></tr><tr> <td><a href='#'>Carpet Area</a> <input type='checkbox'><br> <input type='text' name='H_Plinth_Area_#I#' id ='H_Plinth_Area_#I#' dbname='carpetAreaCnt'></td><td><a href='#'>Ceiling Fans</a> <input type='checkbox' name='H_Ceiling_Fans_#I#' id ='H_Ceiling_Fans_#I#' dbname='ceilingFans'><br> <input type='text' name='H_Ceiling_Fans_Count_#I#' id ='H_Ceiling_Fans_Count_#I#' dbname='ceilingFansCnt'></td> 	</tr>  "+
 		         "<tr><td><a href='#'>Tube Lights</a> <input type='checkbox' name='H_TubeLights_#I#' id ='H_TubeLights_#I#' dbname='tubeLights'><br> <input type='text'name='H_TubeLights_Count_#I#' id ='H_TubeLights_Count_#I#' dbname='tubeLightsCnt'></td><td><a href='#'>Bulbs</a> <input type='checkbox' name='H_Bulbs_#I#' id ='H_Bulbs_#I#' dbname='bulbs'><br> <input type='text' name='H_Bulbs_Count_#I#' id ='H_Bulbs_Count_#I#' dbname='bulbsCnt'></td></tr>"+  
-		         "<tr><td><a href='#'>Glass Door Almira</a> <input type='checkbox' name='H_Glass_Door_Almira_#I#' id ='H_Glass_Door_Almira_#I#' dbname='glassDoorAlmira'><br> <input type='text' name='H_Glass_Door_Almira_Count_#I#' id ='H_Glass_Door_Almira_Count_#I#' dbname='glassDoorAlmiraCnt'></td><td><a href='#'>Storewell Almira</a> <input type='checkbox' name='H_Store_Well_Almira_#I#' id ='H_Store_Well_Almira_#I#' dbname='storeWallAlmira'><br> <input type='text' name='H_Store_Well_Almira_Count_#I#' id ='H_Store_Well_Almira_Count_#I#' dbname='storeWallAlmiraCnt'></td></tr>"+  
 		         "<tr><td><a href='#'>S type Chairs</a> <input type='checkbox' name='H_S_Type_Chairs_#I#' id ='H_S_Type_Chairs_#I#' dbname='sTypeChairs'><br> <input type='text'name='H_S_Type_Chairs_Count_#I#' id ='H_S_Type_Chairs_Count_#I#' dbname='sTypeChairsCnt'></td><td><a href='#'>Chairs</a> <input type='checkbox' name='H_Chairs_#I#' id ='H_Chairs_#I#' dbname='chairs'><br> <input type='text' name='H_Chairs_Count_#I#' id ='H_Chairs_Count_#I#' dbname='chairsCnt'></td></tr> "+
 		         "<tr><td><a href='#'>Tables</a> <input type='checkbox' name='H_Tables_#I#' id ='H_Tables_#I#' dbname='tables'><br> <input type='text' name='H_Tables_Count_#I#' id ='H_Tables_Count_#I#' dbname='tablesCnt'></td><td><a href='#'>Stools</a> <input type='checkbox' name='H_Stools_#I#' id ='H_Stools_#I#' dbname='stools'><br> <input type='text' name='H_Stools_Count_#I#' id ='H_Stools_Count_#I#' dbname='stoolsCnt'></td> </tr>  "+
 		         "<tr><td><a href='#'>Wall Mount Fans</a> <input type='checkbox' name='H_Wall_Mount_Fans_#I#' id ='H_Wall_Mount_Fans_#I#' dbname='wallMountFans'><br> <input type='text'name='H_Wall_Mount_Fans_Count_#I#' id ='H_Wall_Mount_Fans_Count_#I#' dbname='wallMountFansCnt'></td><td><a href='#'>Pedestal fans</a> <input type='checkbox' name='H_Pedestal_Fans_#I#' id ='H_Pedestal_Fans_#I#' dbname='pedestalFans'><br> <input type='text' name='H_Pedestal_Fans_Count_#I#' id ='H_Pedestal_Fans_Count_#I#' dbname='pedestalFansCnt'></td> 	</tr>"+ 	 
 		         "<tr><td><a href='#'>Doors</a> <input type='checkbox' name='H_Doors_#I#' id ='H_Doors_#I#' dbname='doors'><br> <input type='text' name='H_Doors_Count_#I#' id ='H_Doors_Count_#I#' dbname='doorsCnt'></td><td><a href='#'>Windows</a> <input type='checkbox' name='H_Windows_#I#' id ='H_Windows_#I#' dbname='windows'><br> <input type='text' name='H_Windows_Count_#I#' id ='H_Windows_Count_#I#' dbname='windowsCnt'></td> </tr> "+
-		         "<tr><td><a href='#'>2-tier Cots</a> <input type='checkbox' name='H_two_tier_cots_#I#' id ='H_two_tier_cots_#I#' dbname='2TierCots'><br> <input type='text' name='H_two_tier_cots_Count_#I#' id ='H_two_tier_cots_Count_#I#' dbname='2TierCotsCnt'></td><td><a href='#'>cots</a> <input type='checkbox' name='H_Cots_#I#' id ='H_Cots_#I#' dbname='cots'><br> <input type='text' name='H_Cots_Count_#I#' id ='H_Cots_Count_#I#' dbname='cotsCnt'></td></tr></table>"+
-		         "</div> </div> </div> </div></div></div>  ";
+		         "<tr><td><a href='#'>2-tier Cots</a> <input type='checkbox' name='H_two_tier_cots_#I#' id ='H_two_tier_cots_#I#' dbname='2TierCots'><br> <input type='text' name='H_two_tier_cots_Count_#I#' id ='H_two_tier_cots_Count_#I#' dbname='2TierCotsCnt'></td><td><a href='#'>cots</a> <input type='checkbox' name='H_Cots_#I#' id ='H_Cots_#I#' dbname='cots'><br> <input type='text' name='H_Cots_Count_#I#' id ='H_Cots_Count_#I#' dbname='cotsCnt'></td></tr>"+
+		         "<tr><td><a href='#'>Glass Door Almira</a> <input type='checkbox' name='H_Glass_Door_Almira_#I#' id ='H_Glass_Door_Almira_#I#' dbname='glassDoorAlmira'><br> <input type='text' name='H_Glass_Door_Almira_Count_#I#' id ='H_Glass_Door_Almira_Count_#I#' dbname='glassDoorAlmiraCnt'></td><td><a href='#'>Storewell Almira</a> <input type='checkbox' name='H_Store_Well_Almira_#I#' id ='H_Store_Well_Almira_#I#' dbname='storeWallAlmira'><br> <input type='text' name='H_Store_Well_Almira_Count_#I#' id ='H_Store_Well_Almira_Count_#I#' dbname='storeWallAlmiraCnt'></td></tr>"+  
+		         "<tr><td><a href='#'>Wooden Almira</a> <input type='checkbox' name='H_Wooden_Almira_#I#' id ='H_Wooden_Almira_#I#' dbname='woodenAlmira'><br> <input type='text' name='H_Wooden_Almira_Count_#I#' id ='H_Wooden_Almira_Count_#I#' dbname='woodenAlmiraCnt'></td></tr>"+  
+		         "</table></div> </div> </div></div><div></div>  ";
       rows = rows.replace(/#I#/g,i);
     }
    	$('.dormitoryHallDiv').remove();

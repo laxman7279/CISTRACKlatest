@@ -38,6 +38,13 @@
 			<td><a href="#"><b style="color: black">Drinking water taps</b></a> 
 			<br> <input type="text" name="DrinkingWaterTaps" id="DrinkingWaterTaps" /></td>
 		</tr>
+		<tr>
+			<td><a href="#"><b style="color: black">RO Plant</b></a> 
+			<br> <select name='RoPlant' id='RoPlant'  dbname="roPlant" >
+			<option value='st'>Select Type</option><option value='250LPH'>250LPH</option>
+			<option value='500LPH'>500LPH</option><option value='1000LPH'>1000LPH</option>
+			</select></td>
+		</tr>
 	</table>
 	<input type="text" name="Dinning_id" id="Dinning_id" hidden="true" /> 
 	<input type="text" name="Institution_Id" id="Institution_Id" hidden="true" />
