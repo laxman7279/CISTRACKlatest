@@ -575,6 +575,291 @@
 									</div>
 								</div>
 							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion"
+											href="#collapse6"><span
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Activity Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											type="checkbox" name="gamesroom" id="gamesroom" />
+									</h4>
+								</div>
+								<div id="collapse6" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="AR_Length" id="AR_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="AR_Width" id="AR_Width" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Carpet Area (in Sft)</a> <input
+														type="checkbox" /><br> <input type="text"
+														name="AR_Plinth_Area" id="AR_Plinth_Area"  readonly=true/></td>
+													<td><a href="#">Stools</a> <input type="checkbox"
+														name="AR_Stools" id="AR_Stools" /><br> <input
+														type="text" name="AR_Stools_Count" id="AR_Stools_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Table Fans</a> <input type="checkbox"
+														name="AR_Table_Fans" id="AR_Table_Fans" /><br> <input
+														type="text" name="AR_Table_Fans_Count"
+														id="AR_Table_Fans_Count" /></td>
+													<td><a href="#">Ceiling Fans</a> <input
+														type="checkbox" name="AR_Ceiling_Fans"
+														id="AR_Ceiling_Fans" /><br> <input type="text"
+														name="AR_Ceiling_Fans_Count" id="AR_Ceiling_Fans_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tables</a> <input type="checkbox"
+														name="AR_Tables" id="AR_Tables" /><br> <input
+														type="text" name="AR_Tables_Count" id="AR_Tables_Count" /></td>
+													<td><a href="#">Chairs</a> <input type="checkbox"
+														name="AR_Chairs" id="AR_Chairs" /><br> <input
+														type="text" name="AR_Chairs_Count" id="AR_Chairs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tube Lights</a> <input type="checkbox"
+														name="AR_TubeLights" id="AR_TubeLights" /><br> <input
+														type="text" name="AR_TubeLights_Count"
+														id="AR_TubeLights_Count" /></td>
+													<td><a href="#">Bulbs</a> <input type="checkbox"
+														name="AR_Bulbs" id="AR_Bulbs" /><br> <input
+														type="text" name="AR_Bulbs_Count" id="AR_Bulbs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Reading Tables</a> <input
+														type="checkbox" name="AR_ReadingTables"
+														id="AR_ReadingTables" /><br> <input type="text"
+														name="AR_ReadingTables_Count" id="AR_ReadingTables_Count" /></td>
+													<td><a href="#">Glass Door Almira</a> <input
+														type="checkbox" name="AR_Glass-Door-Almira"
+														id="AR_Glass-Door-Almira" /><br> <input type="text"
+														name="AR_Glass-Door-Almira_Count"
+														id="AR_Glass-Door-Almira_Count" /></td>
+												</tr>
+
+
+												<tr>
+													<td><a href="#">Locker Units</a> <input
+														type="checkbox" name="AR_Locker_Units"
+														id="AR_Locker_Units" /><br> <input type="text"
+														name="AR_Locker_Units_Count" id="AR_Locker_Units_Count" /></td>
+													<td><a href="#">S Type Chairs</a> <input
+														type="checkbox" name="AR_S_Type_Chairs"
+														id="AR_S_Type_Chairs" /><br> <input type="text"
+														name="AR_S_Type_Chairs_Count" id="AR_S_Type_Chairs_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Store Well Almira</a> <input
+														type="checkbox" name="AR_Store-Well-Almira"
+														id="AR_Store-Well-Almira" /><br> <input type="text"
+														name="AR_Store-Well-Almira_Count"
+														id="AR_Store-Well-Almira_Count" /></td>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="AR_Wooden_Count" id="AR_Wooden_Count" /></td>
+												</tr>
+
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion"
+											href="#collapse6"><span
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>TV Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											type="checkbox" name="gamesroom" id="gamesroom" />
+									</h4>
+								</div>
+								<div id="collapse6" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="TR_Length" id="TR_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="TR_Width" id="TR_Width" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Carpet Area (in Sft)</a> <input
+														type="checkbox" /><br> <input type="text"
+														name="TR_Plinth_Area" id="TR_Plinth_Area"  readonly=true/></td>
+													<td><a href="#">Stools</a> <input type="checkbox"
+														name="TR_Stools" id="TR_Stools" /><br> <input
+														type="text" name="TR_Stools_Count" id="TR_Stools_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Table Fans</a> <input type="checkbox"
+														name="TR_Table_Fans" id="TR_Table_Fans" /><br> <input
+														type="text" name="TR_Table_Fans_Count"
+														id="TR_Table_Fans_Count" /></td>
+													<td><a href="#">Ceiling Fans</a> <input
+														type="checkbox" name="TR_Ceiling_Fans"
+														id="TR_Ceiling_Fans" /><br> <input type="text"
+														name="TR_Ceiling_Fans_Count" id="TR_Ceiling_Fans_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tables</a> <input type="checkbox"
+														name="TR_Tables" id="TR_Tables" /><br> <input
+														type="text" name="TR_Tables_Count" id="TR_Tables_Count" /></td>
+													<td><a href="#">Chairs</a> <input type="checkbox"
+														name="TR_Chairs" id="TR_Chairs" /><br> <input
+														type="text" name="TR_Chairs_Count" id="TR_Chairs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tube Lights</a> <input type="checkbox"
+														name="TR_TubeLights" id="TR_TubeLights" /><br> <input
+														type="text" name="TR_TubeLights_Count"
+														id="TR_TubeLights_Count" /></td>
+													<td><a href="#">Bulbs</a> <input type="checkbox"
+														name="TR_Bulbs" id="TR_Bulbs" /><br> <input
+														type="text" name="TR_Bulbs_Count" id="TR_Bulbs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Reading Tables</a> <input
+														type="checkbox" name="TR_ReadingTables"
+														id="TR_ReadingTables" /><br> <input type="text"
+														name="TR_ReadingTables_Count" id="TR_ReadingTables_Count" /></td>
+													<td><a href="#">Glass Door Almira</a> <input
+														type="checkbox" name="TR_Glass-Door-Almira"
+														id="TR_Glass-Door-Almira" /><br> <input type="text"
+														name="TR_Glass-Door-Almira_Count"
+														id="TR_Glass-Door-Almira_Count" /></td>
+												</tr>
+
+
+												<tr>
+													<td><a href="#">Locker Units</a> <input
+														type="checkbox" name="TR_Locker_Units"
+														id="TR_Locker_Units" /><br> <input type="text"
+														name="TR_Locker_Units_Count" id="TR_Locker_Units_Count" /></td>
+													<td><a href="#">S Type Chairs</a> <input
+														type="checkbox" name="TR_S_Type_Chairs"
+														id="TR_S_Type_Chairs" /><br> <input type="text"
+														name="TR_S_Type_Chairs_Count" id="TR_S_Type_Chairs_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Store Well Almira</a> <input
+														type="checkbox" name="TR_Store-Well-Almira"
+														id="TR_Store-Well-Almira" /><br> <input type="text"
+														name="TR_Store-Well-Almira_Count"
+														id="TR_Store-Well-Almira_Count" /></td>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="TR_Wooden_Count" id="TR_Wooden_Count" /></td>
+												</tr>
+
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion"
+											href="#collapse6"><span
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Projector Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											type="checkbox" name="gamesroom" id="gamesroom" />
+									</h4>
+								</div>
+								<div id="collapse6" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="PR_Length" id="PR_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="PR_Width" id="PR_Width" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Carpet Area (in Sft)</a> <input
+														type="checkbox" /><br> <input type="text"
+														name="PR_Plinth_Area" id="PR_Plinth_Area"  readonly=true/></td>
+													<td><a href="#">Stools</a> <input type="checkbox"
+														name="PR_Stools" id="PR_Stools" /><br> <input
+														type="text" name="PR_Stools_Count" id="PR_Stools_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Table Fans</a> <input type="checkbox"
+														name="PR_Table_Fans" id="PR_Table_Fans" /><br> <input
+														type="text" name="PR_Table_Fans_Count"
+														id="PR_Table_Fans_Count" /></td>
+													<td><a href="#">Ceiling Fans</a> <input
+														type="checkbox" name="PR_Ceiling_Fans"
+														id="PR_Ceiling_Fans" /><br> <input type="text"
+														name="PR_Ceiling_Fans_Count" id="PR_Ceiling_Fans_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tables</a> <input type="checkbox"
+														name="PR_Tables" id="PR_Tables" /><br> <input
+														type="text" name="PR_Tables_Count" id="PR_Tables_Count" /></td>
+													<td><a href="#">Chairs</a> <input type="checkbox"
+														name="PR_Chairs" id="PR_Chairs" /><br> <input
+														type="text" name="PR_Chairs_Count" id="PR_Chairs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tube Lights</a> <input type="checkbox"
+														name="PR_TubeLights" id="PR_TubeLights" /><br> <input
+														type="text" name="PR_TubeLights_Count"
+														id="PR_TubeLights_Count" /></td>
+													<td><a href="#">Bulbs</a> <input type="checkbox"
+														name="PR_Bulbs" id="PR_Bulbs" /><br> <input
+														type="text" name="PR_Bulbs_Count" id="PR_Bulbs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Reading Tables</a> <input
+														type="checkbox" name="PR_ReadingTables"
+														id="PR_ReadingTables" /><br> <input type="text"
+														name="PR_ReadingTables_Count" id="PR_ReadingTables_Count" /></td>
+													<td><a href="#">Glass Door Almira</a> <input
+														type="checkbox" name="PR_Glass-Door-Almira"
+														id="PR_Glass-Door-Almira" /><br> <input type="text"
+														name="PR_Glass-Door-Almira_Count"
+														id="PR_Glass-Door-Almira_Count" /></td>
+												</tr>
+
+
+												<tr>
+													<td><a href="#">Locker Units</a> <input
+														type="checkbox" name="PR_Locker_Units"
+														id="PR_Locker_Units" /><br> <input type="text"
+														name="PR_Locker_Units_Count" id="PR_Locker_Units_Count" /></td>
+													<td><a href="#">S Type Chairs</a> <input
+														type="checkbox" name="PR_S_Type_Chairs"
+														id="PR_S_Type_Chairs" /><br> <input type="text"
+														name="PR_S_Type_Chairs_Count" id="PR_S_Type_Chairs_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Store Well Almira</a> <input
+														type="checkbox" name="PR_Store-Well-Almira"
+														id="PR_Store-Well-Almira" /><br> <input type="text"
+														name="PR_Store-Well-Almira_Count"
+														id="PR_Store-Well-Almira_Count" /></td>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="PR_Wooden_Count" id="PR_Wooden_Count" /></td>
+												</tr>
+
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -671,8 +956,18 @@
 														id="BL_Table_Fans_Count" /></td>
 												</tr>
 												<tr>
+													<td><a href="#">Fixed Tables</a><br>
+													 	<input type="text" name="BL_Fixed_Tables" id="BL_Fixed_Tables" /></td>
+													 	<td><a href="#">Fixed Chairs</a><br>
+													 	<input type="text" name="BL_Fixed_Chairs" id="BL_Fixed_Chairs" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Wooden Almira</a><br>
 													 	<input type="text" name="BL_Wooden_Count" id="BL_Wooden_Count" /></td>
+													 <td><a href="#">Black Boards</a> <input
+														type="checkbox" name="BL_Black_Board" id="BL_Black_Board"><br>
+														<input type="text" name="BL_Black_Board_Count"
+														id="BL_Black_Board_Count" /></td>
 												</tr>
 
 											</table>
@@ -770,8 +1065,18 @@
 														id="PL_Table_Fans_Count" /></td>
 												</tr>
 												<tr>
+													<td><a href="#">Fixed Tables</a><br>
+													 	<input type="text" name="PL_Fixed_Tables" id="PL_Fixed_Tables" /></td>
+													 	<td><a href="#">Fixed Chairs</a><br>
+													 	<input type="text" name="PL_Fixed_Chairs" id="PL_Fixed_Chairs" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Wooden Almira</a><br>
 													 	<input type="text" name="PL_Wooden_Count" id="PL_Wooden_Count" /></td>
+													 	<td><a href="#">Black Boards</a> <input
+														type="checkbox" name="PL_Black_Board" id="PL_Black_Board"><br>
+														<input type="text" name="PL_Black_Board_Count"
+														id="PL_Black_Board_Count" /></td>
 												</tr>
 
 											</table>
@@ -869,8 +1174,18 @@
 														id="CL_Table_Fans_Count" /></td>
 												</tr>
 												<tr>
+													<td><a href="#">Fixed Tables</a><br>
+													 	<input type="text" name="CL_Fixed_Tables" id="CL_Fixed_Tables" /></td>
+													 	<td><a href="#">Fixed Chairs</a><br>
+													 	<input type="text" name="CL_Fixed_Chairs" id="CL_Fixed_Chairs" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Wooden Almira</a><br>
 													 	<input type="text" name="CL_Wooden_Count" id="CL_Wooden_Count" /></td>
+													 	<td><a href="#">Black Boards</a> <input
+														type="checkbox" name="CL_Black_Board" id="CL_Black_Board"><br>
+														<input type="text" name="CL_Black_Board_Count"
+														id="CL_Black_Board_Count" /></td>
 												</tr>
 
 											</table>
@@ -968,8 +1283,18 @@
 														id="ZL_Table_Fans_Count" /></td>
 												</tr>
 												<tr>
+													<td><a href="#">Fixed Tables</a><br>
+													 	<input type="text" name="ZL_Fixed_Tables" id="ZL_Fixed_Tables" /></td>
+													 	<td><a href="#">Fixed Chairs</a><br>
+													 	<input type="text" name="ZL_Fixed_Chairs" id="ZL_Fixed_Chairs" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Wooden Almira</a><br>
 													 	<input type="text" name="ZL_Wooden_Count" id="ZL_Wooden_Count" /></td>
+													 	<td><a href="#">Black Boards</a> <input
+														type="checkbox" name="ZL_Black_Board" id="ZL_Black_Board"><br>
+														<input type="text" name="ZL_Black_Board_Count"
+														id="ZL_Black_Board_Count" /></td>
 												</tr>
 
 											</table>
@@ -1069,10 +1394,23 @@
 														id="CO_Table_Fans_Count" /></td>
 												</tr>
 												<tr>
+													<td><a href="#">Fixed Tables</a><br>
+													 	<input type="text" name="CO_Fixed_Tables" id="CO_Fixed_Tables" /></td>
+													 	<td><a href="#">Fixed Chairs</a><br>
+													 	<input type="text" name="CO_Fixed_Chairs" id="CO_Fixed_Chairs" /></td>
+												</tr>
+												<tr>
 													<td><a href="#">Wooden Almira</a><br>
 													 	<input type="text" name="CO_Wooden_Count" id="CO_Wooden_Count" /></td>
+													 	<td><a href="#">Computers</a><br>
+													 	<input type="text" name="CO_Comp_Count" id="CO_Comp_Count" /></td>
 												</tr>
-
+												<tr>
+												<td><a href="#">Black Boards</a> <input
+														type="checkbox" name="CO_Black_Board" id="CO_Black_Board"><br>
+														<input type="text" name="CO_Black_Board_Count"
+														id="CO_Black_Board_Count" /></td>
+												</tr>
 											</table>
 										</div>
 									</div>
@@ -1080,6 +1418,225 @@
 
 
 							</div>
+							
+													<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion"
+											href="#collapse14"> <span
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Maths Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											type="checkbox" name="zoologylab" id="zoologylab" />
+									</h4>
+								</div>
+								<div id="collapse14" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="ML_Length" id="ML_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="ML_Width" id="ML_Width" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Carpet Area (in Sft)</a> <input
+														type="checkbox" /><br> <input type="text"
+														name="ML_Plinth_Area" id="ML_Plinth_Area"  readonly=true/></td>
+													<td><a href="#">Ceiling Fans</a> <input
+														type="checkbox" name="ML_Ceiling_Fans"
+														id="ML_Ceiling_Fans" /><br> <input type="text"
+														name="ML_Ceiling_Fans_Count" id="ML_Ceiling_Fans_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tables</a> <input type="checkbox"
+														name="ML_Tables" id="ML_Tables" /><br> <input
+														type="text" name="ML_Tables_Count" id="ML_Tables_Count" /></td>
+													<td><a href="#">Chairs</a> <input type="checkbox"
+														name="ML_Chairs" id="ML_Chairs" /><br> <input
+														type="text" name="ML_Chairs_Count" id="ML_Chairs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tube Lights</a> <input type="checkbox"
+														name="ML_TubeLights" id="ML_TubeLights" /><br> <input
+														type="text" name="ML_TubeLights_Count"
+														id="ML_TubeLights_Count" /></td>
+													<td><a href="#">Bulbs</a> <input type="checkbox"
+														name="ML_Bulbs" id="ML_Bulbs" /><br> <input
+														type="text" name="ML_Bulbs_Count" id="ML_Bulbs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Reading Tables</a> <input
+														type="checkbox" name="ML_ReadingTables"
+														id="ML_ReadingTables" /><br> <input type="text"
+														name="ML_ReadingTables_Count" id="ML_ReadingTables_Count" /></td>
+													<td><a href="#">Locker Units</a> <input
+														type="checkbox" name="ML_Locker_Units"
+														id="ML_Locker_Units" /><br> <input type="text"
+														name="ML_Locker_Units_Count" id="ML_Locker_Units_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Stools</a> <input type="checkbox"
+														name="ML_Stools" id="ML_Stools" /><br> <input
+														type="text" name="ML_Stools_Count" id="ML_Stools_Count" /></td>
+													<td><a href="#">Glass Door Almira</a> <input
+														type="checkbox" name="ML_Glass-Door-Almira"
+														id="ML_Glass-Door-Almira" /><br> <input type="text"
+														name="ML_Glass-Door-Almira_Count"
+														id="ML_Glass-Door-Almira_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">S Type Chairs</a> <input
+														type="checkbox" name="ML_S_Type_Chairs"
+														id="ML_S_Type_Chairs"><br> <input type="text"
+														name="ML_S_Type_Chairs_Count" id="ML_S_Type_Chairs_Count" /></td>
+													<td><a href="#">Store well Almira</a> <input
+														type="checkbox" name="ML_Store-Well-Almira"
+														id="ML_Store-Well-Almira"><br> <input
+														type="text" name="ML_Store-Well-Almira_Count"
+														id="ML_Store-Well-Almira_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Green Boards</a> <input
+														type="checkbox" name="ML_Green_Board" id="ML_Green_Board"><br>
+														<input type="text" name="ML_Green_Board_Count"
+														id="ML_Green_Board_Count" /></td>
+													<td><a href="#">Table Fans</a> <input type="checkbox"
+														name="ML_Table_Fans" id="ML_Table_Fans" /><br> <input
+														type="text" name="ML_Table_Fans_Count"
+														id="ML_Table_Fans_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Fixed Tables</a><br>
+													 	<input type="text" name="ML_Fixed_Tables" id="ML_Fixed_Tables" /></td>
+													 	<td><a href="#">Fixed Chairs</a><br>
+													 	<input type="text" name="ML_Fixed_Chairs" id="ML_Fixed_Chairs" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="ML_Wooden_Count" id="ML_Wooden_Count" /></td>
+													 	<td><a href="#">Black Boards</a> <input
+														type="checkbox" name="ML_Black_Board" id="ML_Black_Board"><br>
+														<input type="text" name="ML_Black_Board_Count"
+														id="ML_Black_Board_Count" /></td>
+												</tr>
+
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+													<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion"
+											href="#collapse14"> <span
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Science Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											type="checkbox" name="zoologylab" id="zoologylab" />
+									</h4>
+								</div>
+								<div id="collapse14" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table class="table">
+												<tr>
+													<td><a href="#">Length (in sft)</a><br>
+														<input type="text" name="SL_Length" id="SL_Length" /></td>
+													<td><a href="#">Width (in sft)</a> <br> 
+													<input type="text" name="SL_Width" id="SL_Width" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Carpet Area (in Sft)</a> <input
+														type="checkbox" /><br> <input type="text"
+														name="SL_Plinth_Area" id="SL_Plinth_Area"  readonly=true/></td>
+													<td><a href="#">Ceiling Fans</a> <input
+														type="checkbox" name="SL_Ceiling_Fans"
+														id="SL_Ceiling_Fans" /><br> <input type="text"
+														name="SL_Ceiling_Fans_Count" id="SL_Ceiling_Fans_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tables</a> <input type="checkbox"
+														name="SL_Tables" id="SL_Tables" /><br> <input
+														type="text" name="SL_Tables_Count" id="SL_Tables_Count" /></td>
+													<td><a href="#">Chairs</a> <input type="checkbox"
+														name="SL_Chairs" id="SL_Chairs" /><br> <input
+														type="text" name="SL_Chairs_Count" id="SL_Chairs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Tube Lights</a> <input type="checkbox"
+														name="SL_TubeLights" id="SL_TubeLights" /><br> <input
+														type="text" name="SL_TubeLights_Count"
+														id="SL_TubeLights_Count" /></td>
+													<td><a href="#">Bulbs</a> <input type="checkbox"
+														name="SL_Bulbs" id="SL_Bulbs" /><br> <input
+														type="text" name="SL_Bulbs_Count" id="SL_Bulbs_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Reading Tables</a> <input
+														type="checkbox" name="SL_ReadingTables"
+														id="SL_ReadingTables" /><br> <input type="text"
+														name="SL_ReadingTables_Count" id="SL_ReadingTables_Count" /></td>
+													<td><a href="#">Locker Units</a> <input
+														type="checkbox" name="SL_Locker_Units"
+														id="SL_Locker_Units" /><br> <input type="text"
+														name="SL_Locker_Units_Count" id="SL_Locker_Units_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">Stools</a> <input type="checkbox"
+														name="SL_Stools" id="SL_Stools" /><br> <input
+														type="text" name="SL_Stools_Count" id="SL_Stools_Count" /></td>
+													<td><a href="#">Glass Door Almira</a> <input
+														type="checkbox" name="SL_Glass-Door-Almira"
+														id="SL_Glass-Door-Almira" /><br> <input type="text"
+														name="SL_Glass-Door-Almira_Count"
+														id="SL_Glass-Door-Almira_Count" /></td>
+												</tr>
+
+												<tr>
+													<td><a href="#">S Type Chairs</a> <input
+														type="checkbox" name="SL_S_Type_Chairs"
+														id="SL_S_Type_Chairs"><br> <input type="text"
+														name="SL_S_Type_Chairs_Count" id="SL_S_Type_Chairs_Count" /></td>
+													<td><a href="#">Store well Almira</a> <input
+														type="checkbox" name="SL_Store-Well-Almira"
+														id="SL_Store-Well-Almira"><br> <input
+														type="text" name="SL_Store-Well-Almira_Count"
+														id="SL_Store-Well-Almira_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Green Boards</a> <input
+														type="checkbox" name="SL_Green_Board" id="SL_Green_Board"><br>
+														<input type="text" name="SL_Green_Board_Count"
+														id="SL_Green_Board_Count" /></td>
+													<td><a href="#">Table Fans</a> <input type="checkbox"
+														name="SL_Table_Fans" id="SL_Table_Fans" /><br> <input
+														type="text" name="SL_Table_Fans_Count"
+														id="SL_Table_Fans_Count" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Fixed Tables</a><br>
+													 	<input type="text" name="SL_Fixed_Tables" id="SL_Fixed_Tables" /></td>
+													 	<td><a href="#">Fixed Chairs</a><br>
+													 	<input type="text" name="SL_Fixed_Chairs" id="SL_Fixed_Chairs" /></td>
+												</tr>
+												<tr>
+													<td><a href="#">Wooden Almira</a><br>
+													 	<input type="text" name="SL_Wooden_Count" id="SL_Wooden_Count" /></td>
+													 	<td><a href="#">Black Boards</a> <input
+														type="checkbox" name="SL_Black_Board" id="SL_Black_Board"><br>
+														<input type="text" name="SL_Black_Board_Count"
+														id="SL_Black_Board_Count" /></td>
+												</tr>
+
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>
