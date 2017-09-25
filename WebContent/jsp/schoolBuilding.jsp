@@ -580,12 +580,12 @@
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
-											href="#collapse6"><span
+											href="#collapse7"><span
 											class="glyphicon glyphicon-menu-down">&nbsp;</span>Activity Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="gamesroom" id="gamesroom" />
 									</h4>
 								</div>
-								<div id="collapse6" class="panel-collapse collapse">
+								<div id="collapse7" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
@@ -675,12 +675,12 @@
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
-											href="#collapse6"><span
+											href="#collapse8"><span
 											class="glyphicon glyphicon-menu-down">&nbsp;</span>TV Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="gamesroom" id="gamesroom" />
 									</h4>
 								</div>
-								<div id="collapse6" class="panel-collapse collapse">
+								<div id="collapse8" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
@@ -770,12 +770,12 @@
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
-											href="#collapse6"><span
+											href="#collapse9"><span
 											class="glyphicon glyphicon-menu-down">&nbsp;</span>Projector Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="gamesroom" id="gamesroom" />
 									</h4>
 								</div>
-								<div id="collapse6" class="panel-collapse collapse">
+								<div id="collapse9" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
@@ -1423,12 +1423,12 @@
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
-											href="#collapse14"> <span
+											href="#collapse16"> <span
 											class="glyphicon glyphicon-menu-down">&nbsp;</span>Maths Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="zoologylab" id="zoologylab" />
 									</h4>
 								</div>
-								<div id="collapse14" class="panel-collapse collapse">
+								<div id="collapse16" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">
@@ -1532,12 +1532,12 @@
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
-											href="#collapse14"> <span
+											href="#collapse17"> <span
 											class="glyphicon glyphicon-menu-down">&nbsp;</span>Science Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="zoologylab" id="zoologylab" />
 									</h4>
 								</div>
-								<div id="collapse14" class="panel-collapse collapse">
+								<div id="collapse17" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="table-responsive">
 											<table class="table">

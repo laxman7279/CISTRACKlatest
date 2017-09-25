@@ -435,7 +435,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	function switchWaitingHall() {
 		switchClass();
-
+		
 		$('#epwhdiv').addClass('active');
 		//populateOtherDetails();
 		//alert('others report');
@@ -455,6 +455,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('Dinning-Div').style.display = 'none';
 		document.getElementById('Kitchen-Div').style.display = 'none';
 		document.getElementById('Others-Div').style.display = 'none';
+		
+		getEWPHallDetails();
 	}
 
 	

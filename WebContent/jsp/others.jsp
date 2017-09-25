@@ -650,8 +650,7 @@ function populateOtherDetails(){
 	getSanitarySysDetails();
 	getOverheadTankDetails();
 	getPlayGroundDetails();
-	getToiletsDetails();
-	getBathRoomDetails();
+
 }
 
 function getOtherDetails() {
@@ -925,55 +924,7 @@ function getPlayGroundDetails() {
 		}
 	});
 }
-function getToiletsDetails() {
-	var staffquarterId = $('#institute').val();
-	$.ajax({
-		type : 'POST',
-		url : "../Quarters/getTableDetails.htm",
-		data : {
-			'instituteid' : staffquarterId,
-			'tablename' : 'O_Toilets',
-			'wherecolumn' : 'Others_Id'
-		},
-		dataType : 'json',
-		success : function(data) {
-			$("#o_toilets_exhaustfans").val(data.Exhaust_Fans_Count);
-			$("#o_toilets_indian").val(data.Indian_Toilet_Count);
-			$("#o_toilets_tube_light").val(data.TubeLights_Count);
-			$("#o_toilets_bulb").val(data.Bulbs_Count);
-			$("#o_toilets_water_closet").val(data.Water_Closet_Count);
-			$("#o_toilets_running_water").val(data.Running_Water_Count);
-			$("#o_toilets_flush_system").val(data.Flush_System_Count);
-		},
-		failure : function() {
-			alert("Failed!");
-		}
-	});
-}
-function getBathRoomDetails() {
-	var staffquarterId = $('#institute').val();
-	$.ajax({
-		type : 'POST',
-		url : "../Quarters/getTableDetails.htm",
-		data : {
-			'instituteid' : staffquarterId,
-			'tablename' : 'O_Bathrooms',
-			'wherecolumn' : 'Others_Id'
-		},
-		dataType : 'json',
-		success : function(data) {
-			$("#o_bathroom_quantity").val(data.Quantity_Count);
-			$("#o_bathroom_exhaustfans").val(data.Exhaust_Fans_Count);
-			$("#o_bathroom_tube_light").val(data.TubeLights_Count);
-			$("#o_bathroom_bulb").val(data.Bulbs_Count);
-			$("#o_bathroom_geezers").val(data.Geezers_Count);
-			$("#o_bathroom_washarea").val(data.Washing_Area_Count);
-		},
-		failure : function() {
-			alert("Failed!");
-		}
-	});
-}
+
 
 
 

@@ -23,6 +23,12 @@ public interface UserService {
 	public JSONObject getStaffRoomDetails(int schoolid);
 
 	public JSONObject getGamesRoomDetails(int schoolid);
+	
+	public JSONObject getActivityRoomDetails(int schoolid);
+	
+	public JSONObject getTVRoomDetails(int schoolid);
+	
+	public JSONObject getProjRoomDetails(int schoolid);
 
 	public JSONObject getBotanyLabDetails(int schoolid);
 
@@ -37,5 +43,9 @@ public interface UserService {
 	public JSONObject getToiletDetails(int schoolid);
 	
 	public JSONObject getClassRoomDetails(int schoolid);
+	
+	public JSONObject getMathsLabDetails(int schoolid);
+	
+	public JSONObject getScienceLabDetails(int schoolid);
 
 }

@@ -549,7 +549,7 @@ public class CISDao {
 				" select `Botany-Lab_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Wall-Almira_Count`,Stools , Stools_Count ,")
-				.append(" `Locker-Units`, `Locker-Units_Count`, Green_Board, Green_Board_Count ")
+				.append(" `Locker-Units`, `Locker-Units_Count`, Green_Board, Green_Board_Count,BlackBoardCount, FixedTables, FixedChairs ")
 				.append(" from `Botany-Lab_Room` where  School_Building_Id = " + schoolid);
 
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -591,6 +591,9 @@ public class CISDao {
 				botanyLabJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
 				botanyLabJson.put("Green_Board", "Y".equalsIgnoreCase(rs.getString("Green_Board")) ? true : false);
 				botanyLabJson.put("Green_Board_Count", rs.getInt("Green_Board_Count"));
+				botanyLabJson.put("BlackBoardCount", rs.getInt("BlackBoardCount"));
+				botanyLabJson.put("FixedTables", rs.getInt("FixedTables"));
+				botanyLabJson.put("FixedChairs", rs.getInt("FixedChairs"));
 
 
 			} catch (InvalidResultSetAccessException e) {
@@ -614,7 +617,7 @@ public class CISDao {
 				" select `Chemistry-Lab-Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables, ")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Chemistry-Lab-Well-Almira_Count`,  Stools , Stools_Count , ")
-				.append(" `Locker-Units`, `Locker-Units_Count` ,Green_Board, Green_Board_Count")
+				.append(" `Locker-Units`, `Locker-Units_Count` ,Green_Board, Green_Board_Count ,BlackBoardCount, FixedTables, FixedChairs")
 				.append(" from `Chemistry-Lab_Room` where  School_Building_Id = " + schoolid);
 
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -656,7 +659,9 @@ public class CISDao {
 				chemistryLabJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
 				chemistryLabJson.put("Green_Board", "Y".equalsIgnoreCase(rs.getString("Green_Board")) ? true : false);
 				chemistryLabJson.put("Green_Board_Count", rs.getInt("Green_Board_Count"));
-				
+				chemistryLabJson.put("BlackBoardCount", rs.getInt("BlackBoardCount"));
+				chemistryLabJson.put("FixedTables", rs.getInt("FixedTables"));
+				chemistryLabJson.put("FixedChairs", rs.getInt("FixedChairs"));
 
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
@@ -679,7 +684,7 @@ public class CISDao {
 				" select `Physics-Lab_Building_Id`, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Physics-Lab-Well-Almira_Count`, Stools , Stools_Count ,")
-				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ")
+				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count,BlackBoardCount, FixedTables, FixedChairs ")
 				.append(" from `Physics-Lab_Room` where  School_Building_Id = " + schoolid);
 
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -721,6 +726,10 @@ public class CISDao {
 				physicsLabJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
 				physicsLabJson.put("Green_Board", "Y".equalsIgnoreCase(rs.getString("Green_Board")) ? true : false);
 				physicsLabJson.put("Green_Board_Count", rs.getInt("Green_Board_Count"));
+				physicsLabJson.put("BlackBoardCount", rs.getInt("BlackBoardCount"));
+				physicsLabJson.put("FixedTables", rs.getInt("FixedTables"));
+				physicsLabJson.put("FixedChairs", rs.getInt("FixedChairs"));
+
 				
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
@@ -743,7 +752,7 @@ public class CISDao {
 				" select  `Zoology-Lab_Building_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Zoology-Lab-Well-Almira_Count`, Stools , Stools_Count ,")
-				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ")
+				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ,BlackBoardCount, FixedTables, FixedChairs ")
 				.append(" from `Zoology-Lab_Room` where  School_Building_Id = " + schoolid);
 
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -785,6 +794,10 @@ public class CISDao {
 				zoologyLabJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
 				zoologyLabJson.put("Green_Board", "Y".equalsIgnoreCase(rs.getString("Green_Board")) ? true : false);
 				zoologyLabJson.put("Green_Board_Count", rs.getInt("Green_Board_Count"));
+				zoologyLabJson.put("BlackBoardCount", rs.getInt("BlackBoardCount"));
+				zoologyLabJson.put("FixedTables", rs.getInt("FixedTables"));
+				zoologyLabJson.put("FixedChairs", rs.getInt("FixedChairs"));
+
 
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
@@ -809,7 +822,7 @@ public class CISDao {
 				" select `Computers-Lab_Building_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
 				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
 				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` , `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Computers-Lab-Well-Almira_Count`, Stools , Stools_Count ,")
-				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ")
+				.append(" `Locker-Units`, `Locker-Units_Count`,Green_Board, Green_Board_Count ,BlackBoardCount, FixedTables, FixedChairs")
 				.append(" from `Computers-Lab_Room` where  School_Building_Id = " + schoolid);
 
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -851,6 +864,10 @@ public class CISDao {
 				compLabJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
 				compLabJson.put("Green_Board", "Y".equalsIgnoreCase(rs.getString("Green_Board")) ? true : false);
 				compLabJson.put("Green_Board_Count", rs.getInt("Green_Board_Count"));
+				compLabJson.put("BlackBoardCount", rs.getInt("BlackBoardCount"));
+				compLabJson.put("FixedTables", rs.getInt("FixedTables"));
+				compLabJson.put("FixedChairs", rs.getInt("FixedChairs"));
+
 
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
@@ -992,6 +1009,335 @@ public class CISDao {
 		return responseDetailsJson;
 
 	}
+	
+	public JSONObject getMathsLabDetails(int schoolid) {
+
+		StringBuilder query = new StringBuilder();
+
+		query.append(
+				" select `Maths-Lab_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
+				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Wall-Almira_Count`,Stools , Stools_Count ,")
+				.append(" `Locker-Units`, `Locker-Units_Count`, Green_Board_Count, BlackBoardCount, FixedTables, FixedChairs ")
+				.append(" from `Maths_Lab_Room` where  School_Building_Id = " + schoolid);
+
+		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
+
+		JSONObject botanyLabJson = new JSONObject();
+
+		while (rs.next()) {
+
+			try {
+
+				botanyLabJson.put("Maths-Lab_Id", rs.getInt("Maths-Lab_Id"));
+				botanyLabJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				botanyLabJson.put("Length", rs.getInt("Length"));
+				botanyLabJson.put("Width", rs.getInt("Width"));
+				botanyLabJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
+				botanyLabJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
+				botanyLabJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
+				botanyLabJson.put("Ceiling_Fans", "Y".equalsIgnoreCase(rs.getString("Ceiling_Fans")) ? true : false);
+				botanyLabJson.put("Ceiling_Fans_Count", rs.getInt("Ceiling_Fans_Count"));
+				botanyLabJson.put("Tables", "Y".equalsIgnoreCase(rs.getString("Tables")) ? true : false);
+				botanyLabJson.put("Tables_Count", rs.getInt("Tables_Count"));
+				botanyLabJson.put("Chairs", "Y".equalsIgnoreCase(rs.getString("Chairs")) ? true : false);
+				botanyLabJson.put("Chairs_Count", rs.getInt("Chairs_Count"));
+				botanyLabJson.put("TubeLights", "Y".equalsIgnoreCase(rs.getString("TubeLights")) ? true : false);
+				botanyLabJson.put("TubeLights_Count", rs.getInt("TubeLights_Count"));
+				botanyLabJson.put("Bulbs", "Y".equalsIgnoreCase(rs.getString("Bulbs")) ? true : false);
+				botanyLabJson.put("Bulbs_Count", rs.getInt("Bulbs_Count"));
+				botanyLabJson.put("ReadingTables", "Y".equalsIgnoreCase(rs.getString("ReadingTables")) ? true : false);
+				botanyLabJson.put("ReadingTables_Count", rs.getInt("ReadingTables_Count"));
+				botanyLabJson.put("S_Type_Chairs", "Y".equalsIgnoreCase(rs.getString("S-Type-Chairs")) ? true : false);
+				botanyLabJson.put("S_Type_Chairs_Count", rs.getInt("S-Type-Chairs_Count"));
+				botanyLabJson.put("Glass_Door_Almira", "Y".equalsIgnoreCase(rs.getString("Glass-Door-Almira")) ? true : false);
+				botanyLabJson.put("Glass_Door_Almira_Count", rs.getInt("Glass-Door-Almira_Count"));
+				botanyLabJson.put("Store_Well_Almira", "Y".equalsIgnoreCase(rs.getString("Store-Well-Almira")) ? true : false);
+				botanyLabJson.put("Store_Well_Almira_Count", rs.getInt("Store-Wall-Almira_Count"));
+				botanyLabJson.put("Stools", "Y".equalsIgnoreCase(rs.getString("Stools")) ? true : false);
+				botanyLabJson.put("Stools_Count", rs.getInt("Stools_Count"));
+				botanyLabJson.put("Locker_Units", "Y".equalsIgnoreCase(rs.getString("Locker-Units")) ? true : false);
+				botanyLabJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
+				botanyLabJson.put("Green_Board_Count", rs.getInt("Green_Board_Count"));
+				botanyLabJson.put("BlackBoardCount", rs.getInt("BlackBoardCount"));
+				botanyLabJson.put("FixedTables", rs.getInt("FixedTables"));
+				botanyLabJson.put("FixedChairs", rs.getInt("FixedChairs"));
+
+
+
+			} catch (InvalidResultSetAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return botanyLabJson;
+
+	}
+	
+	public JSONObject getScienceLabDetails(int schoolid) {
+
+		StringBuilder query = new StringBuilder();
+
+		query.append(
+				" select `Science-Lab_Id`, School_Building_Id, Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
+				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Store-Wall-Almira_Count`,Stools , Stools_Count ,")
+				.append(" `Locker-Units`, `Locker-Units_Count`,  Green_Board_Count, BlackBoardCount, FixedTables, FixedChairs ")
+				.append(" from `Science_Lab_Room` where  School_Building_Id = " + schoolid);
+
+		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
+
+		JSONObject botanyLabJson = new JSONObject();
+
+		while (rs.next()) {
+
+			try {
+
+				botanyLabJson.put("Science-Lab_Id", rs.getInt("Science-Lab_Id"));
+				botanyLabJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				botanyLabJson.put("Length", rs.getInt("Length"));
+				botanyLabJson.put("Width", rs.getInt("Width"));
+				botanyLabJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
+				botanyLabJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
+				botanyLabJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
+				botanyLabJson.put("Ceiling_Fans", "Y".equalsIgnoreCase(rs.getString("Ceiling_Fans")) ? true : false);
+				botanyLabJson.put("Ceiling_Fans_Count", rs.getInt("Ceiling_Fans_Count"));
+				botanyLabJson.put("Tables", "Y".equalsIgnoreCase(rs.getString("Tables")) ? true : false);
+				botanyLabJson.put("Tables_Count", rs.getInt("Tables_Count"));
+				botanyLabJson.put("Chairs", "Y".equalsIgnoreCase(rs.getString("Chairs")) ? true : false);
+				botanyLabJson.put("Chairs_Count", rs.getInt("Chairs_Count"));
+				botanyLabJson.put("TubeLights", "Y".equalsIgnoreCase(rs.getString("TubeLights")) ? true : false);
+				botanyLabJson.put("TubeLights_Count", rs.getInt("TubeLights_Count"));
+				botanyLabJson.put("Bulbs", "Y".equalsIgnoreCase(rs.getString("Bulbs")) ? true : false);
+				botanyLabJson.put("Bulbs_Count", rs.getInt("Bulbs_Count"));
+				botanyLabJson.put("ReadingTables", "Y".equalsIgnoreCase(rs.getString("ReadingTables")) ? true : false);
+				botanyLabJson.put("ReadingTables_Count", rs.getInt("ReadingTables_Count"));
+				botanyLabJson.put("S_Type_Chairs", "Y".equalsIgnoreCase(rs.getString("S-Type-Chairs")) ? true : false);
+				botanyLabJson.put("S_Type_Chairs_Count", rs.getInt("S-Type-Chairs_Count"));
+				botanyLabJson.put("Glass_Door_Almira", "Y".equalsIgnoreCase(rs.getString("Glass-Door-Almira")) ? true : false);
+				botanyLabJson.put("Glass_Door_Almira_Count", rs.getInt("Glass-Door-Almira_Count"));
+				botanyLabJson.put("Store_Well_Almira", "Y".equalsIgnoreCase(rs.getString("Store-Well-Almira")) ? true : false);
+				botanyLabJson.put("Store_Well_Almira_Count", rs.getInt("Store-Wall-Almira_Count"));
+				botanyLabJson.put("Stools", "Y".equalsIgnoreCase(rs.getString("Stools")) ? true : false);
+				botanyLabJson.put("Stools_Count", rs.getInt("Stools_Count"));
+				botanyLabJson.put("Locker_Units", "Y".equalsIgnoreCase(rs.getString("Locker-Units")) ? true : false);
+				botanyLabJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
+				botanyLabJson.put("Green_Board_Count", rs.getInt("Green_Board_Count"));
+				botanyLabJson.put("BlackBoardCount", rs.getInt("BlackBoardCount"));
+				botanyLabJson.put("FixedTables", rs.getInt("FixedTables"));
+				botanyLabJson.put("FixedChairs", rs.getInt("FixedChairs"));
+
+
+
+			} catch (InvalidResultSetAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return botanyLabJson;
+
+	}
+
+	public JSONObject getActivityRoomDetails(int schoolid) {
+
+		StringBuilder query = new StringBuilder();
+
+		query.append(
+				"select Activity_Room_Id, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
+				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Games-Well-Almira_Count`,Stools , Stools_Count ,")
+				.append(" `Locker-Units`, `Locker-Units_Count` ")
+				.append(" from Activity_Room where  School_Building_Id = " + schoolid);
+
+		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
+
+		JSONObject gamesRoomJson = new JSONObject();
+
+		while (rs.next()) {
+
+			try {
+
+				gamesRoomJson.put("Activity_Room_Id", rs.getInt("Activity_Room_Id"));
+				gamesRoomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				gamesRoomJson.put("Length", rs.getInt("Length"));
+				gamesRoomJson.put("Width", rs.getInt("Width"));
+				gamesRoomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
+				gamesRoomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
+				gamesRoomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
+				gamesRoomJson.put("Ceiling_Fans", "Y".equalsIgnoreCase(rs.getString("Ceiling_Fans")) ? true : false);
+				gamesRoomJson.put("Ceiling_Fans_Count", rs.getInt("Ceiling_Fans_Count"));
+				gamesRoomJson.put("Tables", "Y".equalsIgnoreCase(rs.getString("Tables")) ? true : false);
+				gamesRoomJson.put("Tables_Count", rs.getInt("Tables_Count"));
+				gamesRoomJson.put("Chairs", "Y".equalsIgnoreCase(rs.getString("Chairs")) ? true : false);
+				gamesRoomJson.put("Chairs_Count", rs.getInt("Chairs_Count"));
+				gamesRoomJson.put("TubeLights", "Y".equalsIgnoreCase(rs.getString("TubeLights")) ? true : false);
+				gamesRoomJson.put("TubeLights_Count", rs.getInt("TubeLights_Count"));
+				gamesRoomJson.put("Bulbs", "Y".equalsIgnoreCase(rs.getString("Bulbs")) ? true : false);
+				gamesRoomJson.put("Bulbs_Count", rs.getInt("Bulbs_Count"));
+				gamesRoomJson.put("ReadingTables", "Y".equalsIgnoreCase(rs.getString("ReadingTables")) ? true : false);
+				gamesRoomJson.put("ReadingTables_Count", rs.getInt("ReadingTables_Count"));
+				gamesRoomJson.put("S_Type_Chairs", "Y".equalsIgnoreCase(rs.getString("S-Type-Chairs")) ? true : false);
+				gamesRoomJson.put("S_Type_Chairs_Count", rs.getInt("S-Type-Chairs_Count"));
+				gamesRoomJson.put("Glass_Door_Almira",
+						"Y".equalsIgnoreCase(rs.getString("Glass-Door-Almira")) ? true : false);
+				gamesRoomJson.put("Glass_Door_Almira_Count", rs.getInt("Glass-Door-Almira_Count"));
+				gamesRoomJson.put("Store_Well_Almira",
+						"Y".equalsIgnoreCase(rs.getString("Store-Well-Almira")) ? true : false);
+				gamesRoomJson.put("Store_Well_Almira_Count", rs.getInt("Games-Well-Almira_Count"));
+				gamesRoomJson.put("Stools", "Y".equalsIgnoreCase(rs.getString("Stools")) ? true : false);
+				gamesRoomJson.put("Stools_Count", rs.getInt("Stools_Count"));
+				gamesRoomJson.put("Locker_Units", "Y".equalsIgnoreCase(rs.getString("Locker-Units")) ? true : false);
+				gamesRoomJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
+
+			} catch (InvalidResultSetAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return gamesRoomJson;
+
+	}
+
+	public JSONObject getTVRoomDetails(int schoolid) {
+
+		StringBuilder query = new StringBuilder();
+
+		query.append(
+				"select TV_Room_Id, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
+				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Games-Well-Almira_Count`,Stools , Stools_Count ,")
+				.append(" `Locker-Units`, `Locker-Units_Count` ")
+				.append(" from TV_Room where  School_Building_Id = " + schoolid);
+
+		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
+
+		JSONObject gamesRoomJson = new JSONObject();
+
+		while (rs.next()) {
+
+			try {
+
+				gamesRoomJson.put("TV_Room_Id", rs.getInt("TV_Room_Id"));
+				gamesRoomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				gamesRoomJson.put("Length", rs.getInt("Length"));
+				gamesRoomJson.put("Width", rs.getInt("Width"));
+				gamesRoomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
+				gamesRoomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
+				gamesRoomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
+				gamesRoomJson.put("Ceiling_Fans", "Y".equalsIgnoreCase(rs.getString("Ceiling_Fans")) ? true : false);
+				gamesRoomJson.put("Ceiling_Fans_Count", rs.getInt("Ceiling_Fans_Count"));
+				gamesRoomJson.put("Tables", "Y".equalsIgnoreCase(rs.getString("Tables")) ? true : false);
+				gamesRoomJson.put("Tables_Count", rs.getInt("Tables_Count"));
+				gamesRoomJson.put("Chairs", "Y".equalsIgnoreCase(rs.getString("Chairs")) ? true : false);
+				gamesRoomJson.put("Chairs_Count", rs.getInt("Chairs_Count"));
+				gamesRoomJson.put("TubeLights", "Y".equalsIgnoreCase(rs.getString("TubeLights")) ? true : false);
+				gamesRoomJson.put("TubeLights_Count", rs.getInt("TubeLights_Count"));
+				gamesRoomJson.put("Bulbs", "Y".equalsIgnoreCase(rs.getString("Bulbs")) ? true : false);
+				gamesRoomJson.put("Bulbs_Count", rs.getInt("Bulbs_Count"));
+				gamesRoomJson.put("ReadingTables", "Y".equalsIgnoreCase(rs.getString("ReadingTables")) ? true : false);
+				gamesRoomJson.put("ReadingTables_Count", rs.getInt("ReadingTables_Count"));
+				gamesRoomJson.put("S_Type_Chairs", "Y".equalsIgnoreCase(rs.getString("S-Type-Chairs")) ? true : false);
+				gamesRoomJson.put("S_Type_Chairs_Count", rs.getInt("S-Type-Chairs_Count"));
+				gamesRoomJson.put("Glass_Door_Almira",
+						"Y".equalsIgnoreCase(rs.getString("Glass-Door-Almira")) ? true : false);
+				gamesRoomJson.put("Glass_Door_Almira_Count", rs.getInt("Glass-Door-Almira_Count"));
+				gamesRoomJson.put("Store_Well_Almira",
+						"Y".equalsIgnoreCase(rs.getString("Store-Well-Almira")) ? true : false);
+				gamesRoomJson.put("Store_Well_Almira_Count", rs.getInt("Games-Well-Almira_Count"));
+				gamesRoomJson.put("Stools", "Y".equalsIgnoreCase(rs.getString("Stools")) ? true : false);
+				gamesRoomJson.put("Stools_Count", rs.getInt("Stools_Count"));
+				gamesRoomJson.put("Locker_Units", "Y".equalsIgnoreCase(rs.getString("Locker-Units")) ? true : false);
+				gamesRoomJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
+
+			} catch (InvalidResultSetAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return gamesRoomJson;
+
+	}
+	
+	public JSONObject getProjRoomDetails(int schoolid) {
+
+		StringBuilder query = new StringBuilder();
+
+		query.append(
+				"select Proj_Room_Id, School_Building_Id,Length,Width, Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, Ceiling_Fans_Count, Tables,")
+				.append(" Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, ReadingTables_Count , `S-Type-Chairs` , ")
+				.append("  `S-Type-Chairs_Count` , `Glass-Door-Almira` ,  `Glass-Door-Almira_Count`, `Store-Well-Almira`, `Games-Well-Almira_Count`,Stools , Stools_Count ,")
+				.append(" `Locker-Units`, `Locker-Units_Count` ")
+				.append(" from Proj_Room where  School_Building_Id = " + schoolid);
+
+		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
+
+		JSONObject gamesRoomJson = new JSONObject();
+
+		while (rs.next()) {
+
+			try {
+
+				gamesRoomJson.put("Proj_Room_Id", rs.getInt("Proj_Room_Id"));
+				gamesRoomJson.put("School_Building_Id", rs.getInt("School_Building_Id"));
+				gamesRoomJson.put("Length", rs.getInt("Length"));
+				gamesRoomJson.put("Width", rs.getInt("Width"));
+				gamesRoomJson.put("Plinth_Area", rs.getInt("Plinth_Area"));
+				gamesRoomJson.put("Table_Fans", "Y".equalsIgnoreCase(rs.getString("Table_Fans")) ? true : false);
+				gamesRoomJson.put("Table_Fans_Count", rs.getInt("Table_Fans_Count"));
+				gamesRoomJson.put("Ceiling_Fans", "Y".equalsIgnoreCase(rs.getString("Ceiling_Fans")) ? true : false);
+				gamesRoomJson.put("Ceiling_Fans_Count", rs.getInt("Ceiling_Fans_Count"));
+				gamesRoomJson.put("Tables", "Y".equalsIgnoreCase(rs.getString("Tables")) ? true : false);
+				gamesRoomJson.put("Tables_Count", rs.getInt("Tables_Count"));
+				gamesRoomJson.put("Chairs", "Y".equalsIgnoreCase(rs.getString("Chairs")) ? true : false);
+				gamesRoomJson.put("Chairs_Count", rs.getInt("Chairs_Count"));
+				gamesRoomJson.put("TubeLights", "Y".equalsIgnoreCase(rs.getString("TubeLights")) ? true : false);
+				gamesRoomJson.put("TubeLights_Count", rs.getInt("TubeLights_Count"));
+				gamesRoomJson.put("Bulbs", "Y".equalsIgnoreCase(rs.getString("Bulbs")) ? true : false);
+				gamesRoomJson.put("Bulbs_Count", rs.getInt("Bulbs_Count"));
+				gamesRoomJson.put("ReadingTables", "Y".equalsIgnoreCase(rs.getString("ReadingTables")) ? true : false);
+				gamesRoomJson.put("ReadingTables_Count", rs.getInt("ReadingTables_Count"));
+				gamesRoomJson.put("S_Type_Chairs", "Y".equalsIgnoreCase(rs.getString("S-Type-Chairs")) ? true : false);
+				gamesRoomJson.put("S_Type_Chairs_Count", rs.getInt("S-Type-Chairs_Count"));
+				gamesRoomJson.put("Glass_Door_Almira",
+						"Y".equalsIgnoreCase(rs.getString("Glass-Door-Almira")) ? true : false);
+				gamesRoomJson.put("Glass_Door_Almira_Count", rs.getInt("Glass-Door-Almira_Count"));
+				gamesRoomJson.put("Store_Well_Almira",
+						"Y".equalsIgnoreCase(rs.getString("Store-Well-Almira")) ? true : false);
+				gamesRoomJson.put("Store_Well_Almira_Count", rs.getInt("Games-Well-Almira_Count"));
+				gamesRoomJson.put("Stools", "Y".equalsIgnoreCase(rs.getString("Stools")) ? true : false);
+				gamesRoomJson.put("Stools_Count", rs.getInt("Stools_Count"));
+				gamesRoomJson.put("Locker_Units", "Y".equalsIgnoreCase(rs.getString("Locker-Units")) ? true : false);
+				gamesRoomJson.put("Locker_Units_Count", rs.getInt("Locker-Units_Count"));
+
+			} catch (InvalidResultSetAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return gamesRoomJson;
+
+	}
+
 
 
 }

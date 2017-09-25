@@ -5,11 +5,16 @@ function populateAllFlds(){
 	getStoreRoomDetails();
 	getStaffRoomDetails();
 	getGamesRoomDetails();
+	getActivityRoomDetails();
+	getTVRoomDetails();
+	getProjectorRoomDetails();
 	getBotanyLabDetails();
 	getPhysicsLabDetails();
 	getChemistryLabDetails();
 	getZoolagyLabDetails();
 	getComputerLabDetails();
+	getMathsLabDetails();
+	getScienceLabDetails();
 	getToiletDetails();
 	getClassRoomDetails();
 	getSchCommonAreaDetails();
@@ -384,6 +389,177 @@ function getSchoolDetails() {
 
 	}
 	
+	function getActivityRoomDetails() {
+		var selectedValue = $('#institute').val();
+		$.ajax({
+			type : 'POST',
+			url : "../CIS/getactivityroomdetails.htm",
+			data : {
+				'schoolid' : selectedValue
+			},
+			dataType : 'json',
+			success : function(data) {
+
+				$("#AR_Plinth_Area").val(data.Plinth_Area);
+				$("#AR_Length").val(data.Length);
+				$("#AR_Width").val(data.Width);
+				$("#AR_Stools").attr('checked', data.Stools);
+				$("#AR_Stools_Count").val(data.Stools_Count);
+
+				$("#AR_Table_Fans").attr('checked', data.Table_Fans);
+				$("#AR_Table_Fans_Count").val(data.Table_Fans_Count);
+
+				$("#AR_Ceiling_Fans").attr('checked', data.Ceiling_Fans);
+				$("#AR_Ceiling_Fans_Count").val(data.Ceiling_Fans_Count);
+
+				$("#AR_Tables").attr('checked', data.Tables);
+				$("#AR_Tables_Count").val(data.Tables_Count);
+
+				$("#AR_Chairs").attr('checked', data.Chairs);
+				$("#AR_Chairs_Count").val(data.Chairs_Count);
+
+				$("#AR_TubeLights").attr('checked', data.TubeLights);
+				$("#AR_TubeLights_Count").val(data.TubeLights_Count);
+
+				$("#AR_Bulbs").attr('checked', data.Bulbs);
+				$("#AR_Bulbs_Count").val(data.Bulbs_Count);
+
+				$("#AR_ReadingTables").attr('checked', data.ReadingTables);
+				$("#AR_ReadingTables_Count").val(data.ReadingTables_Count);
+
+				$("#AR_S_Type_Chairs").attr('checked', data.S_Type_Chairs);
+				$("#AR_S_Type_Chairs_Count").val(data.S_Type_Chairs_Count);
+
+				$("#AR_Glass-Door-Almira").attr('checked',data.Glass_Door_Almira);
+				$("#AR_Glass-Door-Almira_Count").val(data.Glass_Door_Almira_Count);
+
+				$("#AR_Store-Well-Almira").attr('checked',data.Store_Well_Almira);
+				$("#AR_Store-Well-Almira_Count").val(data.Store_Well_Almira_Count);
+
+				$("#AR_Lockerunits").attr('checked', data.Locker_Units);
+				$("#AR_Locker_Units_Count").val(data.Locker_Units_Count);
+			},
+			failure : function() {
+				alert("Failed!");
+			}
+		});
+
+	}
+	
+	function getTVRoomDetails() {
+		var selectedValue = $('#institute').val();
+		$.ajax({
+			type : 'POST',
+			url : "../CIS/gettvroomdetails.htm",
+			data : {
+				'schoolid' : selectedValue
+			},
+			dataType : 'json',
+			success : function(data) {
+
+				$("#TR_Plinth_Area").val(data.Plinth_Area);
+				$("#TR_Length").val(data.Length);
+				$("#TR_Width").val(data.Width);
+				$("#TR_Stools").attr('checked', data.Stools);
+				$("#TR_Stools_Count").val(data.Stools_Count);
+
+				$("#TR_Table_Fans").attr('checked', data.Table_Fans);
+				$("#TR_Table_Fans_Count").val(data.Table_Fans_Count);
+
+				$("#TR_Ceiling_Fans").attr('checked', data.Ceiling_Fans);
+				$("#TR_Ceiling_Fans_Count").val(data.Ceiling_Fans_Count);
+
+				$("#TR_Tables").attr('checked', data.Tables);
+				$("#TR_Tables_Count").val(data.Tables_Count);
+
+				$("#TR_Chairs").attr('checked', data.Chairs);
+				$("#TR_Chairs_Count").val(data.Chairs_Count);
+
+				$("#TR_TubeLights").attr('checked', data.TubeLights);
+				$("#TR_TubeLights_Count").val(data.TubeLights_Count);
+
+				$("#TR_Bulbs").attr('checked', data.Bulbs);
+				$("#TR_Bulbs_Count").val(data.Bulbs_Count);
+
+				$("#TR_ReadingTables").attr('checked', data.ReadingTables);
+				$("#TR_ReadingTables_Count").val(data.ReadingTables_Count);
+
+				$("#TR_S_Type_Chairs").attr('checked', data.S_Type_Chairs);
+				$("#TR_S_Type_Chairs_Count").val(data.S_Type_Chairs_Count);
+
+				$("#TR_Glass-Door-Almira").attr('checked',data.Glass_Door_Almira);
+				$("#TR_Glass-Door-Almira_Count").val(data.Glass_Door_Almira_Count);
+
+				$("#TR_Store-Well-Almira").attr('checked',data.Store_Well_Almira);
+				$("#TR_Store-Well-Almira_Count").val(data.Store_Well_Almira_Count);
+
+				$("#TR_Lockerunits").attr('checked', data.Locker_Units);
+				$("#TR_Locker_Units_Count").val(data.Locker_Units_Count);
+			},
+			failure : function() {
+				alert("Failed!");
+			}
+		});
+
+	}
+	
+	function getProjectorRoomDetails() {
+		var selectedValue = $('#institute').val();
+		$.ajax({
+			type : 'POST',
+			url : "../CIS/getprojroomdetails.htm",
+			data : {
+				'schoolid' : selectedValue
+			},
+			dataType : 'json',
+			success : function(data) {
+
+				$("#PR_Plinth_Area").val(data.Plinth_Area);
+				$("#PR_Length").val(data.Length);
+				$("#PR_Width").val(data.Width);
+				$("#PR_Stools").attr('checked', data.Stools);
+				$("#PR_Stools_Count").val(data.Stools_Count);
+
+				$("#PR_Table_Fans").attr('checked', data.Table_Fans);
+				$("#PR_Table_Fans_Count").val(data.Table_Fans_Count);
+
+				$("#PR_Ceiling_Fans").attr('checked', data.Ceiling_Fans);
+				$("#PR_Ceiling_Fans_Count").val(data.Ceiling_Fans_Count);
+
+				$("#PR_Tables").attr('checked', data.Tables);
+				$("#PR_Tables_Count").val(data.Tables_Count);
+
+				$("#PR_Chairs").attr('checked', data.Chairs);
+				$("#PR_Chairs_Count").val(data.Chairs_Count);
+
+				$("#PR_TubeLights").attr('checked', data.TubeLights);
+				$("#PR_TubeLights_Count").val(data.TubeLights_Count);
+
+				$("#PR_Bulbs").attr('checked', data.Bulbs);
+				$("#PR_Bulbs_Count").val(data.Bulbs_Count);
+
+				$("#PR_ReadingTables").attr('checked', data.ReadingTables);
+				$("#PR_ReadingTables_Count").val(data.ReadingTables_Count);
+
+				$("#PR_S_Type_Chairs").attr('checked', data.S_Type_Chairs);
+				$("#PR_S_Type_Chairs_Count").val(data.S_Type_Chairs_Count);
+
+				$("#PR_Glass-Door-Almira").attr('checked',data.Glass_Door_Almira);
+				$("#PR_Glass-Door-Almira_Count").val(data.Glass_Door_Almira_Count);
+
+				$("#PR_Store-Well-Almira").attr('checked',data.Store_Well_Almira);
+				$("#PR_Store-Well-Almira_Count").val(data.Store_Well_Almira_Count);
+
+				$("#PR_Lockerunits").attr('checked', data.Locker_Units);
+				$("#PR_Locker_Units_Count").val(data.Locker_Units_Count);
+			},
+			failure : function() {
+				alert("Failed!");
+			}
+		});
+
+	}
+	
 	function getBotanyLabDetails(){
 	         var selectedValue = $('#institute').val();
 	          $.ajax({
@@ -433,6 +609,10 @@ function getSchoolDetails() {
 				
 					$("#BL_Green_Board").attr('checked', data.Green_Board);
 	       			$("#BL_Green_Board_Count").val( data.Green_Board_Count);
+	       			
+	       			$("#BL_Black_Board_Count").val( data.BlackBoardCount);
+	       			$("#BL_Fixed_Tables").val( data.FixedTables);
+	       			$("#BL_Fixed_Chairs").val( data.FixedChairs);
 	 	         },
 	 	        failure: function () {
 	 	            alert("Failed!");
@@ -490,6 +670,10 @@ function getSchoolDetails() {
 						
 						$("#CL_Green_Board").attr('checked', data.Green_Board);
  	        			$("#CL_Green_Board_Count").val( data.Green_Board_Count);
+ 	        			
+ 	        			$("#CL_Black_Board_Count").val( data.BlackBoardCount);
+ 		       			$("#CL_Fixed_Tables").val( data.FixedTables);
+ 		       			$("#CL_Fixed_Chairs").val( data.FixedChairs);
 	 	     },
 	 	        failure: function () {
 	 	            alert("Failed!");
@@ -548,6 +732,11 @@ function getSchoolDetails() {
 						
 						$("#PL_Green_Board").attr('checked', data.Green_Board);
  	        			$("#PL_Green_Board_Count").val( data.Green_Board_Count);
+ 	        			
+ 	        			$("#PL_Black_Board_Count").val( data.BlackBoardCount);
+ 		       			$("#PL_Fixed_Tables").val( data.FixedTables);
+ 		       			$("#PL_Fixed_Chairs").val( data.FixedChairs);
+ 		       			
 	 	         },
 	 	        failure: function () {
 	 	            alert("Failed!");
@@ -609,6 +798,10 @@ function getSchoolDetails() {
 							
 							$("#ZL_Green_Board").attr('checked', data.Green_Board);
 	 	        			$("#ZL_Green_Board_Count").val( data.Green_Board_Count);
+	 	        			
+	 	        			$("#ZL_Black_Board_Count").val( data.BlackBoardCount);
+	 		       			$("#ZL_Fixed_Tables").val( data.FixedTables);
+	 		       			$("#ZL_Fixed_Chairs").val( data.FixedChairs);
 							
 	 	        			
 	 	                },
@@ -673,7 +866,9 @@ function getSchoolDetails() {
 							$("#CO_Green_Board").attr('checked', data.Green_Board);
 	 	        			$("#CO_Green_Board_Count").val( data.Green_Board_Count);
 	 	        			
-	 	        			
+	 	        			$("#CO_Black_Board_Count").val( data.BlackBoardCount);
+	 		       			$("#CO_Fixed_Tables").val( data.FixedTables);
+	 		       			$("#CO_Fixed_Chairs").val( data.FixedChairs);
 							
 	 	                },
 	 	        failure: function () {
@@ -682,6 +877,127 @@ function getSchoolDetails() {
 	 	    }); 
 	
 	 }
+	
+	function getMathsLabDetails(){
+        var selectedValue = $('#institute').val();
+         $.ajax({
+	        type: 'POST',
+        	url: "../CIS/getmathsdetails.htm",
+        	data : {'schoolid':selectedValue},
+	        dataType: 'json',
+	        success: function(data) {
+      			$("#ML_Plinth_Area").val( data.Plinth_Area);
+      			$("#ML_Length").val(data.Length);
+				$("#ML_Width").val(data.Width);
+				$("#ML_Stools").attr('checked', data.Stools);
+      			$("#ML_Stools_Count").val( data.Stools_Count);
+			
+      			$("#ML_Table_Fans").attr('checked', data.Table_Fans);
+      			$("#ML_Table_Fans_Count").val( data.Table_Fans_Count);
+			
+				$("#ML_Ceiling_Fans").attr('checked', data.Ceiling_Fans);
+      			$("#ML_Ceiling_Fans_Count").val( data.Ceiling_Fans_Count);
+			
+				$("#ML_Tables").attr('checked', data.Tables);
+      			$("#ML_Tables_Count").val( data.Tables_Count);
+			
+				$("#ML_Chairs").attr('checked', data.Chairs);
+      			$("#ML_Chairs_Count").val( data.Chairs_Count);
+			
+				$("#ML_TubeLights").attr('checked', data.TubeLights);
+      			$("#ML_TubeLights_Count").val( data.TubeLights_Count);
+      			
+				$("#ML_Bulbs").attr('checked', data.Bulbs);
+      			$("#ML_Bulbs_Count").val( data.Bulbs_Count);
+			
+				$("#ML_ReadingTables").attr('checked', data.ReadingTables);
+      			$("#ML_ReadingTables_Count").val( data.ReadingTables_Count);
+			
+				$("#ML_S_Type_Chairs").attr('checked', data.S_Type_Chairs);
+      			$("#ML_S_Type_Chairs_Count").val( data.S_Type_Chairs_Count);
+      			
+				$("#ML_Glass-Door-Almira").attr('checked', data.Glass_Door_Almira);
+      			$("#ML_Glass-Door-Almira_Count").val( data.Glass_Door_Almira_Count);
+			
+				$("#ML_Store-Well-Almira").attr('checked', data.Store_Well_Almira);
+      			$("#ML_Store-Well-Almira_Count").val( data.Store_Well_Almira_Count);
+				
+				$("#ML_Lockerunits").attr('checked', data.Locker_Units);
+      			$("#ML_Locker_Units_Count").val( data.Locker_Units_Count);
+			
+				
+      			$("#ML_Green_Board_Count").val( data.Green_Board_Count);
+      			
+      			$("#ML_Black_Board_Count").val( data.BlackBoardCount);
+      			$("#ML_Fixed_Tables").val( data.FixedTables);
+      			$("#ML_Fixed_Chairs").val( data.FixedChairs);
+	         },
+	        failure: function () {
+	            alert("Failed!");
+	        }
+	    }); 
+}
+
+	function getScienceLabDetails(){
+        var selectedValue = $('#institute').val();
+         $.ajax({
+	        type: 'POST',
+        	url: "../CIS/getsciencedetails.htm",
+        	data : {'schoolid':selectedValue},
+	        dataType: 'json',
+	        success: function(data) {
+      			$("#SL_Plinth_Area").val( data.Plinth_Area);
+      			$("#SL_Length").val(data.Length);
+				$("#SL_Width").val(data.Width);
+				$("#SL_Stools").attr('checked', data.Stools);
+      			$("#SL_Stools_Count").val( data.Stools_Count);
+			
+      			$("#SL_Table_Fans").attr('checked', data.Table_Fans);
+      			$("#SL_Table_Fans_Count").val( data.Table_Fans_Count);
+			
+				$("#SL_Ceiling_Fans").attr('checked', data.Ceiling_Fans);
+      			$("#SL_Ceiling_Fans_Count").val( data.Ceiling_Fans_Count);
+			
+				$("#SL_Tables").attr('checked', data.Tables);
+      			$("#SL_Tables_Count").val( data.Tables_Count);
+			
+				$("#SL_Chairs").attr('checked', data.Chairs);
+      			$("#SL_Chairs_Count").val( data.Chairs_Count);
+			
+				$("#SL_TubeLights").attr('checked', data.TubeLights);
+      			$("#SL_TubeLights_Count").val( data.TubeLights_Count);
+      			
+				$("#SL_Bulbs").attr('checked', data.Bulbs);
+      			$("#SL_Bulbs_Count").val( data.Bulbs_Count);
+			
+				$("#SL_ReadingTables").attr('checked', data.ReadingTables);
+      			$("#SL_ReadingTables_Count").val( data.ReadingTables_Count);
+			
+				$("#SL_S_Type_Chairs").attr('checked', data.S_Type_Chairs);
+      			$("#SL_S_Type_Chairs_Count").val( data.S_Type_Chairs_Count);
+      			
+				$("#SL_Glass-Door-Almira").attr('checked', data.Glass_Door_Almira);
+      			$("#SL_Glass-Door-Almira_Count").val( data.Glass_Door_Almira_Count);
+			
+				$("#SL_Store-Well-Almira").attr('checked', data.Store_Well_Almira);
+      			$("#SL_Store-Well-Almira_Count").val( data.Store_Well_Almira_Count);
+				
+				$("#SL_Lockerunits").attr('checked', data.Locker_Units);
+      			$("#SL_Locker_Units_Count").val( data.Locker_Units_Count);
+			
+				
+      			$("#SL_Green_Board_Count").val( data.Green_Board_Count);
+      			
+      			$("#SL_Black_Board_Count").val( data.BlackBoardCount);
+      			$("#SL_Fixed_Tables").val( data.FixedTables);
+      			$("#SL_Fixed_Chairs").val( data.FixedChairs);
+	         },
+	        failure: function () {
+	            alert("Failed!");
+	        }
+	    }); 
+}
+
 	
 	function getToiletDetails(){
 		 

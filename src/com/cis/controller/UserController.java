@@ -141,6 +141,39 @@ public class UserController {
 		}
 	}
 	
+
+	@RequestMapping(value = "/getactivityroomdetails", method=RequestMethod.POST )
+	public void getActivityRoomDetails(@RequestParam("schoolid") int  schoolid, HttpServletResponse response ) {
+		try {
+			response.getWriter().write(userService.getActivityRoomDetails(schoolid).toString());
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+
+	@RequestMapping(value = "/gettvroomdetails", method=RequestMethod.POST )
+	public void getTVRoomDetails(@RequestParam("schoolid") int  schoolid, HttpServletResponse response ) {
+		try {
+			response.getWriter().write(userService.getTVRoomDetails(schoolid).toString());
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+
+	@RequestMapping(value = "/getprojroomdetails", method=RequestMethod.POST )
+	public void getProjRoomDetails(@RequestParam("schoolid") int  schoolid, HttpServletResponse response ) {
+		try {
+			response.getWriter().write(userService.getProjRoomDetails(schoolid).toString());
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
 	@RequestMapping(value = "/getbotanydetails", method=RequestMethod.POST )
 	public void getBotanyLabDetails(@RequestParam("schoolid") int  schoolid, HttpServletResponse response ) {
 		try {
@@ -191,6 +224,25 @@ public class UserController {
 		}
 	}
 	
+	@RequestMapping(value = "/getmathsdetails", method=RequestMethod.POST )
+	public void getMathsLabDetails(@RequestParam("schoolid") int  schoolid, HttpServletResponse response ) {
+		try {
+			response.getWriter().write(userService.getMathsLabDetails(schoolid).toString());
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+	@RequestMapping(value = "/getsciencedetails", method=RequestMethod.POST )
+	public void getScienceLabDetails(@RequestParam("schoolid") int  schoolid, HttpServletResponse response ) {
+		try {
+			response.getWriter().write(userService.getScienceLabDetails(schoolid).toString());
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	}
 	@RequestMapping(value = "/gettoidetails", method=RequestMethod.POST )
 	public void getToiletDetails(@RequestParam("schoolid") int  schoolid, HttpServletResponse response ) {
 		try {

@@ -77,9 +77,40 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
+	public JSONObject  getActivityRoomDetails(int schoolid)
+	{
+		return cisDao.getActivityRoomDetails(schoolid);
+	}
+	
+	@Override
+	public JSONObject  getTVRoomDetails(int schoolid)
+	{
+		return cisDao.getTVRoomDetails(schoolid);
+	}
+	
+	@Override
+	public JSONObject  getProjRoomDetails(int schoolid)
+	{
+		return cisDao.getProjRoomDetails(schoolid);
+	}
+	
+	
+	@Override
 	public JSONObject  getBotanyLabDetails(int schoolid)
 	{
 		return cisDao.getBotanyLabDetails(schoolid);
+	}
+	
+	@Override
+	public JSONObject  getMathsLabDetails(int schoolid)
+	{
+		return cisDao.getMathsLabDetails(schoolid);
+	}
+	
+	@Override
+	public JSONObject  getScienceLabDetails(int schoolid)
+	{
+		return cisDao.getScienceLabDetails(schoolid);
 	}
 	
 	@Override
