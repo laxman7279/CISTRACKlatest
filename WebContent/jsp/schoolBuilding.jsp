@@ -22,7 +22,7 @@
 							Area</b></a></li>
 			</ul>
 		</div>
-		<div class="col-md-offset-1 col-md-6">
+		<div class="col-md-offset-1 col-md-6" id="schooldBuildingDivId">
 			<div class="row tab-content">
 				<div role="tabpanel" class="tab-pane fade active in" id="home">
 					<div id="divMenu">
@@ -112,7 +112,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 <input type="text" name="L_Wooden_Count" id="L_Wooden_Count" /></td>
+													 <input type="text" name="L_Wooden_Almira_Count" id="L_Wooden_Almira_Count" /></td>
 												</tr>
 											</table>
 										</div>
@@ -221,7 +221,7 @@
 														name="P_Store-Well-Almira_Count"
 														id="P_Store-Well-Almira_Count" /></td>
 													<td><a href="#">Wooden Almira</a><br>
-													 <input type="text" name="P_Wooden_Count" id="P_Wooden_Count" /></td>
+													 <input type="text" name="P_Wooden_Almira_Count" id="P_Wooden_Almira_Count" /></td>
 												</tr>
 												<tr><td><input type="text" name="P_Principal_Room_Id" id="P_Principal_Room_Id" hidden="true" /></td></tr>
 											</table>
@@ -284,7 +284,7 @@
 														name="EH_Bulbs" id="EH_Bulbs" /><br> <input
 														type="text" name="EH_Bulbs_Count" id="EH_Bulbs_Count" /></td>
 												</tr>
-
+												<tr><td><input type="text" name="EH_Wooden_Almira_Count" id="EH_Wooden_Almira_Count" style="display:none;"/></td></tr>
 											</table>
 										</div>
 									</div>
@@ -377,7 +377,7 @@
 														name="ST_Store-Well-Almira_Count"
 														id="ST_Store-Well-Almira_Count" /></td>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="ST_Wooden_Count" id="ST_Wooden_Count" /></td>
+													 	<input type="text" name="ST_Wooden_Almira_Count" id="ST_Wooden_Almira_Count" /></td>
 												</tr>
 
 											</table>
@@ -473,7 +473,7 @@
 														name="SR_Store-Well-Almira_Count"
 														id="SR_Store-Well-Almira_Count" /></td>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="SR_Wooden_Count" id="SR_Wooden_Count" /></td>
+													 	<input type="text" name="SR_Wooden_Almira_Count" id="SR_Wooden_Almira_Count" /></td>
 												</tr>
 											</table>
 										</div>
@@ -567,7 +567,7 @@
 														name="GR_Store-Well-Almira_Count"
 														id="GR_Store-Well-Almira_Count" /></td>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="GR_Wooden_Count" id="GR_Wooden_Count" /></td>
+													 	<input type="text" name="GR_Wooden_Almira_Count" id="GR_Wooden_Almira_Count" /></td>
 												</tr>
 
 											</table>
@@ -662,7 +662,7 @@
 														name="AR_Store-Well-Almira_Count"
 														id="AR_Store-Well-Almira_Count" /></td>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="AR_Wooden_Count" id="AR_Wooden_Count" /></td>
+													 	<input type="text" name="AR_Wooden_Almira_Count" id="AR_Wooden_Almira_Count" /></td>
 												</tr>
 
 											</table>
@@ -757,7 +757,7 @@
 														name="TR_Store-Well-Almira_Count"
 														id="TR_Store-Well-Almira_Count" /></td>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="TR_Wooden_Count" id="TR_Wooden_Count" /></td>
+													 	<input type="text" name="TR_Wooden_Almira_Count" id="TR_Wooden_Almira_Count" /></td>
 												</tr>
 
 											</table>
@@ -852,7 +852,7 @@
 														name="PR_Store-Well-Almira_Count"
 														id="PR_Store-Well-Almira_Count" /></td>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="PR_Wooden_Count" id="PR_Wooden_Count" /></td>
+													 	<input type="text" name="PR_Wooden_Almira_Count" id="PR_Wooden_Almira_Count" /></td>
 												</tr>
 
 											</table>
@@ -963,7 +963,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="BL_Wooden_Count" id="BL_Wooden_Count" /></td>
+													 	<input type="text" name="BL_Wooden_Almira_Count" id="BL_Wooden_Almira_Count" /></td>
 													 <td><a href="#">Black Boards</a> <input
 														type="checkbox" name="BL_Black_Board" id="BL_Black_Board"><br>
 														<input type="text" name="BL_Black_Board_Count"
@@ -1072,7 +1072,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="PL_Wooden_Count" id="PL_Wooden_Count" /></td>
+													 	<input type="text" name="PL_Wooden_Almira_Count" id="PL_Wooden_Almira_Count" /></td>
 													 	<td><a href="#">Black Boards</a> <input
 														type="checkbox" name="PL_Black_Board" id="PL_Black_Board"><br>
 														<input type="text" name="PL_Black_Board_Count"
@@ -1181,7 +1181,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="CL_Wooden_Count" id="CL_Wooden_Count" /></td>
+													 	<input type="text" name="CL_Wooden_Almira_Count" id="CL_Wooden_Almira_Count" /></td>
 													 	<td><a href="#">Black Boards</a> <input
 														type="checkbox" name="CL_Black_Board" id="CL_Black_Board"><br>
 														<input type="text" name="CL_Black_Board_Count"
@@ -1290,7 +1290,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="ZL_Wooden_Count" id="ZL_Wooden_Count" /></td>
+													 	<input type="text" name="ZL_Wooden_Almira_Count" id="ZL_Wooden_Almira_Count" /></td>
 													 	<td><a href="#">Black Boards</a> <input
 														type="checkbox" name="ZL_Black_Board" id="ZL_Black_Board"><br>
 														<input type="text" name="ZL_Black_Board_Count"
@@ -1401,7 +1401,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="CO_Wooden_Count" id="CO_Wooden_Count" /></td>
+													 	<input type="text" name="CO_Wooden_Almira_Count" id="CO_Wooden_Almira_Count" /></td>
 													 	<td><a href="#">Computers</a><br>
 													 	<input type="text" name="CO_Comp_Count" id="CO_Comp_Count" /></td>
 												</tr>
@@ -1515,7 +1515,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="ML_Wooden_Count" id="ML_Wooden_Count" /></td>
+													 	<input type="text" name="ML_Wooden_Almira_Count" id="ML_Wooden_Almira_Count" /></td>
 													 	<td><a href="#">Black Boards</a> <input
 														type="checkbox" name="ML_Black_Board" id="ML_Black_Board"><br>
 														<input type="text" name="ML_Black_Board_Count"
@@ -1624,7 +1624,7 @@
 												</tr>
 												<tr>
 													<td><a href="#">Wooden Almira</a><br>
-													 	<input type="text" name="SL_Wooden_Count" id="SL_Wooden_Count" /></td>
+													 	<input type="text" name="SL_Wooden_Almira_Count" id="SL_Wooden_Almira_Count" /></td>
 													 	<td><a href="#">Black Boards</a> <input
 														type="checkbox" name="SL_Black_Board" id="SL_Black_Board"><br>
 														<input type="text" name="SL_Black_Board_Count"
@@ -1860,7 +1860,7 @@ $('#schoolBuildingSaveDiv').on('click',function(){
 
 function formatKey(key){
 	key = key == undefined ? 'emptyId' : key;
-	key = key.replace(/BL_|PL_|CL_|ZL_|CO_|TO_|L_|P_|EH_|CR_|ST_|SR_|GR_/g,'');
+	key = key.replace(/BL_|PL_|CL_|ZL_|CO_|TO_|ML_|SL_|L_|P_|EH_|CR_|ST_|SR_|GR_|AR_|TR_|PR_/g,'');
 	key = key.replace(/\s+/g, '').replace(/_/g, '').replace(/-/g, '');
 	return key.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) { return index == 0 ? letter.toLowerCase() : letter.toUpperCase(); });
 }

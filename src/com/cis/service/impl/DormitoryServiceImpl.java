@@ -113,4 +113,22 @@ public class DormitoryServiceImpl implements  DormitoryService {
 		return new JSONObject();
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public JSONObject updateEpWaitingDetails(JSONObject epWaitingJson) {
+		try {
+			List<String> replaceStrList = new ArrayList();
+			replaceStrList = new ArrayList();
+			replaceStrList = Arrays.asList("Cots=:cots,","Cots_Count=:cotsCnt,","Cots,Cots_Count,",":cots,:cotsCnt,",
+						"Glass_Door_Almira,Glass_Door_Almira_Count,",":glassDoorAlmira,:glassDoorAlmiraCnt,","Dormitory_Id,",
+						"Glass_Door_Almira_Count=:glassDoorAlmiraCnt,","Glass_Door_Almira=:glassDoorAlmira,",
+						"Store_Well_Almira=:storeWallAlmira,","Store_Well_Almira_Count=:storeWallAlmiraCnt,",
+						"Store_Well_Almira,Store_Well_Almira_Count,",":storeWallAlmira,:storeWallAlmiraCnt,");
+			dmUpdateDao.updateDormitoryObjectData(epWaitingJson,"EP_WaitingHall","Institution_Id,EP_Waiting_Id",replaceStrList);
+			System.out.println("::StaffQuarters Save Completed Successfully:::");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new JSONObject();
+	}
+	
 }

@@ -139,7 +139,18 @@ public void updateDormitoryDetails(HttpServletRequest request,HttpServletRespons
 	}
 }
 
-
+@RequestMapping(value = "/updateEpWaitingDetails", method=RequestMethod.POST )
+public void updateEpWaitingDetails(HttpServletRequest request,HttpServletResponse response) {
+	JSONObject responseJson = new JSONObject();
+	try {
+		JSONObject requestJson = new JSONObject(request.getParameter("finalSaveJson"));
+		dmService.updateEpWaitingDetails(requestJson);
+		responseJson.put("result", "Success");
+		response.getWriter().write(responseJson.toString());
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
 
 
 

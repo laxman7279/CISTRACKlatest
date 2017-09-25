@@ -99,7 +99,7 @@ public class DormitoryUpdateDao {
 					" Ceiling_Fans_Count,TubeLights,TubeLights_Count,Bulbs,Bulbs_Count,Glass_Door_Almira,Glass_Door_Almira_Count,Store_Well_Almira,Store_Well_Almira_Count,"+ 	
 					" S_Type_Chairs,S_Type_Chairs_Count,Chairs,Chairs_Count,Tables,Tables_Count,Stools,Stools_Count,Wall_Mount_Fans,"+ 
 					" Wall_Mount_Fans_Count,Pedestal_Fans,Pedestal_Fans_Count,Doors,Doors_Count,Windows,Windows_Count,Cots,Cots_Count,Ventilators,Ventilators_Count) "+ 			
-					" VALUES (:dormitoryId,:buildingId,:blockId,:floorId,:carpetAreaCnt,:ceilingFans,:ceilingFansCnt,:tubeLights,:tubeLightsCnt,"+ 			
+					" VALUES (:buildingId,:buildingId,:blockId,:floorId,:carpetAreaCnt,:ceilingFans,:ceilingFansCnt,:tubeLights,:tubeLightsCnt,"+ 			
 					" :bulbs,:bulbsCnt,:glassDoorAlmira,:glassDoorAlmiraCnt,:storeWallAlmira,:storeWallAlmiraCnt,:sTypeChairs,:sTypeChairsCnt,"+ 
 					" :chairs,:chairsCnt,:tables,:tablesCnt,:stools,:stoolsCnt,:wallMountFans,:wallMountFansCnt,:pedestalFans,:pedestalFansCnt,"+
 					" :doors,:doorsCnt,:windows,:windowsCnt,:cots,:cotsCnt,:ventilators,:ventilatorsCnt ) "+					

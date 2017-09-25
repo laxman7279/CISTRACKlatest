@@ -1,9 +1,7 @@
 <label style="padding-right: 20px;"><h3>External Parent
 		Waiting Hall</h3></label>
-<div class="table-responsive">
+<div class="table-responsive" id="epWaitingHallDiv">
 	<table class="table">
-
-		
 		<tr>
 			<td><a href="#">Length (in sft)</a> <br> <input type="text"
 				name="dp_waiting_Length" id="dp_waiting_Length" dbname="length" /></td>
@@ -86,12 +84,12 @@
 		</tr>
 
 	</table>
-	<input type="text" name="Dinning_id" id="Dinning_id" hidden="true" /> 
+	<input type="text" name="epWaiting_id" id="epWaiting_id" hidden="true" /> 
 	<input type="text" name="Institution_Id" id="Institution_Id" hidden="true" />
-	<div style="float: left; padding: 30px;"id="dinningSaveDiv">
+	<div style="float: left; padding: 30px;"id="epWaitingSaveDiv">
 		<input type="button" name="Save" value="Save">
 	</div>
-	<div style="float: left; padding:30px"	id="dinningCancelDiv">
+	<div style="float: left; padding:30px"	id="epWaitingCancelDiv">
 		<input type="button" name="Cancel" value="Cancel">
 	</div>	
 </div>
@@ -145,17 +143,17 @@ function getEWPHallDetails() {
 	});
 }
 
-$('#dinningSaveDiv').on('click',function(){
+$('#epWaitingSaveDiv').on('click',function(){
 	console.log('-----SchoolSave-----');
 	var dropDownId = $('#institute').val();
-	var finalSaveJson = {"dinningId":dropDownId,"institutionId":dropDownId};
-	$('#dinningHallDiv').find('input').each(function(){
-		finalSaveJson[formatCamcelCaseKey($(this).attr('id'))] = $(this).val() == '' ? '0' :$(this).val();
+	var finalSaveJson = {"epWaitingId":dropDownId,"institutionId":dropDownId,"buildingId":dropDownId,"blockId":"0","floorId":"0"};
+	$('#epWaitingHallDiv').find('input').each(function(){
+		finalSaveJson[$(this).attr('dbname')] = $(this).val() == '' ? '0' :$(this).val();
 	});
 	console.log(finalSaveJson);
 	$.ajax({
 	    type: 'POST',
-     	url: "../otherQuarters/updateDinningDetails.htm",
+     	url: "../dormitory/updateEpWaitingDetails.htm",
      	data : {'finalSaveJson':JSON.stringify(finalSaveJson)},
         dataType: 'json',
         success: function(data){

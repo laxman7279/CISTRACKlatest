@@ -17,4 +17,5 @@ public interface DormitoryService {
  public JSONObject updateDormitoryDetails(JSONObject requestJson);	  
  public JSONObject getDmHallData(int Institution_Id);
  public JSONObject getHallData(int Institution_Id,int hallId);
+ public JSONObject updateEpWaitingDetails(JSONObject requestJson);
 }

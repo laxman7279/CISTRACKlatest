@@ -29,7 +29,7 @@
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-3.0.3.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-4.0.0.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/spring.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/EducationSoft/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/jsp-api.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/EducationSoft/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/Softwares/apache-tomcat-7.0.78-windows-x64/apache-tomcat-7.0.78/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/Softwares/apache-tomcat-7.0.78-windows-x64/apache-tomcat-7.0.78/lib/jsp-api.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>

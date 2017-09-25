@@ -58,6 +58,6 @@ public class QuartersServiceImpl implements QuartersService {
 	@Override
 	public JSONObject getEPWHallDetails(int id,String tablename, String wherecolumn )
 	{
-		return quatersDao.getEPWHallDetails(id, tablename, wherecolumn);
+		return quatersDao.getEPWHallDetails(id, tablename, wherecolumn); 
 	}
 }
