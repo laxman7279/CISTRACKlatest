@@ -548,31 +548,31 @@
 								<tr>
 									<td><a href="#">Exhaust Fans</a> <input type="checkbox"
 										name="o_toilets_exhaustfans_check" id="o_toilets_exhaustfans_check" dbname="exhaustFans"/><br> <input
-										type="text" name=o_toilets_exhaustfans id="o_toilets_exhaustfans" dbname="exhaustFansCnt"/></td>
+										type="text" name="Exhaust_Fans_Count" id="Exhaust_Fans_Count" dbname="exhaustFansCnt"/></td>
 									<td><a href="#">Tube Lights</a> <input type="checkbox"
 										name="o_toilets_tube_light_check" id="o_toilets_tube_light_check" dbname="tubeLights"/><br> <input
-										type="text" name="o_toilets_tube_light" id="o_toilets_tube_light" dbname="tubeLightsCnt"/></td>
+										type="text" name="TubeLights_Count" id="TubeLights_Count" dbname="tubeLightsCnt"/></td>
 								</tr>
 								<tr>
 									<td><a href="#">Bulbs</a> <input type="checkbox"
 										name="o_toilets_bulb_check" id="o_toilets_bulb_check" dbname="bulbs"/><br> <input
-										type="text" name="o_toilets_bulb" id="o_toilets_bulb" dbname="bulbsCnt"/></td>
+										type="text" name="Bulbs_Count" id="Bulbs_Count" dbname="bulbsCnt"/></td>
 									<td><a href="#">Indian Toilet</a> <input type="checkbox"
 										name="o_toilets_indian_check" id="o_toilets_indian_check" dbname="indianToilets"/><br> <input
-										type="text" name="o_toilets_indian" id="o_toilets_indian" dbname="indianToiletsCnt"/></td>
+										type="text" name="Indian_Toilet_Count" id="Indian_Toilet_Count" dbname="indianToiletsCnt"/></td>
 								</tr>
 								<tr>
 									<td><a href="#">Water Closet</a> <input type="checkbox"
 										name="o_toilets_water_closet_check" id="o_toilets_water_closet_check" dbname="waterCloset"/><br> <input
-										type="text" name="o_toilets_water_closet" id="o_toilets_water_closet" dbname="waterClosetCnt"/></td>
+										type="text" name="Water_Closet_Count" id="Water_Closet_Count" dbname="waterClosetCnt"/></td>
 									<td><a href="#">Running Water</a> <input type="checkbox"
-										name="o_toilets_running_water_check" id="o_toilets_running_water_check" dbname="runningWater"/><br> <input
-										type="text" name="o_toilets_running_water" id="o_toilets_running_water" dbname="runningWaterCnt"/></td>
+										name="O_Running_Water_Count" id="O_Running_Water_Count" dbname="runningWater"/><br> <input
+										type="text" name="Running_Water_Count" id="Running_Water_Count" dbname="runningWaterCnt"/></td>
 								</tr>
 								<tr>
 									<td><a href="#">Flush System</a> <input type="checkbox"
 										name="o_toilets_flush_system_check" id="o_toilets_flush_system_check" dbname="flushSystem"/><br> <input
-										type="text" name="o_toilets_flush_system" id="o_toilets_flush_system" dbname="flushSystemCnt"/></td>
+										type="text" name="Flush_System_Count" id="Flush_System_Count" dbname="flushSystemCnt"/></td>
 								</tr>
 							</table>
 						</div>
@@ -598,28 +598,28 @@
 								<tr>
 									<td><a href="#">Quantity</a> <input type="checkbox"
 										name="o_bathroom_quantity_check" id="o_bathroom_quantity_check" dbname="quantity"/><br> <input
-										type="text" name="o_bathroom_quantity" id="o_bathroom_quantity" dbname="quantityCnt"/></td>
+										type="text" name="Quantity_Count" id="Quantity_Count" dbname="quantityCnt"/></td>
 
 									<td><a href="#">Exhaust Fans</a> <input type="checkbox"
 										name="o_bathroom_exhaustfans_check" id="o_bathroom_exhaustfans_check" dbname="exhaustFans"/><br> <input
-										type="text" name="o_bathroom_exhaustfans" id="o_bathroom_exhaustfans" dbname="exhaustFansCnt"/></td>
+										type="text" name="BO_Exhaust_Fans_Count" id="BO_Exhaust_Fans_Count" dbname="exhaustFansCnt"/></td>
 								</tr>
 								<tr>
 									<td><a href="#">Tube Lights</a> <input type="checkbox"
 										name="o_bathroom_tube_light_check" id="o_bathroom_tube_light_check" dbname="tubeLights"/><br> <input
-										type="text" name="o_bathroom_tube_light" id="o_bathroom_tube_light" dbname="tubeLightsCnt"/></td>
+										type="text" name="BO_TubeLights_Count" id="BO_TubeLights_Count" dbname="tubeLightsCnt"/></td>
 
 									<td><a href="#">Bulbs</a> <input type="checkbox"
 										name="o_bathroom_bulb_check" id="o_bathroom_bulb_check" dbname="bulbs"/><br> <input
-										type="text" name="o_bathroom_bulb" id="o_bathroom_bulb" dbname="bulbsCnt"/></td>
+										type="text" name="BO_Bulbs_Count" id="BO_Bulbs_Count" dbname="bulbsCnt"/></td>
 								</tr>
 								<tr>
 									<td><a href="#">Geezers</a> <input type="checkbox"
 										name="o_bathroom_geezers_check" id="o_bathroom_geezers_check" dbname="geezers"/><br> <input
-										type="text" name="o_bathroom_geezers" id="o_bathroom_geezers" dbname="geezersCnt"/></td>
+										type="text" name="Geezers_Count" id="Geezers_Count" dbname="geezersCnt"/></td>
 									<td><a href="#">Washing Area</a> <input type="checkbox"
 										placeholder="size" dbname="washingArea" ><br> <input type="text"
-										name="o_bathroom_washarea" id="o_bathroom_washarea" dbname="washingAreaCnt"/></td>
+										name="Washing_Area_Count" id="Washing_Area_Count" dbname="washingAreaCnt"/></td>
 								</tr>
 							</table>
 						</div>
@@ -650,6 +650,8 @@ function populateOtherDetails(){
 	getSanitarySysDetails();
 	getOverheadTankDetails();
 	getPlayGroundDetails();
+	getBathroomDetails();
+	getToiletDetails();
 
 }
 
@@ -923,6 +925,68 @@ function getPlayGroundDetails() {
 			alert("Failed!");
 		}
 	});
+}
+
+function getToiletDetails() {
+	var staffquarterId = $('#institute').val();
+	$.ajax({
+		type : 'POST',
+		url : "../Quarters/getTableDetails.htm",
+		data : {
+			'instituteid' : staffquarterId,
+			'tablename' : 'O_Toilets',
+			'wherecolumn' : 'Others_Id'
+		},
+		dataType : 'json',
+		success : function(data) {
+			$.each(data, function(k, v) {
+				
+					$('#' + k).val(v);
+				
+			});
+		},
+		failure : function() {
+			alert("Failed!");
+		}
+	});
+
+}
+
+
+function getBathroomDetails() {
+	var staffquarterId = $('#institute').val();
+	$.ajax({
+		type : 'POST',
+		url : "../Quarters/getTableDetails.htm",
+		data : {
+			'instituteid' : staffquarterId,
+			'tablename' : 'O_Bathrooms',
+			'wherecolumn' : 'Others_Id'
+		},
+		dataType : 'json',
+		success : function(data) {
+			$.each(data, function(k, v) {
+				
+				if (k == 'Exhaust_Fans_Count')
+					{
+						$('#BO_' + k).val(v);
+					}else  if (k == 'TubeLights_Count')
+					{
+						$('#BO_' + k).val(v);
+					}else if (k == 'Bulbs_Count')
+					{
+						$('#BO_' + k).val(v);
+					}else{ 
+				
+						$('#' + k).val(v);
+					}
+			});
+		},
+		failure : function() {
+			alert("Failed!");
+		}
+	});
+
 }
 
 
