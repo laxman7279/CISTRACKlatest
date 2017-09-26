@@ -46,14 +46,14 @@
 			</select></td>
 			
 			<td><a href="#"><b style="color: black">Fly Catchers</b></a> <br>
-				<input type="text" name="NumofFlyCatcher" id="NumofFlyCatcher" /></td>
+				<input type="text" name="NumofFlyCatcher" id="NumofFlyCatcher" dbname="flyCatchers" /></td>
 				
 		</tr>
 		<tr>
 			<td><a href="#"><b style="color: black">Tube Lights</b></a> <br>
-				<input type="text" name="NumofTubelights" id="NumofTubelights" /></td>
+				<input type="text" name="NumofTubelights" id="NumofTubelights" dbname="tubeLights" /></td>
 			<td><a href="#"><b style="color: black">Fans </b></a> <br>
-				<input type="text" name="NumofFans" id="NumofFans" /></td>
+				<input type="text" name="NumofFans" id="NumofFans" dbname="numOfFans" /></td>
 		</tr>
 		
 		

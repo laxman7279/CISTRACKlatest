@@ -4,7 +4,7 @@
 <div class="container"
 	style="margin-top: 10px; background-color: white; color: black;">
 	<br>
-	<div><label>Year Of Construction</label>&nbsp;&nbsp;<input type="text" name="SB_Year_Of_Construction" id="SB_Year_Of_Construction"  /></div>
+	<div><label>Year Of Construction</label>&nbsp;&nbsp;<select name="SB_Year_Of_Construction" id="SB_Year_Of_Construction" ></select></div>
 	<br/>
 	<div class="row">
 		<div class="col col-md-4 schoolBldTabsDiv">
@@ -1793,13 +1793,13 @@ $('#schoolBuildingSaveDiv').on('click',function(){
 		var $this = $(this);
 		var divHrefId = $(this).attr('href');
 		console.log(divHrefId);
-		divJson =  {"schoolBuildingId":dropDownId};
+		divJson =  {"schoolBuildingId":dropDownId,"yearOfConstruction":$('#SB_Year_Of_Construction').val()};
 		if(divHrefId == '#home' || divHrefId == '#lab'){ 
 			$(divHrefId+' >div >div >div >div >h4 >a').each(function(){
 				var $this1 = $(this);
 				console.log($($this1).attr('href'));
 				var divFldHref = $($this1).attr('href');
-				var fldJson = {"schoolBuildingId":dropDownId,"principalBuildingId":dropDownId,"libraryBuildingId":dropDownId,"entranceHallId":dropDownId,"storeRoomId":dropDownId,"staffRoomId":dropDownId,"gamesRoomId":dropDownId,"botanyLabId":dropDownId};
+				var fldJson = {"schoolBuildingId":dropDownId,"principalBuildingId":dropDownId };
 				$(divFldHref).find('input').each(function(){
 					fldJson[formatKey($(this).attr('id'))] = $(this).attr('type')=='checkbox'?($(this).is(':checked')?'Y':'N'):($(this).val() == ''?'0':$(this).val());
 				});

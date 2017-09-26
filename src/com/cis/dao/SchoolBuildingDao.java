@@ -38,10 +38,10 @@ public class SchoolBuildingDao {
 	public JSONObject updateSchoolDetails(JSONObject jsonObject) { 
 		try {
 			String ENTRANCE_MERGE_SQL = "INSERT INTO School_Building (School_Building_Id,Institution_Id,Plinth_Area,Library_Room,Principal_Room,Entrance_Hall,"+
-					"Office_Store,Staff_Room,Games_Room,Botany_Lab,Physics_Lab,Chemistry_Lab,Zoology_Lab,Computers_Lab,Toilets,Class_Rooms) "+
-					" VALUES (:schoolBuildingId,:schoolBuildingId,'1000','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y' )"+
+					"Office_Store,Staff_Room,Games_Room,Botany_Lab,Physics_Lab,Chemistry_Lab,Zoology_Lab,Computers_Lab,Toilets,Class_Rooms,Year_Of_Construction) "+
+					" VALUES (:schoolBuildingId,:schoolBuildingId,'1000','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y',:yearOfConstruction )"+
 					" ON DUPLICATE KEY UPDATE Library_Room='Y',Principal_Room='Y',Entrance_Hall='Y',Office_Store='Y',Staff_Room='Y',"+
-					"Games_Room='Y',Botany_Lab='Y',Physics_Lab='Y',Chemistry_Lab='Y',Zoology_Lab='Y',Computers_Lab='Y',Toilets='Y',Class_Rooms='Y'";
+					"Games_Room='Y',Botany_Lab='Y',Physics_Lab='Y',Chemistry_Lab='Y',Zoology_Lab='Y',Computers_Lab='Y',Toilets='Y',Class_Rooms='Y',Year_Of_Construction=:yearOfConstruction";
 		 Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 		 System.out.println("::::"+getExecuteSql(ENTRANCE_MERGE_SQL, paramMap)); 
 		 getNamedJdbcTemplate().update(ENTRANCE_MERGE_SQL, paramMap);
@@ -75,55 +75,86 @@ public class SchoolBuildingDao {
 	}
 	
 	
-	public void updateAdminData(JSONObject jsonObject,String tableName,String pkColumn) { 
+	public void updateAdminData(JSONObject jsonObject,String tableName,String pkColumn,List<String> removeStrList,List<String> replaceStrList) { 
 		try {
 			String ENTRANCE_MERGE_SQL = "INSERT INTO #TABLE_NAME# (#PK_COLUMN#, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
-					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  Stools , Stools_Count,Wooden_Almira ) "+
+					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  Stools , Stools_Count,Wooden_Almira_Count ) "+
 					" VALUES (:schoolBuildingId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:stools,:stoolsCount,:woodenAlmiraCount )"+
 					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,"+
-					"Stools=:stools,Stools_Count=:stoolsCount,Wooden_Almira=:woodenAlmiraCount";
+					"Stools=:stools,Stools_Count=:stoolsCount,Wooden_Almira_Count=:woodenAlmiraCount";
+		
+		String ADMIN_MERGE_SQL = "INSERT INTO #TABLE_NAME# (#PK_COLUMN#,School_Building_Id,Length,Width,Plinth_Area,Table_Fans,Table_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count, "+
+					"Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs, Bulbs_Count, ReadingTables, ReadingTables_Count,`S-Type-Chairs`,"+
+					"`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count, "+
+					"`Principal-Table`, `Principal-Table-Count`, `Principal-Chair` ,`Principal-Chair-Count`, `Locker-Units`, `Locker-Units-Count`,Wooden_Almira_Count ) "+
+					" VALUES (:schoolBuildingId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,:ceilingFansCount,"+
+					":tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables,:readingTablesCount,:sTypeChairs,"+
+					":sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira,:storeWellAlmiraCount,:stools,:stoolsCount, "+
+					":principalTable, :principalTableCount, :principalChair,:principalChairCount, :lockerUnits, :lockerUnitsCount,:woodenAlmiraCount) "+
+					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
+					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
+					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,"+
+					"ReadingTables=:readingTables,ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
+					"`Glass-Door-Almira`=:glassDoorAlmira,`Glass-Door-Almira_Count`=:glassDoorAlmiraCount,`Store-Well-Almira`=:storeWellAlmira,"+
+					" `Store-Well-Almira_Count`=:storeWellAlmiraCount,Stools=:stools,Stools_Count=:stoolsCount,"+
+					"`Principal-Table`=:principalTable, `Principal-Table-Count`=:principalTableCount, `Principal-Chair`=:principalChair, "+
+					"`Principal-Chair-Count`=:principalChairCount, `Locker-Units`=:lockerUnits, `Locker-Units-Count`=:lockerUnitsCount,Wooden_Almira_Count=:woodenAlmiraCount"; 
+				
+		 ADMIN_MERGE_SQL = "ENTRANCE_ROOM".equalsIgnoreCase(tableName) ? ENTRANCE_MERGE_SQL : ADMIN_MERGE_SQL;
 		 Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
-		 ENTRANCE_MERGE_SQL = ENTRANCE_MERGE_SQL.replaceAll("#TABLE_NAME#", tableName).replaceAll("#PK_COLUMN#", pkColumn);
-		 System.out.println(ENTRANCE_MERGE_SQL); 
-		 getNamedJdbcTemplate().update(ENTRANCE_MERGE_SQL, paramMap);
+		 ADMIN_MERGE_SQL = ADMIN_MERGE_SQL.replaceAll("#TABLE_NAME#", tableName).replaceAll("#PK_COLUMN#", pkColumn);
+		 for(String removeStr : removeStrList){
+			 ADMIN_MERGE_SQL = ADMIN_MERGE_SQL.replace(removeStr, "");
+		}
+		 for(String replaceStr : replaceStrList){
+			 String[] splitStrs = replaceStr.contains("\\|") ? replaceStr.split("\\|") : (replaceStr+"| ").split("\\|");  
+			 ADMIN_MERGE_SQL = ADMIN_MERGE_SQL.replace(splitStrs[0], splitStrs[1]);
+		}
+		 System.out.println(":::::"+getExecuteSql(ADMIN_MERGE_SQL, paramMap));
+		 getNamedJdbcTemplate().update(ADMIN_MERGE_SQL, paramMap);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}		
 	}		
 	
-	public void updateLabsData(JSONObject jsonObject, String labTableName,String labColumnName,String labColumnId,String storeAlmiraCnt) { 
+	public void updateLabsData(JSONObject jsonObject, String labTableName,String labColumnName,List<String> removeStrList,List<String> replaceStrList) { 
 		try {
-			String ENTRANCE_MERGE_SQL = "INSERT INTO `#LAB_NAME#` (`#LAB_COLUMN_NAME#`, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
+			String ADMIN_MERGE_SQL = "INSERT INTO `#LAB_NAME#` (`#LAB_COLUMN_NAME#`, School_Building_Id,Length,Width,Plinth_Area, Table_Fans, Table_Fans_Count, Ceiling_Fans, "+
 					"Ceiling_Fans_Count, Tables,Tables_Count, Chairs, Chairs_Count, TubeLights, TubeLights_Count, Bulbs,  Bulbs_Count,  ReadingTables, "+
 					"ReadingTables_Count,`S-Type-Chairs`,`S-Type-Chairs_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`Store-Well-Almira`, "+
-					"`#STORE_WALL_ALMIRA_COUNT#`,Stools,Stools_Count,`Locker-Units`,`Locker-Units_Count`,Green_Board,Green_Board_Count,FixedChairs,FixedTables,Wooden_Almira,BlackBoardCount ) "+
-					" VALUES (:#LAB_COLUMN_ID#,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
+					"`Store-Wall-Almira_Count`,Stools,Stools_Count,`Locker-Units`,`Locker-Units_Count`,Green_Board,Green_Board_Count,FixedChairs,FixedTables,`CO_Comp_Count`,Wooden_Almira_Count,BlackBoardCount ) "+
+					" VALUES (:schoolBuildingId,:schoolBuildingId,:length,:width,:plinthArea,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables, "+
 					":readingTablesCount,:sTypeChairs,:sTypeChairsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:storeWellAlmira, "+
-					":storeWellAlmiraCount,:stools,:stoolsCount,:lockerUnits, :lockerUnitsCount,:greenBoard,:greenBoardCount,:fixedChairs,:fixedTables,:woodenAlmiraCount,:blackBoardCount) "+
+					":storeWellAlmiraCount,:stools,:stoolsCount,:lockerUnits, :lockerUnitsCount,:greenBoard,:greenBoardCount,:fixedChairs,:fixedTables,:compCount,:woodenAlmiraCount,:blackBoardCount) "+
 					" ON DUPLICATE KEY UPDATE Length=:length,Width=:width,Plinth_Area=:plinthArea,Table_Fans=:tableFans,Table_Fans_Count=:tableFansCount,Ceiling_Fans=:ceilingFans,"+
 					"Ceiling_Fans_Count=:ceilingFansCount,Tables=:tables,Tables_Count=:tablesCount,Chairs=:chairs,Chairs_Count=:chairsCount,"+
 					"TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCount,Bulbs=:bulbs,Bulbs_Count=:bulbsCount,ReadingTables=:readingTables,"+
 					"ReadingTables_Count=:readingTablesCount,`S-Type-Chairs`=:sTypeChairs,`S-Type-Chairs_Count`=:sTypeChairsCount,"+
 					"`Glass-Door-Almira`=:glassDoorAlmira,`Glass-Door-Almira_Count`=:glassDoorAlmiraCount,`Store-Well-Almira`=:storeWellAlmira,"+
-					"`#STORE_WALL_ALMIRA_COUNT#`=:storeWellAlmiraCount,Stools=:stools,Stools_Count=:stoolsCount,`Locker-Units`=:lockerUnits,"+
+					"`Store-Wall-Almira_Count`=:storeWellAlmiraCount,Stools=:stools,Stools_Count=:stoolsCount,`Locker-Units`=:lockerUnits,"+
 					"`Locker-Units_Count` =:lockerUnitsCount,Green_Board=:greenBoard,Green_Board_Count=:greenBoardCount,FixedChairs=:fixedChairs,"+
-					"FixedTables=:fixedTables,Wooden_Almira=:woodenAlmiraCount,BlackBoardCount=:blackBoardCount";
+					"FixedTables=:fixedTables,`CO_Comp_Count`=:compCount,Wooden_Almira_Count=:woodenAlmiraCount,BlackBoardCount=:blackBoardCount";
 		
 		
 			
-		ENTRANCE_MERGE_SQL = ENTRANCE_MERGE_SQL.replaceAll("#LAB_NAME#", labTableName).replaceAll("#LAB_COLUMN_NAME#", labColumnName)
-				.replaceAll("#LAB_COLUMN_ID#", labColumnId).replaceAll("#STORE_WALL_ALMIRA_COUNT#", storeAlmiraCnt);
-		System.out.println(ENTRANCE_MERGE_SQL); 
-		Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
-		System.out.println(":::::"+getExecuteSql(ENTRANCE_MERGE_SQL, paramMap));
-		getNamedJdbcTemplate().update(ENTRANCE_MERGE_SQL, paramMap);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}		
+					ADMIN_MERGE_SQL = ADMIN_MERGE_SQL.replaceAll("#LAB_NAME#", labTableName).replaceAll("#LAB_COLUMN_NAME#", labColumnName);
+					for(String removeStr : removeStrList){
+						ADMIN_MERGE_SQL = ADMIN_MERGE_SQL.replace(removeStr, "");
+					}
+					for(String replaceStr : replaceStrList){
+						String[] splitStrs = replaceStr.contains("\\|") ? replaceStr.split("\\|") : (replaceStr+"| ").split("\\|");  
+						ADMIN_MERGE_SQL = ADMIN_MERGE_SQL.replace(splitStrs[0], splitStrs[1]);
+					}
+					Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
+					System.out.println(":::::"+getExecuteSql(ADMIN_MERGE_SQL, paramMap));
+					getNamedJdbcTemplate().update(ADMIN_MERGE_SQL, paramMap);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}		
 	}
 	public void updateClassRoomData(JSONArray jsonArray,String schoolBuildingId) { 
 		try {
@@ -131,11 +162,11 @@ public class SchoolBuildingDao {
 			String ENTRANCE_MERGE_SQL = "INSERT INTO Class_Room (School_Building_Id,Table_Fans,Table_Fans_Count,Ceiling_Fans,"+
 					"Ceiling_Fans_Count,Floor,Tables,Tables_Count,Chairs,Chairs_Count,TubeLights,TubeLights_Count,Bulbs,Bulbs_Count,ReadingTables,"+
 					"ReadingTables_Count,`Locker-Units`,`Locker-Units_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`S-Type-Chairs`,`S-Type-Chairs_Count`,"+
-					"`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count,`Dual-Desk`,`Dual-Desk_Count`,`Green-Boards`,`Green-Boards_Count` ) "+
+					"`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count,`Dual-Desk`,`Dual-Desk_Count`,`Green-Boards`,`Green-Boards_Count`,BlackBoardCount,Wooden_Almira_Count ) "+
 					" VALUES (:schoolBuildingId,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:floor,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables, "+
 					":readingTablesCount,:lockerUnits, :lockerUnitsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:sTypeChairs,:sTypeChairsCount, "+
-					":storeWellAlmira,:storeWellAlmiraCount,:stools,:stoolsCount,:dualDesk,:dualDeskCount,:greenBoards,:greenBoardsCount) ";
+					":storeWellAlmira,:storeWellAlmiraCount,:stools,:stoolsCount,:dualDesk,:dualDeskCount,:greenBoards,:greenBoardsCount,:blackBoardCount,:woodenAlmiraCount) ";
 		 getJdbcTemplate().update(DELETE_CLASS_ROOM_DATA, new Object[] { schoolBuildingId });
 		 System.out.println(":::Delete completed:::::");
 		 for(int i=0;i<jsonArray.length();i++){ 

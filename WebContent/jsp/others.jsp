@@ -319,7 +319,7 @@
 										</div></td>
 									<td style="margin-bottom: 20px;" id="div-ul"><a href="#">Number
 											of Pump Sets </a> <input type='text' onchange="addBoreType();"
-										id="NumOfPumpSets" disabled='disabled' name="NumOfPumpSets"></td>
+										id="NumOfPumpSets" name="NumOfPumpSets"></td>
 
 								</tr>
 								<tr>

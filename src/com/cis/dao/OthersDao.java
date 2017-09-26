@@ -60,13 +60,13 @@ public class OthersDao {
 		try {
 			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO DiningDetails (Dinning_id,Institution_Id,DinningPlinth,SeatingCapacity,FixedTablesCount,"+
 						" FixedStoolsCount,FixedBenchesCount,MovableTableCount,MovableStoolsCount,MovableBenchesCount,HandWashAreaCount,"+
-						" DrinkingWaterTaps,NumOfWaterTaps) "+
+						" DrinkingWaterTaps,NumOfWaterTaps,NumofFlyCatcher,NumofFans,NumofTubelights) "+
 						" VALUES (:dinningId,:institutionId,:dinningPlinth,:seatingCapacity,:fixedTablesCount,:fixedStoolsCount,:fixedBenchesCount,"+
-						" :movableTableCount,:movableStoolsCount,:movableBenchesCount,:handWashAreaCount,:drinkingWaterTaps,:numOfWaterTaps )"+
+						" :movableTableCount,:movableStoolsCount,:movableBenchesCount,:handWashAreaCount,:drinkingWaterTaps,:numOfWaterTaps,:numofFlyCatcher,:numofTubelights,:numofFans )"+
 						"ON DUPLICATE KEY UPDATE DinningPlinth=:dinningPlinth,SeatingCapacity=:seatingCapacity,FixedTablesCount=:fixedTablesCount,"+
 						" FixedStoolsCount=:fixedStoolsCount,FixedBenchesCount=:fixedBenchesCount,MovableTableCount=:movableTableCount,"+
 						" MovableStoolsCount=:movableStoolsCount,MovableBenchesCount=:movableBenchesCount,HandWashAreaCount=:handWashAreaCount,"+
-						" DrinkingWaterTaps=:drinkingWaterTaps,NumOfWaterTaps=:numOfWaterTaps";
+						" DrinkingWaterTaps=:drinkingWaterTaps,NumOfWaterTaps=:numOfWaterTaps,NumofFlyCatcher=:numofFlyCatcher,NumofFans=:numofFans,NumofTubelights=:numofTubelights";
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 			System.out.println(":::::"+STAFF_QUARTERS_OBJECT_MERGE_SQL.toString()); 
 			System.out.println(":::::"+paramMap.toString());

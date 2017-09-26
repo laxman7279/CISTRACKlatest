@@ -1,4 +1,6 @@
 function populateAllFlds(){
+	var opts=''; for(var i=1970;i<(new Date()).getFullYear();i++){ opts += '<option value="'+i+'">'+i+'</option/>';   }
+	$('#SB_Year_Of_Construction').html(opts);
 	getLibraryDetails();
 	getPrincipalDetails();
 	getEntranceRoomDetails();
