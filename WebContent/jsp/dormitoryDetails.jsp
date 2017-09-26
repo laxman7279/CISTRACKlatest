@@ -501,6 +501,16 @@
 										type="text" name="d_toilets_indian" id="d_toilets_indian" dbname="indianToiletsCnt"/></td>
 
 								</tr>
+								
+								<tr>
+									<td><a href="#">Western Toilets</a> <input type="checkbox"
+										name="d_toilets_bulb_check" id="d_toilets_bulb_check" dbname="bulbs"/><br> <input
+										type="text" name="d_toilets_western" id="d_toilets_western" dbname="westernToiletsCnt"/></td>
+									<td><a href="#">PH Type Toilet</a> <input type="checkbox"
+										name="d_toilets_indian_check" id="d_toilets_indian_check" dbname="indianToilets"/><br> <input
+										type="text" name="d_toilets_ph" id="d_toilets_ph" dbname="phToiletsCnt"/></td>
+
+								</tr>
 
 								<tr>
 									<td><a href="#">Water Closet</a> <input type="checkbox"
@@ -518,6 +528,9 @@
 									<td><a href="#">Flush System</a> <input type="checkbox"
 										name="d_toilets_flush_system_check" id="d_toilets_flush_system_check" dbname="flushSystem"/><br> <input
 										type="text" name="d_toilets_flush_system" id="d_toilets_flush_system" dbname="flushSystemCnt"/></td>
+									<td><a href="#">Incinators</a> <input type="checkbox"
+										name="d_toilets_flush_system_check" id="d_toilets_flush_system_check" dbname="flushSystem"/><br> <input
+										type="text" name="d_incinators" id="d_incinators" dbname="incinators"/></td>										
 								</tr>
 
 
@@ -953,6 +966,9 @@ function getDmToiletsDetails(){
 						$("#d_toilets_water_closet").val(data.Water_Closet_Count);
 						$("#d_toilets_running_water").val(data.Running_Water_Count);
 						$("#d_toilets_flush_system").val(data.Flush_System_Count);
+						$("#d_toilets_western").val(data.Western_Toilet_Count);
+						$("#d_toilets_ph").val(data.PH_Toilet_Count);
+						$("#d_incinators").val(data.Incinators);
 						
 						$("#d_toilets_exhaustfans_check").attr('checked',data.Exhaust_Fans);
 						$("#d_toilets_indian_check").attr('checked',data.Indian_Toilet);

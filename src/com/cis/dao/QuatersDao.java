@@ -81,7 +81,7 @@ public class QuatersDao {
 
 		query.append("select Exhaust_Fans,Exhaust_Fans_Count, TubeLights, ");
 		query.append(" TubeLights_Count,Bulbs,Bulbs_Count,Running_Water,Running_Water_Count,Water_Closet,Water_Closet_Count,Indian_Toilet,  ");
-		query.append(" Indian_Toilet_Count,Flush_System,Flush_System_Count ");
+		query.append(" Indian_Toilet_Count,Flush_System,Flush_System_Count, Western_Toilet_Count, PH_Toilet_Count ");
 		query.append("	 from "+tablename+" where "+ wherecolumn+" = " + staffquarterId);
 			
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -107,7 +107,8 @@ public class QuatersDao {
 				toiletdetailsJson.put("Indian_Toilets_Count", rs.getInt("Indian_Toilet_Count"));
 				toiletdetailsJson.put("Flush_System", "Y".equalsIgnoreCase(rs.getString("Flush_System")) ? true : false);
 				toiletdetailsJson.put("Flush_System_Count", rs.getInt("Flush_System_Count"));
-				
+				toiletdetailsJson.put("PH_Toilet_Count", rs.getInt("PH_Toilet_Count"));
+				toiletdetailsJson.put("Western_Toilet_Count", rs.getInt("Western_Toilet_Count"));
 			
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto_generated catch block

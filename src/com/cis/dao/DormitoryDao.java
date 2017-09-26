@@ -370,7 +370,7 @@ public class DormitoryDao {
 	//5
 	public JSONObject getDmToiletsDetails(int dormitoryId) {
 		String query ="select Dormitory_Id,Toilets_Id,Exhaust_Fans,Exhaust_Fans_Count,TubeLights,TubeLights_Count,Bulbs,Bulbs_Count,Indian_Toilet, "
-					+ " Indian_Toilet_Count,Water_Closet,Water_Closet_Count,Running_Water,Running_Water_Count,Flush_System,Flush_System_Count "
+					+ " Indian_Toilet_Count,Water_Closet,Water_Closet_Count,Running_Water,Running_Water_Count,Flush_System,Flush_System_Count , Western_Toilet_Count, PH_Toilet_Count, Incinators "
 					+ " from D_Toilets where  Dormitory_Id = "+dormitoryId+" ";
 		
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -393,6 +393,12 @@ public class DormitoryDao {
 				DormitoryDetailsJson.put("Running_Water_Count", rs.getInt("Running_Water_Count"));
 				DormitoryDetailsJson.put("Flush_System", "Y".equalsIgnoreCase(rs.getString("Flush_System")) ? true : false);
 				DormitoryDetailsJson.put("Flush_System_Count", rs.getInt("Flush_System_Count"));
+				DormitoryDetailsJson.put("PH_Toilet_Count", rs.getInt("PH_Toilet_Count"));
+				DormitoryDetailsJson.put("Western_Toilet_Count", rs.getInt("Western_Toilet_Count"));
+				DormitoryDetailsJson.put("Incinators", rs.getInt("Incinators"));
+				
+				
+				
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
