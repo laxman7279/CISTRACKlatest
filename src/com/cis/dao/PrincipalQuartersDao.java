@@ -56,11 +56,12 @@ public class PrincipalQuartersDao {
 		
 		try {
 			String PRINCIPAL_QUARTERS_MERGE_SQL = "INSERT INTO PrincipalQuarters (Principal_Quarter_Id,Institution_Id,Building_Id,Living_Room,Dining_Room,"+
-						"Bed_Room1,Bed_Room2,Toilets,Kitchen,Block,Floor,Staff_Quarters_Type,Has_Separate_Meter) "+
+						"Bed_Room1,Bed_Room2,Toilets,Kitchen,Block,Floor,Staff_Quarters_Type,Has_Separate_Meter,Year_Of_Construction,Quarters_Name) "+
 						" VALUES (:principalQuarterId,:institutionId,:buildingId,:livingRoom,:diningRoom,"+
-						":bedRoom1,:bedRoom2,:toilets,:kitchen,:block,:floor,:principalQuartersType,:hasSeperateMeter)"+
+						":bedRoom1,:bedRoom2,:toilets,:kitchen,:block,:floor,:principalQuartersType,:hasSeperateMeter,:yearOfConstruction,:quartersName)"+
 						"ON DUPLICATE KEY UPDATE Living_Room=:livingRoom,Dining_Room=:diningRoom,Bed_Room1=:bedRoom1,Bed_Room2=:bedRoom2,"+
-						"Toilets=:toilets,Kitchen=:kitchen,Block=:block,Floor=:floor,Staff_Quarters_Type=:principalQuartersType,Has_Separate_Meter=:hasSeperateMeter";
+						"Toilets=:toilets,Kitchen=:kitchen,Block=:block,Floor=:floor,Staff_Quarters_Type=:principalQuartersType,Has_Separate_Meter=:hasSeperateMeter,"+
+						"Year_Of_Construction=:yearOfConstruction,Quarters_Name=:quartersName";
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 			System.out.println(":::::"+paramMap.toString()); 
 			getNamedJdbcTemplate().update(PRINCIPAL_QUARTERS_MERGE_SQL, paramMap);

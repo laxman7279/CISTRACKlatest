@@ -1115,7 +1115,7 @@ function getSchoolDetails() {
 				$("#S_inverter_capacity_check").attr('checked',data.Inverters);
 				$("#S_Ro_Plant").val(data.RO_Plant_Capacity);
 				addTypeCapacity('#S_watertank','sbwater');
-				var waterJson = data.Water_Json;
+				var waterJson = data.Water_Json == undefined||''||'0'||0||null||'null' ? "[]" : data.Water_Json;
 				waterJson = waterJson.replace(/=/g, '":"').replace(/, /g, '", "').replace(/"{|{/g, '{"').replace(/}"|}/g, '"}');
 				waterJson = $.parseJSON(waterJson);
 				$.each(waterJson,function(i,obj){

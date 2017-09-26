@@ -1051,7 +1051,7 @@ function getDmCommonAreaDetails(){
 			$("#d_commonarea_inverter_capacity_check").attr('checked',data.Inverter_Capacity);
 			$("#d_commonarea_ro_plant").val(data.RO_Plant_Capacity);
 			addTypeCapacity('#d_commonarea_watertank','dwater');
-			var waterJson = data.Water_Json;
+			var waterJson = data.Water_Json == undefined||''||'0'||0||null||'null' ? "[]" : data.Water_Json;
 			waterJson = waterJson.replace(/=/g,'":"').replace(/, /g,'", "').replace(/"{|{/g,'{"').replace(/}"|}/g,'"}');
 			waterJson = $.parseJSON(waterJson);
 			$.each(waterJson,function(i,obj){

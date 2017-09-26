@@ -52,11 +52,12 @@ public class StaffQuartersDao {
 	public void updateStaffQuartersData(JSONObject jsonObject) { 
 		try {
 			String STAFF_QUARTERS_MERGE_SQL = "INSERT INTO StaffQuarters (Staff_Quarter_Id,Institution_Id,Building_Id,Living_Room,Dining_Room,"+
-						"Bed_Room1,Bed_Room2,Toilets,Kitchen,Block,Floor,Staff_Quarters_Type,Has_Separate_Meter) "+
+						"Bed_Room1,Bed_Room2,Toilets,Kitchen,Block,Floor,Staff_Quarters_Type,Has_Separate_Meter,Year_Of_Construction,Quarters_Name) "+
 						" VALUES (:staffQuarterId,:institutionId,:buildingId,:livingRoom,:diningRoom,"+
-						":bedRoom1,:bedRoom2,:toilets,:kitchen,:block,:floor,:staffQuartersType,:hasSeperateMeter)"+
+						":bedRoom1,:bedRoom2,:toilets,:kitchen,:block,:floor,:staffQuartersType,:hasSeperateMeter,:yearOfConstruction,:quartersName)"+
 						"ON DUPLICATE KEY UPDATE Living_Room=:livingRoom,Dining_Room=:diningRoom,Bed_Room1=:bedRoom1,Bed_Room2=:bedRoom2,"+
-						"Toilets=:toilets,Kitchen=:kitchen,Block=:block,Floor=:floor,Staff_Quarters_Type=:staffQuartersType,Has_Separate_Meter=:hasSeperateMeter";
+						"Toilets=:toilets,Kitchen=:kitchen,Block=:block,Floor=:floor,Staff_Quarters_Type=:staffQuartersType,Has_Separate_Meter=:hasSeperateMeter,"+
+						"Year_Of_Construction=:yearOfConstruction,Quarters_Name=:quartersName";
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 			System.out.println(":::::"+paramMap.toString()); 
 			getNamedJdbcTemplate().update(STAFF_QUARTERS_MERGE_SQL, paramMap);
@@ -89,12 +90,13 @@ public class StaffQuartersDao {
 		try {
 			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO S_Toilets (Staff_Quarter_Id,S_Toilets_Id,Exhaust_Fans,Exhaust_Fans_Count,TubeLights,"+
 						"TubeLights_Count,Bulbs,Bulbs_Count,Indian_Toilet,Indian_Toilet_Count,Water_Closet,Water_Closet_Count,Running_Water,Running_Water_Count,"+
-						"Flush_System,Flush_System_Count,BUILDING_ID) "+
+						"Flush_System,Flush_System_Count,BUILDING_ID,PH_Toilet_Count,Western_Toilet_Count) "+
 						" VALUES (:staffQuarterId,:buildingId,:exhaustFans,:exhaustFansCnt,:tubeLights,:tubeLightsCnt,:bulbs,:bulbsCnt,:indianToilets,"+
-						" :indianToiletsCnt,:waterCloset,:waterClosetCnt,:runningWater,:runningWaterCnt,:flushSystem,:flushSystemCnt,:buildingId )"+
+						" :indianToiletsCnt,:waterCloset,:waterClosetCnt,:runningWater,:runningWaterCnt,:flushSystem,:flushSystemCnt,:buildingId,:phToiletCnt,:wsToiletCnt )"+
 						"ON DUPLICATE KEY UPDATE Exhaust_Fans=:exhaustFans,Exhaust_Fans_Count=:exhaustFansCnt,TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCnt,"+
 						" Bulbs=:bulbs,Bulbs_Count=:bulbsCnt,Indian_Toilet=:indianToilets,Indian_Toilet_Count=:indianToiletsCnt,Water_Closet=:waterCloset,"+
-						" Water_Closet_Count=:waterClosetCnt,Running_Water=:runningWater,Running_Water_Count=:runningWaterCnt,Flush_System=:flushSystem,Flush_System_Count=:flushSystemCnt";
+						" Water_Closet_Count=:waterClosetCnt,Running_Water=:runningWater,Running_Water_Count=:runningWaterCnt,Flush_System=:flushSystem,"+
+						" Flush_System_Count=:flushSystemCnt,PH_Toilet_Count=:phToiletCnt,Western_Toilet_Count=:wsToiletCnt";
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 			System.out.println(":::::"+STAFF_QUARTERS_OBJECT_MERGE_SQL.toString()); 
 			System.out.println(":::::"+paramMap.toString());
