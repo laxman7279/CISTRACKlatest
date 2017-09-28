@@ -156,17 +156,17 @@ public class SchoolBuildingDao {
 						e.printStackTrace();
 					}		
 	}
-	public void updateClassRoomData(JSONArray jsonArray,String schoolBuildingId) { 
+	public void updateClassRoomData(JSONArray jsonArray,String schoolBuildingId) {  
 		try {
 			String DELETE_CLASS_ROOM_DATA = "DELETE FROM Class_Room WHERE School_Building_Id =?";
 			String ENTRANCE_MERGE_SQL = "INSERT INTO Class_Room (School_Building_Id,Table_Fans,Table_Fans_Count,Ceiling_Fans,"+
 					"Ceiling_Fans_Count,Floor,Tables,Tables_Count,Chairs,Chairs_Count,TubeLights,TubeLights_Count,Bulbs,Bulbs_Count,ReadingTables,"+
 					"ReadingTables_Count,`Locker-Units`,`Locker-Units_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`,`S-Type-Chairs`,`S-Type-Chairs_Count`,"+
-					"`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count,`Dual-Desk`,`Dual-Desk_Count`,`Green-Boards`,`Green-Boards_Count`,BlackBoardCount,Wooden_Almira_Count ) "+
+					"`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count,`Dual-Desk`,`Dual-Desk_Count`,`Green-Boards`,`Green-Boards_Count`,BlackBoardCount,Wooden_Almira_Count,Class_Name ) "+
 					" VALUES (:schoolBuildingId,:tableFans,:tableFansCount,:ceilingFans,"+
 					":ceilingFansCount,:floor,:tables,:tablesCount,:chairs,:chairsCount,:tubeLights,:tubeLightsCount,:bulbs,:bulbsCount,:readingTables, "+
 					":readingTablesCount,:lockerUnits, :lockerUnitsCount,:glassDoorAlmira,:glassDoorAlmiraCount,:sTypeChairs,:sTypeChairsCount, "+
-					":storeWellAlmira,:storeWellAlmiraCount,:stools,:stoolsCount,:dualDesk,:dualDeskCount,:greenBoards,:greenBoardsCount,:blackBoardCount,:woodenAlmiraCount) ";
+					":storeWellAlmira,:storeWellAlmiraCount,:stools,:stoolsCount,:dualDesk,:dualDeskCount,:greenBoards,:greenBoardsCount,:blackBoardCount,:woodenAlmiraCount,:className) ";
 		 getJdbcTemplate().update(DELETE_CLASS_ROOM_DATA, new Object[] { schoolBuildingId });
 		 System.out.println(":::Delete completed:::::");
 		 for(int i=0;i<jsonArray.length();i++){ 
