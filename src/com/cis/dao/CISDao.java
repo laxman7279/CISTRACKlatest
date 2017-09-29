@@ -120,7 +120,7 @@ public class CISDao {
 
 		query.append(
 				"select School_Building_Id, Plinth_Area,  Library_Room, Principal_Room ,  Entrance_Hall , Office_Store , Staff_Room , Games_Room , Botany_Lab , Physics_Lab  , Chemistry_Lab ,")
-				.append(" Zoology_Lab  , Computers_Lab , Toilets,    Class_Rooms from School_Building where  Institution_Id ="
+				.append(" Zoology_Lab  , Computers_Lab , Toilets,    Class_Rooms, Year_Of_Construction from School_Building where  Institution_Id ="
 						+ instituteid);
 
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -151,6 +151,7 @@ public class CISDao {
 						"Y".equalsIgnoreCase(rs.getString("Computers_Lab")) ? true : false);
 				schoolDetailsJson.put("Toilets", rs.getString("Toilets"));
 				schoolDetailsJson.put("Class_Rooms", rs.getString("Class_Rooms"));
+				schoolDetailsJson.put("Year_Of_Construction", rs.getString("Year_Of_Construction"));
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -938,7 +939,7 @@ public class CISDao {
 
 		query.append("select Class_Room_Id, School_Building_Id, Table_Fans,Table_Fans_Count,Ceiling_Fans,Ceiling_Fans_Count,Floor,Tables,Tables_Count,Chairs,Chairs_Count,TubeLights,");
 		query.append(" TubeLights_Count,Bulbs,Bulbs_Count,ReadingTables,ReadingTables_Count,`Locker-Units`,`Locker-Units_Count`,`Glass-Door-Almira`,`Glass-Door-Almira_Count`, ");
-		query.append(" `S-Type-Chairs`,`S-Type-Chairs_Count`,`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count,`Dual-Desk`,`Dual-Desk_Count`,`Green-Boards`,`Green-Boards_Count`  ");
+		query.append(" `S-Type-Chairs`,`S-Type-Chairs_Count`,`Store-Well-Almira`,`Store-Well-Almira_Count`,Stools,Stools_Count,`Dual-Desk`,`Dual-Desk_Count`,`Green-Boards`,`Green-Boards_Count`, Class_Name  ");
 		query.append("	 from Class_Room where  School_Building_Id = " + schoolid);
 			
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -986,6 +987,7 @@ public class CISDao {
 				classjson.put("DualDesks", "Y".equalsIgnoreCase(rs.getString("Dual-Desk")) ? true : false);
 				classjson.put("DualDesksCount", rs.getInt("Dual-Desk_Count"));
 				classjson.put("floor", rs.getString("Floor"));
+				classjson.put("Class_Name", rs.getString("Class_Name"));
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

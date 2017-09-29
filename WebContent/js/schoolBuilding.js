@@ -44,6 +44,7 @@ function getSchoolDetails() {
 				$("#chemistrylab").attr('checked', data.chemistrylab);
 				$("#zoologylab").attr('checked', data.zoologylab);
 				$("#computerslab").attr('checked', data.computerslab);
+				$("#SB_Year_Of_Construction option[value="+data.Year_Of_Construction+"]").prop('selected', true);
 			},
 			failure : function() {
 				alert("Failed!");
