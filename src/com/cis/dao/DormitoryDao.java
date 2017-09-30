@@ -90,7 +90,8 @@ public class DormitoryDao {
 		String query ="select Institution_Id,Dormitory_Id,Hall_Id,Block_Id,Floor_Id,Plinth_Area,Ceiling_Fans,Ceiling_Fans_Count,TubeLights,TubeLights_Count, "
 					+ " Bulbs,Bulbs_Count,Glass_Door_Almira,Glass_Door_Almira_Count,Store_Well_Almira,Store_Well_Almira_Count,S_Type_Chairs, "
 					+ " S_Type_Chairs_Count,Chairs,Chairs_Count,Tables,Tables_Count,Stools,Stools_Count,Wall_Mount_Fans,Wall_Mount_Fans_Count,"
-					+ " Pedestal_Fans,Pedestal_Fans_Count,Doors,Doors_Count,Windows,Windows_Count,Cots,Cots_Count,two_tier_cots,two_tier_cots_Count "
+					+ " Pedestal_Fans,Pedestal_Fans_Count,Doors,Doors_Count,Windows,Windows_Count,Cots,Cots_Count,two_tier_cots,two_tier_cots_Count, "
+					+ " Length,Width,two_one_tier_cots_Count,Window_Mosquito_Mesh_Count,Ventilators_Count,Ventilator_Mosquito_Mesh_Count,Wooden_Almira_Count"
 					+ " from D_Hall where  Institution_Id = "+Institution_Id+" AND Hall_Id="+hallId+" ";
 		System.out.println("getHallData  "+query.toString());
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
@@ -133,7 +134,15 @@ public class DormitoryDao {
 				DormitoryDetailsJson.put("Cots_Count", rs.getInt("Cots_Count"));
 				DormitoryDetailsJson.put("two_tier_cots", "Y".equalsIgnoreCase(rs.getString("two_tier_cots")) ? true : false);
 				DormitoryDetailsJson.put("two_tier_cots_Count", rs.getInt("two_tier_cots_Count"));
+				DormitoryDetailsJson.put("Length", rs.getInt("Length"));
+				DormitoryDetailsJson.put("Width", rs.getInt("Width"));
+				DormitoryDetailsJson.put("two_one_tier_cots_Count", rs.getInt("two_one_tier_cots_Count"));
+				DormitoryDetailsJson.put("Window_Mosquito_Mesh_Count", rs.getInt("Window_Mosquito_Mesh_Count"));
+				DormitoryDetailsJson.put("Ventilators_Count", rs.getInt("Ventilators_Count"));
+				DormitoryDetailsJson.put("Ventilator_Mosquito_Mesh_Count", rs.getInt("Ventilator_Mosquito_Mesh_Count"));
+				DormitoryDetailsJson.put("Wooden_Almira_Count", rs.getInt("Wooden_Almira_Count"));
 				System.out.println(DormitoryDetailsJson);
+				
 			} catch (InvalidResultSetAccessException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
