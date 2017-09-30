@@ -1,3 +1,5 @@
+<script type="text/javascript" src="../js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="../css/bootstrap-multiselect.css" type="text/css"/>
 <h3>
 	<label style="padding-right: 20px;">Others</label> <input type="checkbox" />
 </h3>
@@ -208,13 +210,13 @@
 							<table class="table">
 								<tr>
 									<td><a href="#"><b style="color: black">Type</b></a> <input
-										type="checkbox"><br> <select name="RoadType"
-										id="RoadType">
-											<option value="">Select</option>
-											<option value="eratheren">Eratheren</option>
-											<option value="metal">Metal</option>
+										type="checkbox"><br> <select name="RoadType"  
+										multiple="multiple" class="multiSelectDropDown"
+										id="RoadType" dbname="roadType">
+											<option value="Eratheren">Eratheren</option>
+											<option value="Metal">Metal</option>
 											<option value="CC">CC</option>
-											<option value="bt">BT</option>
+											<option value="BT">BT</option>
 									</select></td>
 
 									<td style="margin-bottom: 20px;"><a href="#"><b
@@ -238,8 +240,8 @@
 										value="N"> <b style="color: black">No</b></td>
 									<td><a href="#"><b style="color: black">Street
 												Lightings Type</b></a> <input type="checkbox"><br> <select
-										name="StreetLightTy" id="StreetLightTy">
-											<option value="">Select</option>
+										multiple="multiple" class="multiSelectDropDown"
+										name="StreetLightTy" id="StreetLightTy" dbname="streetLightTy">
 											<option value="Electrical">Electrical</option>
 											<option value="Solar">Solar</option>
 									</select></td>
@@ -641,6 +643,11 @@
 </div> <input type="text" name="Others_Id" id="Others_Id" hidden="true" />
 <input type="text" name="Institution_Id" id="Institution_Id" hidden="true" /> 
 <script type="text/javascript">
+
+$(document).ready(function(){
+	$('.multiSelectDropDown').multiselect();
+});
+
 function populateOtherDetails(){
 	getCompWallDetails();
 	getGuardRoomDetails();
@@ -800,12 +807,16 @@ function getInternalRoadsDetails() {
 				} else
 					$('#' + k).val(v);
 			});
+			console.log(data.RoadType);
+			$('#RoadType').val(data.RoadType == undefined ? "" : data.RoadType.split("|"));
+			$('#StreetLightTy').val(data.StreetLightTy == undefined ? "" : data.StreetLightTy.split("|"));
+			$('.multiSelectDropDown').multiselect('refresh');
 		},
 		failure : function() {
 			alert("Failed!");
 		}
 	});
-
+	
 }
 
 function getExtWaterSupDetails() {
@@ -1009,6 +1020,9 @@ $('#othersSaveDiv').on('click',function(){
 		});
 		$(this).find('>div >div >div >div >table').find('select').each(function(){
 			divJson[$(this).attr('dbname') == undefined ? formatCamcelCaseKey($(this).attr('id')) : $(this).attr('dbname')] = $(this).val();
+			if($(this).attr('dbname') == 'roadType' || $(this).attr('dbname') == 'streetLightTy'){
+				divJson[$(this).attr('dbname')] = (divJson[$(this).attr('dbname')]).join("|");
+			}
 		});
 		$(this).find('>div >div >h4 >input').each(function(){
 			finalSaveJson[formatCamcelCaseKey($(this).attr('id'))] = $(this).is(':checked') ? 'Y' : 'N';

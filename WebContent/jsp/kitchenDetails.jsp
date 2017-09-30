@@ -6,10 +6,9 @@
 		<input type="radio" name="RunningWaterConnection" id ="RunningWaterConnection" value="no"> <b>No</b></li>
 	<li style="margin-bottom: 20px;" dbname="cookingType"><a href="#"><b
 			style="color: black"> Cooking Type</b></a>&nbsp;&nbsp;<b>:</b> <input
-		type="radio" name="CookingType" id="CookingType" value="steam"><b>Steam</b>&nbsp;&nbsp;
-		<input type="radio" name="CookingType" id="CookingType" value="gas"> <b>Gas</b>
-		&nbsp;&nbsp; <input type="radio" name="CookingType" id="CookingType" value="wood"><b>
-			Wood</b></li>
+		type="checkbox" name="CookingType" id="CookingType" value="steam" class="dontHideCls"><b>Steam</b>&nbsp;&nbsp;
+		<input type="checkbox" name="CookingType" id="CookingType" value="gas" class="dontHideCls"> <b>Gas</b>
+		&nbsp;&nbsp; <input type="checkbox" name="CookingType" id="CookingType" value="wood" class="dontHideCls"><b> Wood</b></li>
 
 	<li style="margin-bottom: 20px;" dbname="drainageSystem"><a href="#"><b
 			style="color: black">Drainage system </b></a>&nbsp;&nbsp;<b>:</b> <input
@@ -77,6 +76,9 @@ $('#kitchenSaveDiv').on('click',function(){
 			console.log('-----other tag-----');
 		}
 	});
+	$('li[dbname="cookingType"]').find('input[type="checkbox"]:checked').each(function(){
+		finalSaveJson['cookingType'] += finalSaveJson['cookingType'] == "" ? $(this).val() : "|"+$(this).val();	
+	});
 	console.log(finalSaveJson);
 	
 	$.ajax({
@@ -109,15 +111,22 @@ function getKitchenDetails() {
 				console.log(k);
 				if(k=='SizeofWashArea' || k=='KitchenShedSize' || k=='Kitchen_Id' || k=='Institution_Id') {
 						$('#'+k).val(v);
+				}else if(k == 'CookingType' && data['CookingType'] != undefined && data['CookingType'] != "" ){
+					$('input[name="CookingType"]').prop('checked',false); 
+					for(var i=0,types=data['CookingType'].split("|");i<types.length;i++){
+						$('input[name="CookingType"][value="'+types[i]+'"]').prop('checked',true); 
+					}
 				}else if(k=='WashPlinth'){
 					console.log((v== 'Y'||'y'||'Yes'||'yes'));
 					$('input[name="'+k+'"]').prop('checked',(v== 'Y'||'y'||'Yes'||'yes') ? true :false);
 				}else if(v=='Yes' || v=='yes') {
 						$('input:radio[name='+k+']')[0].checked = true;
-				}else {
+				}else if($('input:radio[name='+k+']').length > 0){
 						$('input:radio[name='+k+']')[1].checked = true;
 				}
 			});
+			
+			
 		},
 		failure : function() {
 			alert("Failed!");
