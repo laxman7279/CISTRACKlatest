@@ -1,8 +1,8 @@
 package com.cis.service.impl;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.cis.dao.QuatersDao;
@@ -54,7 +54,11 @@ public class QuartersServiceImpl implements QuartersService {
 	{
 		return quatersDao.getTableDetails(id, tablename, wherecolumn);
 	}
-	
+	@Override
+	public JSONArray getTableResults(int id,String tablename, String wherecolumn )
+	{
+		return quatersDao.getTableResults(id, tablename, wherecolumn);
+	}
 	@Override
 	public JSONObject getEPWHallDetails(int id,String tablename, String wherecolumn )
 	{

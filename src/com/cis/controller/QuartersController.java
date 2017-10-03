@@ -95,6 +95,15 @@ public class QuartersController {
 		}
 	}
 	
+	@RequestMapping(value = "/getTableResults", method = RequestMethod.POST)
+	public void getTableResults(@RequestParam("instituteid") int  id, @RequestParam("tablename") String  tablename, @RequestParam("wherecolumn") String  wherecolumn , HttpServletResponse response ) {
+		try {
+			response.getWriter().write(quartersService.getTableResults(id, tablename, wherecolumn).toString());
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
 	
 	@RequestMapping(value = "/getEWPDetails", method = RequestMethod.POST)
 	public void getEWPDetails(@RequestParam("instituteid") int  id, @RequestParam("tablename") String  tablename, @RequestParam("wherecolumn") String  wherecolumn , HttpServletResponse response ) {

@@ -1,5 +1,6 @@
 package com.cis.service.impl;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,9 +22,14 @@ public class OthersServiceImpl {
 		}
 		return new JSONObject();
 	}
-	public JSONObject updateDinningDetails(JSONObject kitchenJson) {
+	public JSONObject updateDinningDetails(JSONArray dinningArray) {
 		try {
-			othersDao.updateDinningDetails(kitchenJson); 
+			for(int i=0;i<dinningArray.length();i++){
+				if(i==0){
+					othersDao.deleteDinningDetails(dinningArray.getJSONObject(i)); 
+				}
+				othersDao.updateDinningDetails(dinningArray.getJSONObject(i)); 
+			}
 			System.out.println("::Successfully Saved:::");
 		} catch (Exception e) {
 			e.printStackTrace();

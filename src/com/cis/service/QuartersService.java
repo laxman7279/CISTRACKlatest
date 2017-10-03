@@ -1,5 +1,6 @@
 package com.cis.service;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ public interface QuartersService {
 	public JSONObject getToiletDetails(int staffquarterId,String tablename, String wherecolumn,int buildingid);	
 	
 	public JSONObject getTableDetails(int id,String tablename, String wherecolumn );
+	public JSONArray getTableResults(int id,String tablename, String wherecolumn );
 	
 	public JSONObject getEPWHallDetails(int id,String tablename, String wherecolumn );
 }

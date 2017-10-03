@@ -3,6 +3,7 @@ package com.cis.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,7 +41,7 @@ public class OthersController {
 	public void updateDinningDetails(HttpServletRequest request,HttpServletResponse response) {
 		JSONObject responseJson = new JSONObject();
 		try {
-			JSONObject requestJson = new JSONObject(request.getParameter("finalSaveJson"));
+			JSONArray requestJson = new JSONArray(request.getParameter("finalSaveJson"));
 			othersService.updateDinningDetails(requestJson);
 			responseJson.put("result", "Success");
 			response.getWriter().write(responseJson.toString());

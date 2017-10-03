@@ -6,7 +6,7 @@ import java.util.Map;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.InvalidResultSetAccessException;
+import org.springframework.jdbc.InvalidResultSetAccessException; 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -55,21 +55,28 @@ public class OthersDao {
 		}
 	}
 	
+	public void deleteDinningDetails(JSONObject jsonObject) { 
+		try {
+			String DELETE_DINNING_DETAILS = "DELETE FROM DiningDetails WHERE Institution_Id = :institutionId";
+			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
+			getNamedJdbcTemplate().update(DELETE_DINNING_DETAILS, paramMap);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public void updateDinningDetails(JSONObject jsonObject) { 
 		try {
-			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO DiningDetails (Dinning_id,Institution_Id,DinningPlinth,SeatingCapacity,FixedTablesCount,"+
+			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO DiningDetails (Dinning_id,Building_id,Institution_Id,DinningPlinth,SeatingCapacity,FixedTablesCount,"+
 						" FixedStoolsCount,FixedBenchesCount,MovableTableCount,MovableStoolsCount,MovableBenchesCount,HandWashAreaCount,"+
-						" DrinkingWaterTaps,NumOfWaterTaps,NumofFlyCatcher,NumofFans,NumofTubelights) "+
-						" VALUES (:dinningId,:institutionId,:dinningPlinth,:seatingCapacity,:fixedTablesCount,:fixedStoolsCount,:fixedBenchesCount,"+
-						" :movableTableCount,:movableStoolsCount,:movableBenchesCount,:handWashAreaCount,:drinkingWaterTaps,:numOfWaterTaps,:numofFlyCatcher,:numofTubelights,:numofFans )"+
+						" DrinkingWaterTaps,NumOfWaterTaps,NumofFlyCatcher,NumofFans,NumofTubelights,HallName) "+
+						" VALUES (:dinningId,:buildingId,:institutionId,:dinningPlinth,:seatingCapacity,:fixedTablesCount,:fixedStoolsCount,:fixedBenchesCount,"+
+						" :movableTableCount,:movableStoolsCount,:movableBenchesCount,:handWashAreaCount,:drinkingWaterTaps,:numOfWaterTaps,:numofFlyCatcher,:numofTubelights,:numofFans,:hallName )"+
 						"ON DUPLICATE KEY UPDATE DinningPlinth=:dinningPlinth,SeatingCapacity=:seatingCapacity,FixedTablesCount=:fixedTablesCount,"+
 						" FixedStoolsCount=:fixedStoolsCount,FixedBenchesCount=:fixedBenchesCount,MovableTableCount=:movableTableCount,"+
 						" MovableStoolsCount=:movableStoolsCount,MovableBenchesCount=:movableBenchesCount,HandWashAreaCount=:handWashAreaCount,"+
 						" DrinkingWaterTaps=:drinkingWaterTaps,NumOfWaterTaps=:numOfWaterTaps,NumofFlyCatcher=:numofFlyCatcher,NumofFans=:numofFans,NumofTubelights=:numofTubelights";
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
-			System.out.println(":::::"+STAFF_QUARTERS_OBJECT_MERGE_SQL.toString()); 
-			System.out.println(":::::"+paramMap.toString());
 			System.out.println(":::::"+getExecuteSql(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap));
 			getNamedJdbcTemplate().update(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap);
 		} catch (Exception e) {

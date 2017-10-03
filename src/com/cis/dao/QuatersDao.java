@@ -344,6 +344,27 @@ public class QuatersDao {
 		return utiljson;
 	}
 
+	public JSONArray getTableResults(int id,String tablename, String wherecolumn ) {
+		StringBuilder query = new StringBuilder();
+		query.append("select * from "+tablename+" where "+wherecolumn+" = "+id);
+		SqlRowSet rs = getJdbcTemplate().queryForRowSet(query.toString());
+		JSONObject rowJson = new JSONObject();
+		JSONArray resultArray = new JSONArray();
+		String [] colnames = rs.getMetaData().getColumnNames();
+		while (rs.next()) {
+			rowJson = new JSONObject();
+			for(String colname : colnames) {
+				try {
+					rowJson.put(colname, rs.getString(colname));
+				} catch (InvalidResultSetAccessException | JSONException e) {
+					e.printStackTrace();
+				}
+			}
+			resultArray.put(rowJson);
+		}
+		return resultArray;
+	}
+	
 	public JSONObject getEPWHallDetails(int id,String tablename, String wherecolumn )
 	{
 		String query ="Select Institution_Id,EP_Waiting_Id,Block_Id,Floor_Id, Length, Width,Plinth_Area,Ceiling_Fans,Ceiling_Fans_Count,TubeLights,TubeLights_Count, "
