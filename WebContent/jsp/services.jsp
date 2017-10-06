@@ -478,29 +478,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	function switchReport() {
 		switchClass();
-		
 		$('#switchReport').addClass('active');
-		//populateOtherDetails();
-		//alert('others report');
-
-		//alert(document.getElementById('Dorm-Div').style.display);
-		if (document.getElementById('Report-Div').style.display == 'none')
-			document.getElementById('Report-Div').style.display = 'block';
-		else
-			document.getElementById('Report-Div').style.display = 'none';
-
-		document.getElementById('School-Div').style.display = 'none';
-		document.getElementById('Overview-Div').style.display = 'none';
-		document.getElementById('Staff-Div').style.display = 'none';
-		document.getElementById('Principal-Div').style.display = 'none';
-		document.getElementById('Dorm-Div').style.display = 'none';
-		document.getElementById('stats-div').style.display = 'none';
-		document.getElementById('Dinning-Div').style.display = 'none';
-		document.getElementById('Kitchen-Div').style.display = 'none';
-		document.getElementById('Others-Div').style.display = 'none';
-		document.getElementById('EPWH-Div').style.display = 'none';
-		
-		getEWPHallDetails();
+		$('#Report-Div').show();
+		$('#School-Div,#Overview-Div,#Staff-Div,#Principal-Div,#Dorm-Div,#stats-div,#Dinning-Div,#Kitchen-Div,#Others-Div,#EPWH-Div').hide();
+		getReport();
 	}
 	
 	

@@ -23,4 +23,6 @@ public interface QuartersService {
 	public JSONArray getTableResults(int id,String tablename, String wherecolumn );
 	
 	public JSONObject getEPWHallDetails(int id,String tablename, String wherecolumn );
+
+	public JSONObject getReportData(int id); 
 }

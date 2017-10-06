@@ -64,4 +64,9 @@ public class QuartersServiceImpl implements QuartersService {
 	{
 		return quatersDao.getEPWHallDetails(id, tablename, wherecolumn); 
 	}
+	
+	@Override
+	public JSONObject getReportData(int id) {
+		return quatersDao.getReportData(id);
+	}
 }
