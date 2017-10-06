@@ -420,14 +420,18 @@ public class QuatersDao {
 
 	public JSONObject getReportData(int id) { 
 		JSONObject reportJson = new JSONObject();
-		String ALL_TABLES = "SELECT REPORT_TABLE_NAME,REPORT_PK_COLUMN,CONVERT(UI_MAPPING_JSON USING utf8) as UI_MAPPING_JSON FROM REPORT_CONFIG WHERE UI_MAPPING_JSON <> ''";
+		String ALL_TABLES = "SELECT REPORT_TABLE_NAME,REPORT_PK_COLUMN,CONVERT(UI_MAPPING_JSON USING utf8) as UI_MAPPING_JSON,UI_DISPLAY_ORDER FROM REPORT_CONFIG "+
+		" WHERE UI_MAPPING_JSON <> '' ORDER BY ISNULL(UI_DISPLAY_ORDER),UI_DISPLAY_ORDER ";
 		SqlRowSet rs = getJdbcTemplate().queryForRowSet(ALL_TABLES.toString());
+		JSONArray uiOrderArray = new JSONArray();
 		try {
 			while (rs.next()) {
 				System.out.println(rs.getString("REPORT_TABLE_NAME")+"::::"+rs.getString("REPORT_PK_COLUMN")+":::"+id);  
 				reportJson.put(rs.getString("REPORT_TABLE_NAME"), getTableResults(id,"`"+rs.getString("REPORT_TABLE_NAME")+"`","`"+rs.getString("REPORT_PK_COLUMN")+"`"));
 				reportJson.put(rs.getString("REPORT_TABLE_NAME")+"_JSON",new JSONObject(rs.getString("UI_MAPPING_JSON")));
+				uiOrderArray.put(new JSONObject("{ 'tableName':'"+rs.getString("REPORT_TABLE_NAME")+"','uiOrder':'"+rs.getString("UI_DISPLAY_ORDER")+"'}"));
 			}
+			reportJson.put("uiOrderJson", uiOrderArray);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

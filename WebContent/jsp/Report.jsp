@@ -22,9 +22,10 @@ function getReport(){
 
 function populateData(data){
 	var reportHtml = '';
-	$.each(data,function(key,val){
-		console.log(key);
-		console.log(val);
+	var divTables = data['uiOrderJson'];
+	for(var di=0;di<divTables.length;di++){
+		var key = divTables[di]['tableName'];
+		var val = data[key];
 		if( data[key+'_JSON'] != undefined){
 			var jsonKeys =  data[key+'_JSON'];
 			var divTableHtml = '<div style="background-color:white;"><div style="text-align:center;"><h4>'+jsonKeys[key]+'</h4></div><div class="table-responsive"><table class="table"><thead>#THEAD#</thead><tbody>#TBODY#</tbody></table></div></div><br/>';
@@ -44,7 +45,7 @@ function populateData(data){
 				reportHtml += divTableHtml;
 			}
 		}
-	});
+	}
 	$('#reportDiv').html(reportHtml);
 }
 
